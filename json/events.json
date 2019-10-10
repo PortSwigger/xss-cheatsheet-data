@@ -60109,14 +60109,14 @@
         "tags": [
             {
                 "tag": "details",
-                "code": "<details ontoggle=alert(1)>test<\/details>",
+                "code": "<details ontoggle=alert(1) open>test<\/details>",
                 "browsers": [
                     "chrome",
                     "firefox",
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": false
             }
         ]
     },
