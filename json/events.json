@@ -60105,7 +60105,7 @@
         ]
     },
     "ontoggle": {
-        "description": "Requires click on the details arrow",
+        "description": "Fires when the details tag is expanded",
         "tags": [
             {
                 "tag": "details",
