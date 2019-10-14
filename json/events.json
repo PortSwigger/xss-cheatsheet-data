@@ -58147,6 +58147,17 @@
                     "safari"
                 ],
                 "interaction": false
+            },
+            {
+                "tag": "frameset",
+                "code": "<frameset onpageshow=alert(1)>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": false
             }
         ]
     },
