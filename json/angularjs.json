@@ -414,7 +414,7 @@
                 "twitterUrl": "https:\/\/twitter.com\/garethheyes"
             }
         ],
-        "vector": "<input id=x ng-focus=$event.path|orderBy:'CSS&&[1].map(alert)'>",
+        "vector": "<input id=x ng-focus=$event.path|orderBy:'(z=alert)(1)'>",
         "hash": "#x",
         "type": "reflected",
         "csp": true
