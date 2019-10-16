@@ -47191,7 +47191,7 @@
             },
             {
                 "tag": "image2",
-                "code": "<picture><source srcset=\"validimage.png\"><img onloadend=alert(1)><\/picture>",
+                "code": "<picture><source srcset=\"validimage.png\"><image onloadend=alert(1)><\/picture>",
                 "browsers": [
                     "firefox"
                 ],
@@ -47228,7 +47228,7 @@
             },
             {
                 "tag": "image",
-                "code": "<img src=validimage.png onloadstart=alert(1)>",
+                "code": "<image src=validimage.png onloadstart=alert(1)>",
                 "browsers": [
                     "firefox"
                 ],
@@ -47236,7 +47236,7 @@
             },
             {
                 "tag": "image2",
-                "code": "<picture><source srcset=\"validimage.png\"><img onloadstart=alert(1)><\/picture>",
+                "code": "<picture><source srcset=\"validimage.png\"><image onloadstart=alert(1)><\/picture>",
                 "browsers": [
                     "firefox"
                 ],
