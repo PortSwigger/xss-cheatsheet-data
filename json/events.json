@@ -47183,7 +47183,7 @@
             },
             {
                 "tag": "image",
-                "code": "<img src=validimage.png onloadend=alert(1)>",
+                "code": "<image src=validimage.png onloadend=alert(1)>",
                 "browsers": [
                     "firefox"
                 ],
