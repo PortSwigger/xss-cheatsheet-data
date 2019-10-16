@@ -468,7 +468,8 @@
                     "edge"
                 ],
                 "interaction": false,
-                "hash": "#x"
+                "hash": "#x",
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -7774,7 +7775,8 @@
                     "edge"
                 ],
                 "interaction": false,
-                "hash": "#x"
+                "hash": "#x",
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -9183,7 +9185,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -10740,7 +10743,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -12222,7 +12226,7 @@
                 ],
                 "interaction": false,
                 "hash": "#x",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23y%27%29%7D%2C500%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cframeset%20id%3Dx%20tabindex%3D1%20onbeforedeactivate%3Dalert%281%29%3E%3C%2Fframeset%3E%3Cinput%20id%3Dy%20autofocus%3E%23x%22%3E"
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?context=before_body&x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23y%27%29%7D%2C500%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cframeset%20id%3Dx%20tabindex%3D1%20onbeforedeactivate%3Dalert%281%29%3E%3C%2Fframeset%3E%3Cinput%20id%3Dy%20autofocus%3E%23x%22%3E"
             },
             {
                 "tag": "h1",
@@ -13559,7 +13563,8 @@
                 "browsers": [
                     "edge"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -14957,7 +14962,8 @@
                     "safari"
                 ],
                 "interaction": false,
-                "hash": "#x"
+                "hash": "#x",
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -16575,7 +16581,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -18131,7 +18138,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -19709,7 +19717,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -21266,7 +21275,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -22800,7 +22810,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -24304,7 +24315,7 @@
                 ],
                 "interaction": false,
                 "hash": "#x",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23y%27%29%7D%2C500%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cframeset%20id%3Dx%20tabindex%3D1%20ondeactivate%3Dalert%281%29%3E%3C%2Fframeset%3E%3Cinput%20id%3Dy%20autofocus%3E%23x%22%3E"
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?context=before_body&x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23y%27%29%7D%2C500%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cframeset%20id%3Dx%20tabindex%3D1%20ondeactivate%3Dalert%281%29%3E%3C%2Fframeset%3E%3Cinput%20id%3Dy%20autofocus%3E%23x%22%3E"
             },
             {
                 "tag": "h1",
@@ -25781,7 +25792,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -27337,7 +27349,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -28893,7 +28906,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -30449,7 +30463,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -32005,7 +32020,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -33561,7 +33577,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -35117,7 +35134,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -36456,7 +36474,8 @@
                     "chrome"
                 ],
                 "interaction": false,
-                "hash": "#x"
+                "hash": "#x",
+                "context": "before_body"
             },
             {
                 "tag": "embed",
@@ -37056,7 +37075,8 @@
                     "safari"
                 ],
                 "interaction": false,
-                "hash": "#x"
+                "hash": "#x",
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -38058,7 +38078,8 @@
                     "chrome"
                 ],
                 "interaction": false,
-                "hash": "#x"
+                "hash": "#x",
+                "context": "before_body"
             },
             {
                 "tag": "embed",
@@ -38658,7 +38679,8 @@
                     "safari"
                 ],
                 "interaction": false,
-                "hash": "#x"
+                "hash": "#x",
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -40168,7 +40190,8 @@
                     "safari"
                 ],
                 "interaction": false,
-                "hash": "#x"
+                "hash": "#x",
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -41762,7 +41785,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -43318,7 +43342,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -44874,7 +44899,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -45946,7 +45972,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": false
+                "interaction": false,
+                "context": "before_body"
             },
             {
                 "tag": "embed",
@@ -47815,7 +47842,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -49371,7 +49399,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -50927,7 +50956,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -52483,7 +52513,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -54039,7 +54070,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -55595,7 +55627,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -57151,7 +57184,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
@@ -58157,7 +58191,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": false
+                "interaction": false,
+                "context": "before_body"
             }
         ]
     },
@@ -58756,7 +58791,8 @@
                     "edge",
                     "safari"
                 ],
-                "interaction": true
+                "interaction": true,
+                "context": "before_body"
             },
             {
                 "tag": "h1",
