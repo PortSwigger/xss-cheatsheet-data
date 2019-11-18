@@ -60279,6 +60279,54 @@
             }
         ]
     },
+    "ontouchstart": {
+        "description": "Fires when the touch screen, only mobile device",
+        "tags": [
+            {
+                "tag": "body",
+                "code": "<body ontouchstart=alert(1)> ",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "ontouchend": {
+        "description": "Fires when the touch screen, only mobile device",
+        "tags": [
+            {
+                "tag": "body",
+                "code": "<body ontouchend=alert(1)> ",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "ontouchmove": {
+        "description": "Fires when the touch screen and move, only mobile device",
+        "tags": [
+            {
+                "tag": "body",
+                "code": "<body ontouchmove=alert(1)> ",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
     "ontransitioncancel": {
         "description": "Fires when a CSS transition cancels",
         "tags": [
