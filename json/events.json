@@ -59834,6 +59834,118 @@
             }
         ]
     },
+    "onpointerover": {
+        "description": "Fires when the mouseover",
+        "tags": [
+            {
+                "tag": "div",
+                "code": "<div onpointer over=alert(1)>",
+				"browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onpointerdown": {
+        "description": "Fires when the mouse down",
+        "tags": [
+            {
+                "tag": "div",
+                "code": "<div onpointerdown=alert(1)>",
+				"browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onpointerenter": {
+        "description": "Fires when the mouseenter",
+        "tags": [
+            {
+                "tag": "div",
+                "code": "<div onpointerenter=alert(1)>",
+				"browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onpointerleave": {
+        "description": "Fires when the mouseleave",
+        "tags": [
+            {
+                "tag": "div",
+                "code": "<div onpointerleave=alert(1)>",
+				"browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onpointermove": {
+        "description": "Fires when the mouse move",
+        "tags": [
+            {
+                "tag": "div",
+                "code": "<div onpointermove=alert(1)>",
+				"browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onpointerout": {
+        "description": "Fires when the mouse out",
+        "tags": [
+            {
+                "tag": "div",
+                "code": "<div onpointerout=alert(1)>",
+				"browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onpointerup": {
+        "description": "Fires when the mouse up",
+        "tags": [
+            {
+                "tag": "div",
+                "code": "<div onpointerup=alert(1)>",
+				"browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
     "onpopstate": {
         "description": "Fires when the history changes",
         "tags": [
