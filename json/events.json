@@ -59946,6 +59946,19 @@
             }
         ]
     },
+    "onpointerrawupdate": {
+        "description": "Fires when the pointer changes",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onpointerrawupdate=alert(1)>XSS</*>",
+				        "browsers": [
+                    "chrome"
+                ],
+                "interaction": true
+            }
+        ]
+    },
     "onpopstate": {
         "description": "Fires when the history changes",
         "tags": [
