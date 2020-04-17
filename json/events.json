@@ -1,4 +1,30 @@
 {
+    "onbeforescriptexecute": {
+        "description": "Fires before script is executed",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onbeforescriptexecute=alert(1)><script>1</script>",
+				        "browsers": [                    
+                    "firefox"               
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onafterscriptexecute": {
+        "description": "Fires after script is executed",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onafterscriptexecute=alert(1)><script>1</script>",
+				        "browsers": [                    
+                    "firefox"               
+                ],
+                "interaction": true
+            }
+        ]
+    },
     "onactivate": {
         "description": "Fires when the element is activated",
         "tags": [
