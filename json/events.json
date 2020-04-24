@@ -36598,6 +36598,14 @@
                 "hash": "#x"
             },
             {
+                "tag": "a2",
+                "code": "<a autofocus onfocus=alert(1) href><\/a>",
+                "browsers": [
+                    "chrome"                    
+                ],
+                "interaction": false
+            },
+            {
                 "tag": "abbr",
                 "code": "<abbr id=x tabindex=1 onfocus=alert(1)><\/abbr>",
                 "browsers": [
@@ -38200,6 +38208,14 @@
                 ],
                 "interaction": false,
                 "hash": "#x"
+            },
+            {
+                "tag": "a2",
+                "code": "<a autofocus onfocusin=alert(1) href><\/a>",
+                "browsers": [
+                    "chrome"                    
+                ],
+                "interaction": false
             },
             {
                 "tag": "abbr",
