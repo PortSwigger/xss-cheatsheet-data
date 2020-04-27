@@ -36494,6 +36494,14 @@
                 "hash": "#x"
             },
             {
+                "tag": "iframe2",
+                "code": "<iframe autofocus onfocus=alert(1)>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false            
+            },
+            {
                 "tag": "frame",
                 "code": "<frameset><frame id=x onfocus=alert(1)>",
                 "browsers": [
@@ -38104,6 +38112,14 @@
                 ],
                 "interaction": false,
                 "hash": "#x"
+            },
+            {
+                "tag": "iframe2",
+                "code": "<iframe autofocus onfocusin=alert(1)>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false            
             },
             {
                 "tag": "frame",
