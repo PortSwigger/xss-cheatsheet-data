@@ -36594,12 +36594,29 @@
                 "hash": "#x"
             },
             {
+                "tag": "video2",
+                "code": "<video controls src=1 onfocus=alert(1) autofocus>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false
+            },
+            {
                 "tag": "audio",
                 "code": "<audio id=x controls onfocus=alert(1) id=x><source src=\"validaudio.wav\"><\/audio>",
                 "browsers": [
                     "chrome",
                     "edge",
                     "safari"
+                ],
+                "interaction": false,
+                "hash": "#x"
+            },
+            {
+                "tag": "audio2",
+                "code": "<audio controls src=1 onfocus=alert(1) autofocus>",
+                "browsers": [
+                    "chrome"
                 ],
                 "interaction": false,
                 "hash": "#x"
@@ -38214,6 +38231,14 @@
                 "hash": "#x"
             },
             {
+                "tag": "video2",
+                "code": "<video controls src=1 onfocusin=alert(1) autofocus>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false
+            },
+            {
                 "tag": "audio",
                 "code": "<audio id=x controls onfocusin=alert(1) id=x><source src=\"validaudio.wav\"><\/audio>",
                 "browsers": [
@@ -38223,6 +38248,14 @@
                 ],
                 "interaction": false,
                 "hash": "#x"
+            },
+            {
+                "tag": "audio2",
+                "code": "<audio controls src=1 onfocusin=alert(1) autofocus>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false                
             },
             {
                 "tag": "link",
