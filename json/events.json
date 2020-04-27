@@ -25,6 +25,32 @@
             }
         ]
     },
+    "onfullscreenchange": {
+        "description": "Fires when a video changes full screen status",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video onfullscreenchange=alert(1) src=validvideo.mp4 controls>",
+				        "browsers": [                    
+                    "firefox"               
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onmozfullscreenchange": {
+        "description": "Fires when a video changes full screen status",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video onmozfullscreenchange=alert(1) src=validvideo.mp4 controls>",
+				        "browsers": [                    
+                    "firefox"               
+                ],
+                "interaction": true
+            }
+        ]
+    },
     "onactivate": {
         "description": "Fires when the element is activated",
         "tags": [
