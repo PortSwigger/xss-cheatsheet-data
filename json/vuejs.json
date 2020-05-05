@@ -28,5 +28,18 @@
         "hash": "",
         "type": "reflected",
         "csp": false
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            }
+        ],
+        "vector": "<x v-html=_c.constructor('alert(1)')()>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false
     }
 ]
