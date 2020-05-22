@@ -20,8 +20,19 @@
                 "twitterUrl": "https:\/\/twitter.com\/cure53berlin"
             },
             {
-                "name": "Script Gadget Research",
-                "company": "Google"
+                "name": "Sebastian Lekies",
+                "company": "Google",
+                "twitterUrl": "https://twitter.com/slekies"
+            },
+            {
+                "name": "Eduardo Vela Nava",
+                "company": "Google",
+                "twitterUrl": "https://twitter.com/sirdarckcat"
+            },
+            {
+                "name": "Krzysztof Kotowicz",
+                "company": "Google",
+                "twitterUrl": "https://twitter.com/kkotowicz"
             }
         ],
         "vector": "<div v-html=\"''.constructor.constructor('alert(1)')()\">a</div>",
