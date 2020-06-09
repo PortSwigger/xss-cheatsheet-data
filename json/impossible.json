@@ -46,8 +46,9 @@
         "descriptionHTML": "Again calling alert proves you can call a function but we created another lab to find the shortest possible attribute based injection with arbitrary JavaScript.",
         "context": "Attribute",
         "url": "https://portswigger-labs.net/impossible-labs/attribute-context-length-limit-arbitrary.php?a=`+alert(document.domain);//&x=%22oncut=%22eval(%27`%27%2bURL)",
-        "lengthLimit": 20,
-        "closestVector": "\"oncut=\"eval('`'+URL)"           
+        "lengthLimit": 17,
+        "closestVector": "See link",
+        "vectorLink": "https://lbherrera.github.io/lab/portswigger/18chars.html"           
     },
     {
         "title": "Injection occurs inside a frameset but before the body", 
