@@ -55,5 +55,11 @@
         "descriptionHTML": "We received a <a href=\"https://twitter.com/roughwire/status/1250320540625014787?s=20\">request from twitter</a> about this next lab. It occurs within a frameset but before a body tag with equals filtered. You would think you could inject a closing frameset followed by a script block but that would be too easy.",
         "context": "HTML",
         "url": "https://portswigger-labs.net/impossible-labs/after-frameset-before-body.php?x=%3C/frameset%3E%3Cscript%3Ealert(1)%3C/script%3E"    
+    },
+    {
+        "title": "Injection occurs inside single quoted string, only characters a-z0-9+'.` are allowed.",
+        "descriptionHTML": "The injection occurs within a single quoted string and the challenge is to execute arbitrary code using the charset a-zA-Z0-9'+.`",
+        "context": "Script",
+        "url": "https://portswigger-labs.net/impossible-labs/arbitrary-code-script-limited-charset.php?x=%27%2bwindow.location.href.replace`javascript`%2balert`1`%2b%27"
     }
 ]
