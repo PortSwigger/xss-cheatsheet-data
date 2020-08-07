@@ -450,7 +450,7 @@
         "csp": true
     },
     {
-        "versionRange": "All versions (Chrome) shorter",
+        "versionRange": "All versions (Chrome) shorter via oncut",
         "version": "1.4.5",
         "authors": [
             {

