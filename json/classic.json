@@ -144,5 +144,12 @@
         "browsers": [
             "edge"
         ]
+    },
+    {
+        "description": "discard tag and onbegin",
+        "code": "<svg><discard onbegin=alert(1)>",
+        "browsers": [
+            "chrome"
+        ]
     }
 ]

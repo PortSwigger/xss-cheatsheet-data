@@ -58,7 +58,7 @@
     },
     {
         "title": "Injection occurs inside single quoted string, only characters a-z0-9+'.` are allowed.", 
-        "descriptionHTML": "The injection occurs within a single quoted string and the challenge is to execute arbitrary code using the charset a-zA-Z0-9'+.`",
+        "descriptionHTML": "The injection occurs within a single quoted string and the challenge is to execute arbitrary code using the charset a-zA-Z0-9'+.`. <a href=\"https://twitter.com/lbherrera_\">Luan Herrera</a> solved this lab in an amazing way, you can view the solution in the following <a href=\"https://portswigger.net/research/redefining-impossible-xss-without-arbitrary-javascript\">post.</a>",
         "context": "Script",
         "url": "https://portswigger-labs.net/impossible-labs/arbitrary-code-script-limited-charset.php?x='%2balert`1`%2b'"    
     }

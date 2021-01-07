@@ -4695,14 +4695,6 @@
         "description": "Fires when a svg animation begins",
         "tags": [
             {
-                "tag": "discard",
-                "code": "<svg><discard onbegin=alert(1)>",
-                "browsers": [
-                    "chrome"
-                ],
-                "interaction": false
-            },
-            {
                 "tag": "animatemotion",
                 "code": "<svg><path><animateMotion onbegin=alert(1) dur=\"1s\" repeatCount=\"1\">",
                 "browsers": [
