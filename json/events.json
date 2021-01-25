@@ -263,7 +263,7 @@
                     "firefox",
                     "edge"
                 ],
-                "interaction": false
+                "interaction": true
             }
         ]
     },
