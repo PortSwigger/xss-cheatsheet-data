@@ -150,5 +150,35 @@
             "edge",
             "safari"
         ]
+    },
+    {
+        "description": "Array based destructuring using onerror",
+        "code": "<script>throw[onerror]=[alert],1<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Destructuring using onerror",
+        "code": "<script>var{a:onerror}={a:alert};throw 1<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Destructuring using default values and onerror",
+        "code": "<script>var{haha:onerror=alert}=0;throw 1<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
     }
 ]
