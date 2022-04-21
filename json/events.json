@@ -9071,7 +9071,7 @@
         "tags": [
             {
                 "tag": "*",
-                "code": "<style>:target {color:red;}<\/style><* id=x style=\"transition:color 1s\" ontransitionend=alert(1)><\/*>",
+                "code": "<* id=x style=\"transition:outline 1s\" ontransitionend=alert(1) tabindex=1><\/*>",
                 "browsers": [
                     "chrome"
                 ],
