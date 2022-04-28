@@ -837,6 +837,20 @@
     {
         "authors": [
             {
+                "name": "Francesco Minetti",
+                "company": "Bug hunter",
+                "twitterUrl": ""
+            }
+        ],
+        "vector": "${alert``}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false,
+        "version" : 2
+    },
+    {
+        "authors": [
+            {
                 "name": "Gareth Heyes",
                 "company": "PortSwigger",
                 "twitterUrl": "https:\/\/twitter.com\/garethheyes"
