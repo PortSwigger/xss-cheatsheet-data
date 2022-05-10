@@ -9168,5 +9168,37 @@
                 "interaction": true
             }
         ]
+    },
+    "ononline": {
+        "description": "Fires when network access switches to on.",
+        "tags": [
+            {
+                "tag": "body",
+                "code": "<body ononline=alert(1)>",
+                "browsers": [
+                    "chrome",
+                    "edge",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "onoffline": {
+        "description": "Fires when network access switches to off.",
+        "tags": [
+            {
+                "tag": "body",
+                "code": "<body onoffline=alert(1)>",
+                "browsers": [
+                    "chrome",
+                    "edge",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
     }
 }
