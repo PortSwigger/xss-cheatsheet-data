@@ -8610,6 +8610,31 @@
             }
         ]
     },
+    "onratechange": {
+        "description": "Fires when the speed of the video changes",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls autoplay onratechange=alert(1)><source src=\"validvideo.mp4\" type=\"video\/mp4\"><\/video>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            },
+            {
+                "tag": "audio",
+                "code": "<audio controls autoplay onratechange=alert(1)><source src=\"validaudio.wav\" type=\"audio\/wav\"><\/audio>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
     "onpointerover": {
         "description": "Fires when the mouseover",
         "tags": [
