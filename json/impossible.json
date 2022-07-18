@@ -61,5 +61,11 @@
         "descriptionHTML": "The injection occurs within a single quoted string and the challenge is to execute arbitrary code using the charset a-zA-Z0-9'+.`. <a href=\"https://twitter.com/lbherrera_\">Luan Herrera</a> solved this lab in an amazing way, you can view the solution in the following <a href=\"https://portswigger.net/research/redefining-impossible-xss-without-arbitrary-javascript\">post.</a>",
         "context": "Script",
         "url": "https://portswigger-labs.net/impossible-labs/arbitrary-code-script-limited-charset.php?x='%2balert`1`%2b'"    
+    },
+    {
+        "title": "Injection occurs inside double quoted src attribute of a image element", 
+        "descriptionHTML": "The double quote is encoded, the challenge is to find a way to execute XSS within a quoted src attribute.",
+        "context": "Attribute",
+        "url": "https://portswigger-labs.net/impossible-labs/inside-image-src-encoded.php?x=1%22onerror=alert(1)+"    
     }
 ]

