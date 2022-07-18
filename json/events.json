@@ -8621,7 +8621,7 @@
                     "firefox",
                     "safari"
                 ],
-                "interaction": false
+                "interaction": true
             },
             {
                 "tag": "audio",
@@ -8631,7 +8631,7 @@
                     "firefox",
                     "safari"
                 ],
-                "interaction": false
+                "interaction": true
             }
         ]
     },
