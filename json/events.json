@@ -9443,5 +9443,40 @@
                 "interaction": true
             }
         ]
+    },
+    "onbeforeinput": {
+        "description": "Fires when the value of the element is about to be modified",
+        "tags": [
+            {
+                "tag": "input",
+                "code": "<input onbeforeinput=alert(1)>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": true
+            },
+            {
+                "tag": "textarea",
+                "code": "<textarea onbeforeinput=alert(1)>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": true
+            },
+            {
+                "tag": "*",
+                "code": "<div contenteditable onbeforeinput=alert(1)>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
     }
 }
