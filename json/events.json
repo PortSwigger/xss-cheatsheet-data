@@ -5237,7 +5237,7 @@
             },
             {
                 "tag": "custom tags",
-                "code": "<xss id=x tabindex=1 onfocus=alert(1)><\/xss>",
+                "code": "<xss autofocus tabindex=1 onfocus=alert(1)><\/xss>",
                 "browsers": [
                     "chrome",
                     "firefox",
@@ -6818,7 +6818,7 @@
             },
             {
                 "tag": "custom tags",
-                "code": "<xss id=x tabindex=1 onfocusin=alert(1)><\/xss>",
+                "code": "<xss autofocus tabindex=1 onfocusin=alert(1)><\/xss>",
                 "browsers": [
                     "chrome",
                     "firefox",
@@ -6834,7 +6834,7 @@
         "tags": [
             {
                 "tag": "*",
-                "code": "<* onfocusout=alert(1) id=x tabindex=1 style=display:block>test</*><input value=clickme>",
+                "code": "<* onfocusout=alert(1) autofocus tabindex=1 style=display:block>test</*><input value=clickme>",
                 "browsers": [
                     "chrome",
                     "safari",

