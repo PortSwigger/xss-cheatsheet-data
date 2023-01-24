@@ -169,7 +169,7 @@
 
     },
     {
-        "description": "onloadstart event for media elements in Firefox v107 and below",
+        "description": "onloadend event for media elements in Firefox v107 and below",
         "code": "<input type=image onloadend=alert(1) src=validimage.png>",
                 "browsers": [
                     "firefox"
