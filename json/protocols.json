@@ -269,5 +269,12 @@
         "browsers": [
             "chrome","safari"       
         ]
-    }       
+    },
+    {
+        "description": "Navigation navigate method",
+        "code": "<script>navigation.navigate('javascript:alert(1)')</script>",
+        "browsers": [
+            "chrome" 
+        ]
+    }        
 ]
