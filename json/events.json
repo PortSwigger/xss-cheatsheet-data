@@ -9368,5 +9368,19 @@
                 "interaction": true
             }
         ]
+    },
+    "onscrollend": {
+        "description": "Fires when the scrolling to the end of the element",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:100px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test</span></*>",
+                "browsers": [            
+                    "firefox"
+                ],
+                "interaction": false,
+                "hash":"#x"
+            }
+        ]
     }
 }
