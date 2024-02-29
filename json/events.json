@@ -26,6 +26,31 @@
             }
         ]
     },
+    "onsuspend": {
+        "description": "Fires when the video/audio when the data loading is suspended",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls onsuspend=alert(1)><source src=validvideo.mp4 type=video/mp4></video>",
+                "browsers": [
+                    "chrome",                    
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            },
+            {
+                "tag": "audio",
+                "code": "<audio controls onsuspend=alert(1)><source src=validaudio.mp3 type=audio/mpeg></audio>",
+                "browsers": [
+                    "chrome",                    
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
     "onprogress": {
         "description": "Fires when the video/audio begins downloading",
         "tags": [
@@ -3346,6 +3371,19 @@
                     "chrome",
                     "firefox",
                     "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "ondragexit": {
+        "description": "Triggered when dragging the element",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* draggable=\"true\" ondragexit=\"alert(1)\" style=display:block>test<\/*>",
+                "browsers": [                
+                    "firefox"
                 ],
                 "interaction": true
             }
@@ -6861,6 +6899,21 @@
             }
         ]
     },
+    "onformdata": {
+        "description": "Triggered when a form is submitted",
+        "tags": [
+            {
+                "tag": "form",
+                "code": "<form onformdata=\"alert(1)\"><button>Click</button></form>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
     "oninput": {
         "description": "Requires as change of value",
         "tags": [
@@ -6953,6 +7006,21 @@
                     "safari"
                 ],
                 "interaction": true
+            }
+        ]
+    },
+    "onloadstart": {
+        "description": "Triggered video is loaded",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video onloadstart=\"alert(1)\"><source><\/*>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
             }
         ]
     },
