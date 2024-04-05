@@ -3198,19 +3198,6 @@
             }
         ]
     },
-    "onbounce": {
-        "description": "Fires when the marquee bounces",
-        "tags": [
-            {
-                "tag": "marquee",
-                "code": "<marquee width=1 loop=1 onbounce=alert(1)>XSS<\/marquee>",
-                "browsers": [
-                    "firefox"
-                ],
-                "interaction": false
-            }
-        ]
-    },
     "oncanplay": {
         "description": "Fires if the resource can be played",
         "tags": [
@@ -3686,19 +3673,6 @@
                 "browsers": [
                     "chrome",
                     "safari"
-                ],
-                "interaction": false
-            }
-        ]
-    },
-    "onfinish": {
-        "description": "Fires when the marquee finishes",
-        "tags": [
-            {
-                "tag": "marquee",
-                "code": "<marquee width=1 loop=1 onfinish=alert(1)>XSS<\/marquee>",
-                "browsers": [
-                    "firefox"
                 ],
                 "interaction": false
             }
@@ -9175,19 +9149,6 @@
                     "safari"
                 ],
                 "interaction": true
-            }
-        ]
-    },
-    "onstart": {
-        "description": "Fires when the marquee starts",
-        "tags": [
-            {
-                "tag": "marquee",
-                "code": "<marquee onstart=alert(1)>XSS<\/marquee>",
-                "browsers": [
-                    "firefox"
-                ],
-                "interaction": false
             }
         ]
     },
