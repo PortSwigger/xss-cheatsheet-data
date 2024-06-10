@@ -9477,5 +9477,26 @@
                 "interaction": true
             }
         ]
+    },
+    "onwebkitplaybacktargetavailabilitychanged": {
+        "description": "Fires when the availability of an AirPlay playback target changes",
+	"tags": [
+            {
+                "tag": "audio",
+                "code": "<audio onwebkitplaybacktargetavailabilitychanged=alert(1)>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": false
+	    },
+            {
+                "tag": "video",
+                "code": "<video onwebkitplaybacktargetavailabilitychanged=alert(1)>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": false
+	    }
+	]
     }
 }
