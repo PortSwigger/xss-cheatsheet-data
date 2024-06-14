@@ -261,5 +261,15 @@
             "edge",
             "safari"
         ]
+    },
+    {
+        "description": "\\x20,\\x09,\\x0a,\\x0d can be replaced in the Attribute context.",
+        "code": "<img src=x onerror =   alert(1)",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
     }
 ]
