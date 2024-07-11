@@ -9554,5 +9554,20 @@
                 "interaction": true
             }
         ]
+    },
+	    "onstalled": {
+        "description": "Fires when video is stalled. ",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video onstalled=\"alert('Video playback stalled!')\" controls><source src=\"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny3.mp4\" ></video>",
+                "browsers": [
+                    "firefox" ,
+                    "chrome"                  
+                ],
+                "interaction": false
+            }
+        ]
     }
 }
+
