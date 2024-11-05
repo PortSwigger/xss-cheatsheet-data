@@ -9554,5 +9554,47 @@
                 "interaction": true
             }
         ]
+    },
+    "onwaiting": {
+        "description": "Fires when the video/audio attempts to play",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls onwaiting=alert(1)><source src=x type=x></video>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            },
+            {
+                "tag": "audio",
+                "code": "<audio controls onwaiting=alert(1)><source src=x type=x></audio>",
+                "browsers": [
+                    "safari"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+    "onwaiting(loop)": {
+        "description": "Fires when the video/audio attempts to replay",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls loop muted autoplay onwaiting=alert(1)><source src=validvideo.mp4 type=video/mp4></video>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false
+            },
+            {
+                "tag": "audio",
+                "code": "<audio controls loop muted autoplay onwaiting=alert(1)><source src=validaudio.mp3 type=audio/mpeg></audio>",
+                "browsers": [
+                    "chrome"
+                ],
+                "interaction": false
+            }
+        ]
     }
 }
