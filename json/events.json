@@ -6220,5 +6220,27 @@
         "interaction": false
       }
     ]
+  },
+  "onwebkitpresentationmodechanged": {
+    "description": "Fires when a video changes full screen status",
+    "tags": [
+      {
+        "tag": "video",
+        "code": "<video controls src=validvideo.mp4 onwebkitpresentationmodechanged=alert(1)>",
+        "browsers": ["safari"],
+        "interaction": true
+      }
+    ]
+  },
+  "onwebkitfullscreenchange": {
+    "description": "Fires when a video changes full screen status",
+    "tags": [
+      {
+        "tag": "video",
+        "code": "<video controls src=validvideo.mp4 onwebkitfullscreenchange=alert(1)>",
+        "browsers": ["safari"],
+        "interaction": true
+      }
+    ]
   }
 }
