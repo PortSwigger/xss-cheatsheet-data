@@ -6342,5 +6342,38 @@
         "interaction": false
       }
     ]
+  },
+  "onbeforepaste": {
+    "description": "Fires at the end of a paste operation",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<* onbeforepaste=alert(1)>XSS</*>",
+        "browsers": ["safari"],
+        "interaction": true
+      }
+    ]
+  },
+  "ontouchcancel": {
+    "description": "Fires when the select text, only mobile device",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<* ontouchcancel=alert(1)>XSS</*>",
+        "browsers": ["chrome", "safari", "firefox"],
+        "interaction": true
+      }
+    ]
+  },
+  "onscrollsnapchanging": {
+    "description": "Fires when the scroll position is snapping to a new point",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<style>.scroll-container { overflow-x: scroll; scroll-snap-type: x mandatory; display: flex; width: 300px; } .scroll-item { flex: 0 0 500px; scroll-snap-align: start; } .scroll-item:first-child { animation: sample; animation-duration: 0.1s; } @keyframes sample { 100% { scroll-snap-align: none; } }</style><x class=\"scroll-container\" onscrollsnapchanging=\"alert(1)\"> <* class=\"scroll-item\">Item 1</*><* class=\"scroll-item\">Item 2</*></*>",
+        "browsers": ["chrome"],
+        "interaction": false
+      }
+    ]
   }
 }
