@@ -6375,5 +6375,27 @@
         "interaction": false
       }
     ]
+  },
+  "ononline": {
+    "description": "Fires when the browser gains network access",
+    "tags": [
+      {
+        "tag": "body",
+        "code": "<body ononline=alert(1)>",
+        "browsers": ["chrome", "firefox", "safari"],
+        "interaction": false
+      }
+    ]
+  },
+  "onoffline": {
+    "description": "Fires when the browser loses network access",
+    "tags": [
+      {
+        "tag": "body",
+        "code": "<body onoffline=alert(1)>",
+        "browsers": ["chrome", "firefox", "safari"],
+        "interaction": false
+      }
+    ]
   }
 }
