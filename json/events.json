@@ -6383,7 +6383,7 @@
         "tag": "body",
         "code": "<body ononline=alert(1)>",
         "browsers": ["chrome", "firefox", "safari"],
-        "interaction": false
+        "interaction": true
       }
     ]
   },
@@ -6394,7 +6394,7 @@
         "tag": "body",
         "code": "<body onoffline=alert(1)>",
         "browsers": ["chrome", "firefox", "safari"],
-        "interaction": false
+        "interaction": true
       }
     ]
   }
