@@ -6375,5 +6375,38 @@
         "interaction": false
       }
     ]
+  },
+  "ongesturestart": {
+    "description": "Fires when multiple fingers touch the surface, initiating a new gesture.",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<div ongesturestart=alert(1)>XSS</div>",
+        "browsers": ["safari"],
+        "interaction": true
+      }
+    ]
+  },
+  "ongesturechange": {
+    "description": "Fires when the gesture is in progress and changes occur.",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<div ongesturechange=alert(1)>XSS</div>",
+        "browsers": ["safari"],
+        "interaction": true
+      }
+    ]
+  },
+  "ongestureend": {
+    "description": "Fires when the gesture comes to an end.",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<div ongestureend=alert(1)>XSS</div>",
+        "browsers": ["safari"],
+        "interaction": true
+      }
+    ]
   }
 }
