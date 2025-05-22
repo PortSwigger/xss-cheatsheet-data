@@ -6408,5 +6408,16 @@
         "interaction": true
       }
     ]
+  },
+  "onpagereveal": {
+    "description": "Fires when the page is shown",
+    "tags": [
+      {
+        "tag": "body",
+        "code": "<body onpagereveal=alert(1)>",
+        "browsers": ["safari"],
+        "interaction": false
+      }
+    ]
   }
 }
