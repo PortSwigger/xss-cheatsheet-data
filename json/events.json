@@ -6419,5 +6419,16 @@
         "interaction": false
       }
     ]
+  },
+  "onsecuritypolicyviolation": {
+    "description": "Fires when a CSP violation occurs. This would be site specific.",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<* onsecuritypolicyviolation=alert(1)>XSS</*>",
+        "browsers": ["chrome", "safari", "firefox"],
+        "interaction": false
+      }
+    ]
   }
 }
