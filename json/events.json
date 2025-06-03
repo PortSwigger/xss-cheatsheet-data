@@ -6441,5 +6441,16 @@
         "interaction": true
       }
     ]
+  },
+  "oncommand": {
+    "description": "Fires when the command is sent via click",
+    "tags": [
+      {
+        "tag": "div",
+        "code": "<button commandfor=test command=show-popover>Click<div id=test oncommand=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": true
+      }
+    ]
   }
 }
