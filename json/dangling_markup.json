@@ -126,7 +126,7 @@
   },
   {
     "description": "Video element with poster attribute",
-    "code": "<video poster=//evil?",
+    "code": "<video poster=\"//evil?",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   }
 ]
