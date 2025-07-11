@@ -67,7 +67,7 @@
   {
     "description": "SVG script href attribute without closing script tag",
     "code": "<svg><script href=\"data:text/javascript,alert(1)\" />",
-    "browsers": ["firefox"]
+    "browsers": ["chrome", "firefox", "safari"]
   },
   {
     "description": "SVG use element Chrome/Firefox",
