@@ -5,16 +5,6 @@
     "browsers": ["chrome", "firefox", "safari"]
   },
   {
-    "description": "Object data attribute with JavaScript protocol",
-    "code": "<object data=\"javascript:alert(1)\">",
-    "browsers": ["firefox"]
-  },
-  {
-    "description": "Embed src attribute with JavaScript protocol",
-    "code": "<embed src=\"javascript:alert(1)\">",
-    "browsers": ["firefox"]
-  },
-  {
     "description": "A standard JavaScript protocol",
     "code": "<a href=\"javascript:alert(1)\">XSS</a>",
     "browsers": ["chrome", "firefox", "safari"]
