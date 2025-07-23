@@ -6205,7 +6205,7 @@
       {
         "tag": "input",
         "code": "<input type=hidden oncontentvisibilityautostatechange=alert(1) style=content-visibility:auto>",
-        "browsers": ["chrome"],
+        "browsers": ["chrome", "firefox", "safari"],
         "interaction": false
       }
     ]
@@ -6216,7 +6216,7 @@
       {
         "tag": "*",
         "code": "<* oncontentvisibilityautostatechange=alert(1) style=display:block;content-visibility:auto>",
-        "browsers": ["chrome"],
+        "browsers": ["chrome", "firefox", "safari"],
         "interaction": false
       }
     ]
