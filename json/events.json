@@ -6441,5 +6441,27 @@
         "interaction": true
       }
     ]
+  },
+  "ongotpointercapture": {
+    "description": "Requires interaction with input range via click",
+    "tags": [
+      {
+        "tag": "input",
+        "code": "<input type=range ongotpointercapture=alert(1)>",
+        "browsers": ["chrome", "firefox", "safari"],
+        "interaction": true
+      }
+    ]
+  },
+  "onlostpointercapture": {
+    "description": "Requires interaction with input range via click",
+    "tags": [
+      {
+        "tag": "input",
+        "code": "<input type=range onlostpointercapture=alert(1)>",
+        "browsers": ["chrome", "firefox", "safari"],
+        "interaction": true
+      }
+    ]
   }
 }
