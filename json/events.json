@@ -139,28 +139,6 @@
       }
     ]
   },
-  "onbeforescriptexecute": {
-    "description": "Fires before script is executed",
-    "tags": [
-      {
-        "tag": "*",
-        "code": "<* onbeforescriptexecute=alert(1)><script>1</script>",
-        "browsers": ["firefox"],
-        "interaction": false
-      }
-    ]
-  },
-  "onafterscriptexecute": {
-    "description": "Fires after script is executed",
-    "tags": [
-      {
-        "tag": "*",
-        "code": "<* onafterscriptexecute=alert(1)><script>1</script>",
-        "browsers": ["firefox"],
-        "interaction": false
-      }
-    ]
-  },
   "onfullscreenchange": {
     "description": "Fires when a video changes full screen status",
     "tags": [

