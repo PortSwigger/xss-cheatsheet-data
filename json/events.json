@@ -6441,5 +6441,16 @@
         "interaction": true
       }
     ]
+  },
+  "onbeforematch": {
+    "description": "Fires when a hidden element is revealed",
+    "tags": [
+      {
+        "tag": "*",
+        "code": "<* id=x onbeforematch=alert(1) hidden=until-found>",
+        "browsers": ["firefox"],
+        "interaction": false
+      }
+    ]
   }
 }
