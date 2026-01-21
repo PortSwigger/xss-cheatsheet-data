@@ -6452,5 +6452,16 @@
         "interaction": false
       }
     ]
+  },
+  "onslotchange": {
+    "description": "Fires when the slot’s assigned content changes",
+    "tags": [
+      {
+        "tag": "slot",
+        "code": "x<template shadowrootmode=open><slot onslotchange=alert(1)>",
+        "browsers": ["chrome", "firefox", "safari"],
+        "interaction": false
+      }
+    ]
   }
 }
