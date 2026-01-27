@@ -6463,5 +6463,49 @@
         "interaction": false
       }
     ]
+  },
+  "onvalidationstatuschange": {
+    "description": "Fires when a form control’s validation state changes",
+    "tags": [
+      {
+        "tag": "geolocation",
+        "code": "<geolocation onvalidationstatuschange=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": false
+      }
+    ]
+  },
+  "onpromptdismiss": {
+    "description": "Fires when the user opens the prompt and closes it without responding",
+    "tags": [
+      {
+        "tag": "geolocation",
+        "code": "<geolocation onpromptdismiss=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": true
+      }
+    ]
+  },
+  "onpromptaction": {
+    "description": "Fires when the user takes an action in the prompt (such as confirm)",
+    "tags": [
+      {
+        "tag": "geolocation",
+        "code": "<geolocation onpromptaction=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": true
+      }
+    ]
+  },
+  "onlocation": {
+    "description": "Fires when the browser requests the user’s location after permission is granted",
+    "tags": [
+      {
+        "tag": "geolocation",
+        "code": "<geolocation autolocate onlocation=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": true
+      }
+    ]
   }
 }
