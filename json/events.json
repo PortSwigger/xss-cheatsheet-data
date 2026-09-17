@@ -6478,6 +6478,18 @@
         "code": "<usermedia onvalidationstatuschange=alert(1)>",
         "browsers": ["chrome"],
         "interaction": false
+      },
+      {
+        "tag": "camera",
+        "code": "<camera onvalidationstatuschange=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": false
+      },
+      {
+        "tag": "microphone",
+        "code": "<microphone onvalidationstatuschange=alert(1)>",
+        "browsers": ["chrome"],
+        "interaction": false
       }
     ]
   },
