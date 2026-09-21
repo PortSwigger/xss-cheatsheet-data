@@ -6461,10 +6461,11 @@
     "description": "Fires when a hidden element is revealed",
     "tags": [
       {
-        "tag": "*",
-        "code": "<* id=x onbeforematch=alert(1) hidden=until-found>",
+        "tag": "input",
+        "code": "<input type=hidden id=x onbeforematch=alert(1) hidden=until-found>",
         "browsers": ["firefox"],
-        "interaction": false
+        "interaction": false,
+        "hash": "#x"
       },
       {
         "tag": "meta",
