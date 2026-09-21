@@ -113,10 +113,5 @@
     "description": "Object tag supports param src",
     "code": "<object width=500 height=500 type=text/html><param name=src value=https://portswigger-labs.net>",
     "browsers": ["chrome"]
-  },
-  {
-    "description": "Navigation navigate method",
-    "code": "<script>navigation.navigate('javascript:alert(1)')</script>",
-    "browsers": ["chrome"]
   }
 ]

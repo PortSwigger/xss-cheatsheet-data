@@ -278,5 +278,10 @@
     "description": "Fires after script is executed",
     "code": "<x onafterscriptexecute=alert(1)><script>1</script>",
     "browsers": ["firefox"]
+  },
+  {
+    "description": "JavaScript URLs using navigation.navigate",
+    "code": "<script>navigation.navigate('javascript:alert(1)')</script>",
+    "browsers": ["chrome"]
   }
 ]
