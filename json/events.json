@@ -6465,6 +6465,20 @@
         "code": "<* id=x onbeforematch=alert(1) hidden=until-found>",
         "browsers": ["firefox"],
         "interaction": false
+      },
+      {
+        "tag": "meta",
+        "code": "<meta name=description content=hello id=x hidden=until-found onbeforematch=alert(1)>",
+        "browsers": ["firefox"],
+        "interaction": false,
+        "hash": "#x"
+      },
+      {
+        "tag": "meta(blob)",
+        "code": "<meta name=description content=0;#x http-equiv=refresh id=x hidden=until-found onbeforematch=alert(1)>",
+        "browsers": ["firefox"],
+        "interaction": false,
+        "hash": "#x"
       }
     ]
   },
