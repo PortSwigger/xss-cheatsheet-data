@@ -8,7 +8,7 @@ For example, to add onwaiting to the data, do:
 
 ```javascript
 "onwaiting": {
-        "description": "Fires when while waiting for the data",
+        "description": "Fires while waiting for the data",
         "tags": [
             {
                 "tag": "video",
