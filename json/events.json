@@ -5925,7 +5925,7 @@
                 "tag": "video",
                 "code": "<video controls width=\"640\" src=\"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4\" onwebkitbeginfullscreen=\"console.log('xss')\"></video>",
                 "browsers": [
-                    "edge"
+                    "safari"
                 ],
                 "interaction": true
             }
@@ -5938,7 +5938,7 @@
                 "tag": "video",
                 "code": "<video controls width=\"640\" src=\"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4\" onwebkitendfullscreen=\"console.log('xss')\"></video>",
                 "browsers": [
-                    "edge"
+                    "safari"
                 ],
                 "interaction": true
             }
