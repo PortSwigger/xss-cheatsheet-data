@@ -5918,6 +5918,32 @@
       }
     ]
   },
+  "onwebkitbeginfullscreen": {
+        "description": "Fires when a video pass from a non full-screen to full-screen state (only on mobile, iOS, iPadOS)",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls width=\"640\" src=\"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4\" onwebkitbeginfullscreen=\"console.log('xss')\"></video>",
+                "browsers": [
+                    "edge"
+                ],
+                "interaction": true
+            }
+        ]
+    },
+  "onwebkitendfullscreen": {
+        "description": "Fires when a video pass from a full-screen to a non full-screen state  (only on mobile, iOS, iPadOS)",
+        "tags": [
+            {
+                "tag": "video",
+                "code": "<video controls width=\"640\" src=\"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4\" onwebkitendfullscreen=\"console.log('xss')\"></video>",
+                "browsers": [
+                    "edge"
+                ],
+                "interaction": true
+            }
+        ]
+    },
   "onwebkittransitionend": {
     "description": "Fires when a CSS transition ends",
     "tags": [
